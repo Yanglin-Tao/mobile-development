@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     public float speed;
     public int health;
-    public float jumpForce = 300;
+    public float jumpForce = 900;
     bool isGrounded = false;
 
     // Update is called once per frame
@@ -31,12 +31,16 @@ public class Player : MonoBehaviour
     }
 
     void Update(){
-        _gameManager.ChangeLife(health);
-        
+        _gameManager.ChangeLife(health);       
+        if (Input.GetButtonDown("Jump") && isGrounded){
+            rb.AddForce(new Vector2(0, jumpForce));
+            Animator.SetBool("Jump", !isGrounded);
+        }
+        Animator.SetBool("Jump", !isGrounded);
     }
 
     void FixedUpdate() {
-        isGrounded = Physics2D.OverlapCircle(feet.position, .2f, ground);
+        isGrounded = Physics2D.OverlapCircle(feet.position, .3f, ground);
         if (_gameManager.getHealth() > 0){
             float xSpeed = Input.GetAxis("Horizontal") * speed;
             rb.velocity = new Vector2(xSpeed, rb.velocity.y);
@@ -52,12 +56,5 @@ public class Player : MonoBehaviour
         }
         Animator.SetFloat("Health", _gameManager.getHealth());
         Animator.SetBool("Attack", false);
-
-        if (Input.GetButtonDown("Jump") && isGrounded){
-            rb.AddForce(new Vector2(0, jumpForce));
-            Animator.SetBool("Jump", !isGrounded);
-        }
-        Animator.SetBool("Jump", !isGrounded);
-
     }
 }
