@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     AudioSource _audioSource;
 
     public GameObject[] Attacks;
-    public int specialStatus;
+    public int specialCharge;
     public Transform shootPosition;
     public LayerMask ground;
     public Transform feet;
@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public float speed;
     public int health;
     public float jumpForce = 900;
+    public float bulletSpeed = 900;
     bool isGrounded = false;
 
     // Update is called once per frame
@@ -31,12 +32,23 @@ public class Player : MonoBehaviour
     }
 
     void Update(){
-        _gameManager.ChangeLife(health);       
+        _gameManager.SetLife(health);
         if (Input.GetButtonDown("Jump") && isGrounded){
             rb.AddForce(new Vector2(0, jumpForce));
             Animator.SetBool("Jump", !isGrounded);
         }
         Animator.SetBool("Jump", !isGrounded);
+
+
+        if (Input.GetButtonDown("Fire2")){
+            updateBulletdirection();
+            GameObject Bullet = Instantiate(Attacks[specialCharge], shootPosition.position, Quaternion.identity);
+            Bullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
+            specialCharge = (specialCharge + 1) % Attacks.Length;
+            Destroy(Bullet, 2);
+        }
+
+
     }
 
     void FixedUpdate() {
@@ -56,5 +68,20 @@ public class Player : MonoBehaviour
         }
         Animator.SetFloat("Health", _gameManager.getHealth());
         Animator.SetBool("Attack", false);
+
     }
+
+
+
+
+
+    void updateBulletdirection(){
+        if (transform.localScale.x < 0){
+            bulletSpeed = -Mathf.Abs(bulletSpeed);
+        }
+        else{
+            bulletSpeed = Mathf.Abs(bulletSpeed);
+        }
+    }
+
 }

@@ -41,11 +41,11 @@ public class GameManager : MonoBehaviour
         return life;
     }
 
-    // please use change life for ADDING and SUBTRACTING life
+    // please use SetLife for ADDING and SUBTRACTING life
     // just use negative for the subtracting life
-    public void ChangeLife(int amount)
+    public void SetLife(int amount)
     {
-        life += amount;
+        life = amount;
         if (life < 0){
             GameOver = true;
             life = 0;
