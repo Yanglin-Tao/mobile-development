@@ -108,6 +108,12 @@ public class Player : MonoBehaviour
 
 
 
+
+
+
+
+
+
     void updateBulletdirection(){
         if (transform.localScale.x < 0){
             bulletSpeed = -Mathf.Abs(bulletSpeed);
