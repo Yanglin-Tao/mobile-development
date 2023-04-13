@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 900;
     public float bulletSpeed = 900;
     bool isGrounded = false;
+    float curTime;
 
     // Update is called once per frame
     void Start(){
@@ -45,8 +46,17 @@ public class Player : MonoBehaviour
         Animator.SetBool("Jump", !isGrounded);
 
         if (Input.GetButtonDown("Fire1")){
-            // Animator.SetBool("Attack", true);
-            PerformMeleeAttack();
+            print("THIS RAN");
+            curTime = Time.time;
+            Animator.SetInteger("melee", 1);
+            //PerformMeleeAttack();
+            if (Time.time - curTime < 1f){
+                curTime = Time.time;
+                Animator.SetInteger("melee", 2);
+                if (Time.time - curTime < 1f){
+                    Animator.SetInteger("melee", 3);
+                }
+            }
         }
 
         if (Input.GetButtonDown("Fire2")){
