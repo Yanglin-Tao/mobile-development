@@ -31,8 +31,7 @@ public class charControl : MonoBehaviour
 
     // Play Button
     public void Play() {
-        PrefabUtility.SaveAsPrefabAsset(character, "Assets/Prefabs/name.prefab");
-        SceneManager.LoadScene("Level1");
+        PrefabUtility.SaveAsPrefabAsset(character, "Assets/Prefabs/name.prefab"); // need the actual path 
+        SceneManager.LoadScene("Level1"); // next scene to load after choosing the character
     }
 }
-
