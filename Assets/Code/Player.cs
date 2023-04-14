@@ -23,7 +23,12 @@ public class Player : MonoBehaviour
     public Transform feet;
 
     // melee
+    private float lastMeeleAttackTime;
     public float meleeAttackRange = 1f;
+    // The desired rate limit for melee attacks in seconds
+    // if 1f, then melee attacks will be limited to 1 per second
+    // if 2f, then melee attacks will be limited to 1 per 2 seconds
+    public float meleeAttackDelay = 1f;
     public float meleeDamage = 1f;
     public Transform meleeAttackSpawnPoint;
 
@@ -52,10 +57,17 @@ public class Player : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Fire1")){
+            // Check if enough time has passed since the last attack
+            if (Time.time - lastMeeleAttackTime < meleeAttackDelay)
+            {
+                return;
+            }
+            // Update the last attack time to the current time
+            lastMeeleAttackTime = Time.time;
+            PerformMeleeAttack();
+
             curTime = Time.time + .5f;
             currAttack = 1;
-            // Suning: I uncommented the below line
-            PerformMeleeAttack();
             if (Input.GetButtonDown("Fire1") && Time.time - curTime < .5f){
                 // curTime = Time.time;
                 // currAttack = 2;
