@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
     public float bulletSpeed = 900;
     bool isGrounded = false;
     float curTime;
+    int currAttack;
 
     // Update is called once per frame
     void Start(){
@@ -41,23 +42,22 @@ public class Player : MonoBehaviour
         _gameManager.SetLife(health);
         if (Input.GetButtonDown("Jump") && isGrounded){
             rb.AddForce(new Vector2(0, jumpForce));
-            Animator.SetBool("Jump", !isGrounded);
         }
-        Animator.SetBool("Jump", !isGrounded);
 
         if (Input.GetButtonDown("Fire1")){
-            print("THIS RAN");
-            curTime = Time.time;
-            Animator.SetInteger("melee", 1);
+            curTime = Time.time + .5f;
+            currAttack = 1;
             //PerformMeleeAttack();
-            if (Time.time - curTime < 1f){
-                curTime = Time.time;
-                Animator.SetInteger("melee", 2);
-                if (Time.time - curTime < 1f){
-                    Animator.SetInteger("melee", 3);
-                }
+            if (Input.GetButtonDown("Fire1") && Time.time - curTime < .5f){
+                // curTime = Time.time;
+                // currAttack = 2;
+                // print(true);
+                // if (Time.time - curTime < .5f){
+                //     currAttack = 3;
+                // }
             }
         }
+
 
         if (Input.GetButtonDown("Fire2")){
             updateBulletdirection();
@@ -66,7 +66,11 @@ public class Player : MonoBehaviour
             specialCharge = (specialCharge + 1) % Attacks.Length;
             Destroy(Bullet, 2);
         }
+        //print(currAttack);
 
+        Animator.SetBool("Jump", !isGrounded);
+        Animator.SetInteger("melee", currAttack);
+        currAttack = 0;
 
     }
 
