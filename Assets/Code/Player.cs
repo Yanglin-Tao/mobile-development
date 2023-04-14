@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
     private Collider2D _collider2D;
     public GameObject explosion;
     GameManager _gameManager;
+
+    // audio
+    public AudioClip jumpSound;
+    public AudioClip meleeSound;
+    public AudioClip hitSound;
     AudioSource _audioSource;
 
     public GameObject[] Attacks;
@@ -42,12 +47,15 @@ public class Player : MonoBehaviour
         _gameManager.SetLife(health);
         if (Input.GetButtonDown("Jump") && isGrounded){
             rb.AddForce(new Vector2(0, jumpForce));
+            // play jump sound
+            _audioSource.PlayOneShot(jumpSound);
         }
 
         if (Input.GetButtonDown("Fire1")){
             curTime = Time.time + .5f;
             currAttack = 1;
-            //PerformMeleeAttack();
+            // Suning: I uncommented the below line
+            PerformMeleeAttack();
             if (Input.GetButtonDown("Fire1") && Time.time - curTime < .5f){
                 // curTime = Time.time;
                 // currAttack = 2;
@@ -110,13 +118,25 @@ public class Player : MonoBehaviour
         // Detect all colliders within the melee attack range centered at the spawn point
         Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, meleeAttackRange);
 
+        bool hitEnemy = false;
         foreach (Collider2D collider in colliders)
         {
             // Perform melee attack on detected game objects with "Enemy" tag
             if (collider.gameObject.tag == "Enemy")
             {
+                hitEnemy = true;
                 Debug.Log("Melee attack hit: " + collider.gameObject.name);
             }
+        }
+
+        if (hitEnemy)
+        {
+            // Play melee attack sound
+            _audioSource.PlayOneShot(hitSound);
+        }
+        else {
+            // Play melee attack miss sound
+            _audioSource.PlayOneShot(meleeSound);
         }
     }
 
