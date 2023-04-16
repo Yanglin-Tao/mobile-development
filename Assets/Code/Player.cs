@@ -54,12 +54,15 @@ public class Player : MonoBehaviour
     }
 
     void Update(){
-        MeleeCombo();
         _gameManager.SetLife(health);
         if (Input.GetButtonDown("Jump") && isGrounded){
             rb.AddForce(new Vector2(0, jumpForce));
             // play jump sound
             _audioSource.PlayOneShot(jumpSound);
+        }
+
+        if (Input.GetButtonDown("Fire1") && !isAttacking){
+            MeleeCombo();
         }
 
         // if (Input.GetButtonDown("Fire1")){
@@ -160,11 +163,9 @@ public class Player : MonoBehaviour
 
 
     public void MeleeCombo(){
-        if (Input.GetButtonDown("Fire1") && !isAttacking){
-            print("THIS RAN");
-            isAttacking = true;
-            PerformMeleeAttack();
-        }
+        print("THIS RAN");
+        isAttacking = true;
+        PerformMeleeAttack();
     }
 
 
