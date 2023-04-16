@@ -27,17 +27,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 900;
     public float bulletSpeed = 900;
     bool isGrounded = false;
-    float curTime;
-    int currAttack;
 
-
-    public Animator myAnimator;
-    public bool isAttacking = false;
-    public static Player instance;
-
-    private void Awake(){
-        instance = this;
-    }
 
     // Update is called once per frame
     void Start(){
@@ -45,43 +35,19 @@ public class Player : MonoBehaviour
         Animator = GetComponent<Animator>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _audioSource = GetComponent<AudioSource>();
-        myAnimator = GetComponent<Animator>();
+
     }
 
     void Update(){
-        MeleeCombo();
         _gameManager.SetLife(health);
         if (Input.GetButtonDown("Jump") && isGrounded){
             rb.AddForce(new Vector2(0, jumpForce));
         }
 
-        // if (Input.GetButtonDown("Fire1")){
-        //     curTime = Time.time + .5f;
-        //     currAttack = 1;
-        //     //PerformMeleeAttack();
-        //     if (Input.GetButtonDown("Fire1") && Time.time - curTime < .5f){
-        //         // curTime = Time.time;
-        //         // currAttack = 2;
-        //         // print(true);
-        //         // if (Time.time - curTime < .5f){
-        //         //     currAttack = 3;
-        //         // }
-        //     }
-        // }
 
 
-        // if (Input.GetButtonDown("Fire2")){
-        //     updateBulletdirection();
-        //     GameObject Bullet = Instantiate(Attacks[specialCharge], shootPosition.position, Quaternion.identity);
-        //     Bullet.GetComponent<Rigidbody2D>().AddForce(new Vector3(bulletSpeed, 0, 1));
-        //     specialCharge = (specialCharge + 1) % Attacks.Length;
-        //     Destroy(Bullet, 2);
-        // }
-        // //print(currAttack);
 
         Animator.SetBool("Jump", !isGrounded);
-        Animator.SetInteger("melee", currAttack);
-        currAttack = 0;
 
     }
 
@@ -133,18 +99,6 @@ public class Player : MonoBehaviour
 
 
 
-
-
-
-
-
-
-    public void MeleeCombo(){
-        if (Input.GetButtonDown("Fire1") && !isAttacking){
-            print("THIS RAN");
-            isAttacking = true;
-        }
-    }
 
 
     void updateBulletdirection(){

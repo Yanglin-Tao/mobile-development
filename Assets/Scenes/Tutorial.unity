@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 1625161792}
   - component: {fileID: 1625161791}
   - component: {fileID: 1625161790}
+  - component: {fileID: 1625161797}
   - component: {fileID: 1625161796}
   m_Layer: 3
   m_Name: John Cena
@@ -750,8 +751,6 @@ MonoBehaviour:
   health: 100
   jumpForce: 1200
   bulletSpeed: 900
-  myAnimator: {fileID: 0}
-  isAttacking: 1
 --- !u!61 &1625161791
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -879,7 +878,7 @@ Animator:
   m_GameObject: {fileID: 1625161789}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3af7f83b45b228e40b9f7ce4e07109a5, type: 2}
+  m_Controller: {fileID: 9100000, guid: c0b8d73a8688ac14cbc9641d2df757c7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -889,6 +888,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1625161797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625161789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9515f2dec23c544b582aa2a5e5dfb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 1
 --- !u!1 &1762568843
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,8 +1165,6 @@ MonoBehaviour:
   health: 100
   jumpForce: 1200
   bulletSpeed: 900
-  myAnimator: {fileID: 0}
-  isAttacking: 0
 --- !u!1 &1999054932
 GameObject:
   m_ObjectHideFlags: 0
