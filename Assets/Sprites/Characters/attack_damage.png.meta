@@ -1,0 +1,822 @@
+fileFormatVersion: 2
+guid: 76e565f47df1c4b9f8a9b578a214a809
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 35
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: attack_damage_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 570
+        width: 44
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f3903b47faf47e0a42c37b62816f1f
+      internalID: -1523921078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 570
+        width: 48
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1010e5d228b334c3c86498b7f247dd45
+      internalID: -1090321620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 569
+        width: 42
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f5bd8d9d8e44070bf3792a5930572b
+      internalID: -494680050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_3
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 569
+        width: 52
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda593dc2a5f3430e85c3102fac47284
+      internalID: 1149175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_4
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 569
+        width: 52
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4615c00e0743433dafcf0f0da6976e0
+      internalID: -1409724339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_5
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 570
+        width: 44
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0606abb735d274a0c938c50e93b60d3b
+      internalID: 2143829302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_6
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 440
+        width: 39
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f6d4a5bda504ba4b032bd544b69790
+      internalID: -1643886733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_7
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 440
+        width: 57
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025b4a0d84d3b4bd2b0e0888a45f47ad
+      internalID: -1580975496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_8
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 439
+        width: 48
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5f9b8d837d649fdb6dd67fd23884b5
+      internalID: 843181403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_9
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 437
+        width: 49
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a9c39acb02a453fbff7d041a06906b
+      internalID: 192201212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_12
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 436
+        width: 58
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fa79ffbdeb848ad9d2afb999f17d22
+      internalID: -1291854552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_13
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 434
+        width: 39
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f56bb49e952a4af7802279647fadec5
+      internalID: 137928641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_21
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 303
+        width: 49
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8935f9ab7ac284372a0771404e7b7439
+      internalID: -2064545895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_22
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 301
+        width: 56
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963f2e2853cc94f319fc724d06c88154
+      internalID: 205934813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_23
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 301
+        width: 50
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19924d450af3e4bdd9b875313e93dd86
+      internalID: 450619543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_24
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 299
+        width: 53
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5060ee9cac384ea0b7293a9302c9043
+      internalID: 296308654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_25
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 298
+        width: 49
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8235475a34f3f4fb0b4890e79d0a2830
+      internalID: 1069462954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_26
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 288
+        width: 85
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423bcde23c6ac440f843fabfb973427d
+      internalID: -1894728369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_30
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 314
+        width: 98
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a958109e304c540e190c938fdfb8996c
+      internalID: -430195743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_42
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 170
+        width: 64
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300ca7e3af7164eb5a92e49845c99fed
+      internalID: -1831756872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_43
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 170
+        width: 59
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badc69b5a6669491cad235a3b14fb815
+      internalID: 914690642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_44
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 168
+        width: 54
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe226af3313384941b6bd51685461725
+      internalID: 1323700629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_45
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 167
+        width: 68
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa710058426e4657b6b25a6a012f7e3
+      internalID: 380888125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_47
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 166
+        width: 70
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dff7c340152e44c5b8580254c877fe6
+      internalID: 962932981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 27
+        width: 71
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529fb495d1a874ea7931c341fb532ee1
+      internalID: 661146400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_64
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 25
+        width: 49
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e73c6d1bf2f748318d3f8b1b5082849
+      internalID: 1755056459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_11
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 23
+        width: 63
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c9c4700c1dc41d3a610570e874e32f
+      internalID: 1302121941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_14
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 25
+        width: 67
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d4c8d0952354ec2bf2ffeb0692084c
+      internalID: 637403122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_damage_15
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 27
+        width: 65
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3fefeec02e2b46bcbe8daa556497af2
+      internalID: 1502861664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      attack_damage_36: 1030301821
+      attack_damage_47: 962932981
+      attack_damage_63: 326915023
+      attack_damage_34: 484024769
+      attack_damage_20: -1012315690
+      attack_damage_12: -1291854552
+      attack_damage_13: 137928641
+      attack_damage_52: 146224964
+      attack_damage_44: 1323700629
+      attack_damage_46: 66959596
+      attack_damage_32: -734952139
+      attack_damage_48: 100455118
+      attack_damage_54: 1252030404
+      attack_damage_29: -752001490
+      attack_damage_24: 296308654
+      attack_damage_56: -535236432
+      attack_damage_17: -2065689939
+      attack_damage_37: 1058799827
+      attack_damage_30: -430195743
+      attack_damage_23: 450619543
+      attack_damage_25: 1069462954
+      attack_damage_53: 1716933077
+      attack_damage_55: 179312662
+      attack_damage_10: -1609190954
+      attack_damage_18: 477564378
+      attack_damage_27: 1306930873
+      attack_damage_5: 2143829302
+      attack_damage_33: -474841842
+      attack_damage_26: -1894728369
+      attack_damage_35: 748724609
+      attack_damage_31: -1355949307
+      attack_damage_45: 380888125
+      attack_damage_8: 843181403
+      attack_damage_43: 914690642
+      attack_damage_1: -1090321620
+      attack_damage_14: 637403122
+      attack_damage_62: 1695932766
+      attack_damage_38: 1349026585
+      attack_damage_15: 1502861664
+      attack_damage_39: 203375241
+      attack_damage_16: 793464243
+      attack_damage_41: -434360974
+      attack_damage_58: 244402910
+      attack_damage_22: 205934813
+      attack_damage_19: -651215041
+      attack_damage_9: 192201212
+      attack_damage_28: -994184913
+      attack_damage_40: 527868770
+      attack_damage_4: -1409724339
+      attack_damage_57: -806442820
+      attack_damage_65: 150032545
+      attack_damage_3: 1149175
+      attack_damage_42: -1831756872
+      attack_damage_49: -1691425491
+      attack_damage_50: 721029553
+      attack_damage_64: 1755056459
+      attack_damage_0: -1523921078
+      attack_damage_2: -494680050
+      attack_damage_6: -1643886733
+      attack_damage_61: 661146400
+      attack_damage_21: -2064545895
+      attack_damage_11: 1302121941
+      attack_damage_59: -1912864996
+      attack_damage_51: -2005564488
+      attack_damage_7: -1580975496
+      attack_damage_60: 967040151
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
