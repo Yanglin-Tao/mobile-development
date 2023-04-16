@@ -143,6 +143,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && !isAttacking){
             print("THIS RAN");
             isAttacking = true;
+            PerformMeleeAttack();
         }
     }
 
