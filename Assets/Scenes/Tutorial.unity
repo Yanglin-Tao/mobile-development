@@ -676,7 +676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1454688273}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: fist
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -741,7 +741,7 @@ MonoBehaviour:
   shootPosition: {fileID: 990160614}
   ground:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 247
   feet: {fileID: 977392273}
   meleeAttackRange: 0.5
   meleeDamage: 1
@@ -942,7 +942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1866840951}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Shoot
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -977,10 +977,9 @@ GameObject:
   - component: {fileID: 1917801678}
   - component: {fileID: 1917801677}
   - component: {fileID: 1917801676}
-  - component: {fileID: 1917801681}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: WorkBoss
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1122,39 +1121,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1917801681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917801675}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5657ef51489c4084c9cecea2e2373bc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explosion: {fileID: 1686634913543773074, guid: 35d7e152d229ecd4eb8fa72bf26e33cd, type: 3}
-  Attacks:
-  - {fileID: 5676977240588434479, guid: 28382a15fa3fc724b8f1be9701045160, type: 3}
-  - {fileID: 5676977240588434479, guid: 0f87aa1f89becb54d8f1f7e1ffd19a11, type: 3}
-  - {fileID: 5676977240588434479, guid: b1e7df87e8c611e41809109981656fe8, type: 3}
-  - {fileID: 5676977240588434479, guid: 4fbc67b20c2151449af5abdb86c1bb6d, type: 3}
-  specialCharge: 0
-  shootPosition: {fileID: 1866840951}
-  ground:
-    serializedVersion: 2
-    m_Bits: 119
-  feet: {fileID: 1999054933}
-  meleeAttackRange: 0.5
-  meleeDamage: 1
-  meleeAttackSpawnPoint: {fileID: 1454688273}
-  speed: 9
-  health: 100
-  jumpForce: 1200
-  bulletSpeed: 900
-  myAnimator: {fileID: 0}
-  isAttacking: 0
 --- !u!1 &1999054932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999054933}
   - component: {fileID: 1999054934}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: feet
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
