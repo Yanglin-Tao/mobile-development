@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
 
     private bool GameOver = false;
     private bool enemyKilled = false;
+    private Sprite currentSprite; // selected sprite
+
+    public GameObject controlPlayer; // selected player choosing scene
+    public GameObject mainPlayer; // player to be loaded from selected one
 
     private void Awake()
     {
@@ -25,6 +29,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        currentSprite = controlPlayer.GetComponent<SpriteRenderer>().sprite;
+        mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite;
         //lifeUI.text = "HEALTH: " + life;
     }
 
@@ -89,8 +95,6 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         #endif
     }
-
-
 
     IEnumerator NextScene(int seconds, string level) {
         int counter = seconds;
