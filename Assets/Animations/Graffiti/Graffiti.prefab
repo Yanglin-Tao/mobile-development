@@ -95,5 +95,24 @@ PrefabInstance:
       propertyPath: speed
       value: 11
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7341202417481168819, guid: c96c299ed9657fc4b871e62714a88ac3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c96c299ed9657fc4b871e62714a88ac3, type: 3}
+--- !u!1 &5853491998628671186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5401373425640992992, guid: c96c299ed9657fc4b871e62714a88ac3, type: 3}
+  m_PrefabInstance: {fileID: 2003626256331611698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5634789814670176942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5853491998628671186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949518f0fd25471499b4df82aebf6567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 1

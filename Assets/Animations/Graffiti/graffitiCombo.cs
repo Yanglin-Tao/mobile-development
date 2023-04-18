@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossCombo : MonoBehaviour
+public class graffitiCombo : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
@@ -66,7 +66,6 @@ public class BossCombo : MonoBehaviour
         {
             anim.SetBool("hit1", false);
             anim.SetBool("hit2", true);
-            rb.AddForce(new Vector2(0, 1000));
         }
     }
 }
