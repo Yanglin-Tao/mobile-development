@@ -62,21 +62,18 @@ public class ComboAttack : MonoBehaviour
         noOfClicks++;
         if (noOfClicks == 1)
         {
-            Debug.Log("hit1");
             anim.SetBool("hit1", true);
         }
         noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
 
         if (noOfClicks >= 2  && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
-            Debug.Log("hit2");
             anim.SetBool("hit1", false);
             anim.SetBool("hit2", true);
             rb.AddForce(new Vector2(0, 1200));
         }
         if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
-            Debug.Log("hit3");
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
             rb.velocity = new Vector2(1900, rb.velocity.y);

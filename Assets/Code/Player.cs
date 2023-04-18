@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 900;
     public float bulletSpeed = 900;
     bool isGrounded = false;
+    int current;
 
 
     // Update is called once per frame
@@ -51,7 +52,13 @@ public class Player : MonoBehaviour
             _audioSource.PlayOneShot(jumpSound);
         }
 
-
+        if (Input.GetButtonDown("Fire2")){
+            
+            GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
+            updateBulletdirection();
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+            current = (current + 1) % Attacks.Length;
+        }
 
 
         Animator.SetBool("Jump", !isGrounded);

@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
     private bool enemyKilled = false;
     private Sprite currentSprite; // selected sprite
 
-    public GameObject controlPlayer; // selected player choosing scene
-    public GameObject mainPlayer; // player to be loaded from selected one
+    //public GameObject controlPlayer; // selected player choosing scene
+    //public GameObject mainPlayer; // player to be loaded from selected one
 
     private void Awake()
     {
@@ -29,8 +29,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        currentSprite = controlPlayer.GetComponent<SpriteRenderer>().sprite;
-        mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite;
+        // currentSprite = controlPlayer.GetComponent<SpriteRenderer>().sprite;
+        // mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite;
         //lifeUI.text = "HEALTH: " + life;
     }
 
