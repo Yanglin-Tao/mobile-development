@@ -53,7 +53,6 @@ public class Player : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Fire2")){
-            
             GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
             updateBulletdirection();
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
