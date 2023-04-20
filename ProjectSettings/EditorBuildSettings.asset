@@ -15,8 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo2.unity
     guid: 7c19354b93f044981b27957e546c489e
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 7f47308bf880d46bfa373e0cdf225d68
+    path: Assets/Scenes/Tutorial.unity
+    guid: 9c778fdcec8af7144b7fda61513f06b5
+  - enabled: 1
+    path: Assets/Scenes/StartGame.unity
+    guid: 11b1758d9936a4aa79831a4b0cb71edf
+  - enabled: 1
+    path: Assets/Scenes/Onboarding.unity
+    guid: acaed8e0d7d8c49c880d26975bc9ded5
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: 6d8ecf4b6bd7746749983193497722e8
   - enabled: 1
     path: Assets/Scenes/ChooseCharacter.unity
     guid: d4b8e6288977c456ab97c5d30adb9266
