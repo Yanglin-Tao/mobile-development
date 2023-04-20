@@ -30,21 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/ChooseCharacter.unity
     guid: d4b8e6288977c456ab97c5d30adb9266
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 7f47308bf880d46bfa373e0cdf225d68
-  - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: bc5e38bf9227e4503821be12f02beaff
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 4b5d7629a7ed7483f9afcb5f9fa1e648
   - enabled: 1
-    path: Assets/Scenes/Level4.unity
-    guid: 47050d30fd8494e1aa1323d109446476
-  - enabled: 1
-    path: Assets/Scenes/WinEnd.unity
-    guid: fc4d6feee3d364048987fe3b4df8db66
-  - enabled: 1
-    path: Assets/Scenes/FailEnd.unity
-    guid: 82fb688b244724fcabcacd1c4977b44b
+    path: Assets/Scenes/Level1.unity
+    guid: 7f47308bf880d46bfa373e0cdf225d68
   m_configObjects: {}

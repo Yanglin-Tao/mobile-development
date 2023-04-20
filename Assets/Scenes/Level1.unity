@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511d045f375586245aa26ebb1dc41043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlPlayer: {fileID: 609164819, guid: 6a58ca01722fe44d9949865d73b35dc2, type: 3}
+  selectedPlayer: {fileID: 609164819, guid: 6a58ca01722fe44d9949865d73b35dc2, type: 3}
   mainPlayer: {fileID: 7660928845225562360}
 --- !u!4 &1158600117
 Transform:
