@@ -10,27 +10,29 @@ public class GameManager : MonoBehaviour
     //int score = 0;
     int life = 0;
     string levelName;
-
+    
     // public TMPro.TextMeshProUGUI scoreUI;
     // public TMPro.TextMeshProUGUI lifeUI;
 
     private bool GameOver = false;
     private bool enemyKilled = false;
-    private Sprite currentSprite; // selected sprite
-
-    //public GameObject controlPlayer; // selected player choosing scene
-    //public GameObject mainPlayer; // player to be loaded from selected one
+    public GameObject selectedPlayer; // selected player from the choosing scene
+    private Sprite currentSprite; // selected sprite loaded as currentSprite for the level
+    public GameObject mainPlayer; // player to be loaded from selected one
 
     private void Awake()
     {
         Scene scene = SceneManager.GetActiveScene();
         levelName = scene.name;
     }
-
+    
     void Start()
     {
-        // currentSprite = controlPlayer.GetComponent<SpriteRenderer>().sprite;
-        // mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite;
+        // Needed for the choose character scene
+        // ------
+        currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
+        mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite;
+        // ------
         //lifeUI.text = "HEALTH: " + life;
     }
 
