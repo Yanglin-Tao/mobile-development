@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1bfe3054d29c54cac9aae33ee22a659f
+guid: 718092520770d487eac4502a35773ea0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,7 +133,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 32
+        y: 99
         width: 63
         height: 44
       alignment: 0
@@ -143,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32eb5496e92194b20adf96b9df6025fd
-      internalID: 433897116
+      spriteID: 9d9bd0252f839405bb4cac08003aee44
+      internalID: 1536231536
       vertices: []
       indices: 
       edges: []
@@ -154,7 +154,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 11
+        y: 78
         width: 12
         height: 12
       alignment: 0
@@ -164,8 +164,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbb08c89010284f9f85114acc0aca032
-      internalID: -1539485660
+      spriteID: 113e290d695bc403e81583b34ccd5e55
+      internalID: -1553278199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel_2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 26
+        width: 65
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f4dc8e8f6b54fbbbc59fc74185c9ac
+      internalID: -2000480472
       vertices: []
       indices: 
       edges: []
@@ -181,8 +202,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      panel_1: -1539485660
-      panel_0: 433897116
+      panel_2: -2000480472
+      panel_1: -1553278199
+      panel_0: 1536231536
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
