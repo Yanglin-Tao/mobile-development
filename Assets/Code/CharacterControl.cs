@@ -31,7 +31,9 @@ public class CharacterControl : MonoBehaviour
 
     // Play Button
     public void Play() {
+#if UNITY_EDITOR
         PrefabUtility.SaveAsPrefabAsset(characterSprite, "Assets/Prefabs/currentChar.prefab"); // need the actual path 
+#endif
         SceneManager.LoadScene("Level1"); // next scene to load after choosing the character
     }
 }
