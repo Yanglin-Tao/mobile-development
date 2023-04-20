@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ComboAttack : MonoBehaviour
+public class AIAttack : MonoBehaviour
 {
     private Animator anim;
     private Rigidbody2D rb;
@@ -11,22 +11,23 @@ public class ComboAttack : MonoBehaviour
     public static int noOfClicks = 0;
     float lastClickedTime = 0;
     float maxComboDelay = 1f;
-    public Transform player;
+
+    //difficultyLevel is out of 10. 1 is easiest and 10 is hardest
+    public int difficultyLevel = 5;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
-
-    void Update()
+    public void StartAttack()
     {
         // Rearranges the order of the logic to check for mouse input first,
         // then handle the animations and cooldown time.
         // This should allow the player to trigger melee attacks while walking
         // without the animations being overridden.
         // Check for mouse input
-        if (Input.GetButtonDown("Fire1"))
+        if (Random.Range(1, 11) < difficultyLevel)
         {
             ComboSystem();
         }
@@ -38,7 +39,6 @@ public class ComboAttack : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
-            
         }
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
         {

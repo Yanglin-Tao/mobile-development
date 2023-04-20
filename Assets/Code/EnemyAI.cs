@@ -9,10 +9,19 @@ public class EnemyAI : MonoBehaviour
     public float distance = 10000;
     public int movement = 4;
 
+    GameManager _gameManager;
+    AudioSource _audioSource;
+    private Animator Animator;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
+        _audioSource = GetComponent<AudioSource>();
+
         user = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(Follow());
     }
