@@ -79,7 +79,6 @@ public class AIAttack : MonoBehaviour
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
-            rb.velocity = new Vector2(1900, rb.velocity.y);
         }
     }
 }

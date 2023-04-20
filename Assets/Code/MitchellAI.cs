@@ -47,11 +47,10 @@ public class MitchellAI : MonoBehaviour
             Animator.SetFloat("Speed", Mathf.Abs(xspeed));
 
             // jump to higher platform if player jumps
-            if (player.position.y > 0 && IsGrounded()){
-                rb.AddForce(new Vector2(0f, jumpForce));
-            }
+            // if (player.position.y > 0 && IsGrounded()){
+            //     rb.AddForce(new Vector2(0f, jumpForce));
+            // }
         }
-        print(IsGrounded());
     }
 
     bool IsGrounded()
