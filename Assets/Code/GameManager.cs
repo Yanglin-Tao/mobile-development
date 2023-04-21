@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public GameObject mainPlayer; // player to be loaded from selected one
     private string currentChoosenScene;
     private static GameManager instance = null;
+
+    
     public void SetChosenScene(string choosenScene) {
         currentChoosenScene = choosenScene;
     }
