@@ -18,17 +18,18 @@ public class GameManager : MonoBehaviour
     private bool enemyKilled = false;
     public GameObject selectedPlayer; // selected player from the choosing scene
     private Sprite currentSprite; // selected sprite loaded as currentSprite for the level
-    public GameObject mainPlayer; // player to be loaded from selected one
+    // public GameObject mainPlayer; // player to be loaded from selected one
+    private GameObject mainPlayer;
     private string currentChoosenScene;
     private static GameManager instance = null;
 
-    
+
     public void SetChosenScene(string choosenScene) {
         currentChoosenScene = choosenScene;
     }
     public string GetChosenScene() {
-       Debug.Log("Game Manager GetChosenScene menthod Current Choosen Scene: ");
-       Debug.Log(currentChoosenScene);
+    //    Debug.Log("Game Manager GetChosenScene menthod Current Choosen Scene: ");
+    //    Debug.Log(currentChoosenScene);
        return currentChoosenScene;
     }
 
@@ -45,16 +46,52 @@ public class GameManager : MonoBehaviour
         // After we do the check
         Scene scene = SceneManager.GetActiveScene();
         levelName = scene.name;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
     
     void Start()
     {
         // Needed for the choose character scene
         // ------
+        mainPlayer = GameObject.FindGameObjectWithTag("Player");
         currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
-        mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite;
+        if (mainPlayer != null)
+        {
+            SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sprite = currentSprite;
+            }
+        }
+        // Debug.Log(currentSprite);
+        // mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite;
         // ------
         //lifeUI.text = "HEALTH: " + life;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        mainPlayer = GameObject.FindGameObjectWithTag("Player");
+        currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
+        if (mainPlayer != null)
+        {
+            Debug.Log("FOUND MAIN PLAYER");
+            SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sprite = currentSprite;
+            }
+        }
+
+        // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
+        // Debug.Log("OnSceneLoaded");
+        // Debug.Log(currentSprite);
+        // mainPlayer 
+        // if (mainPlayer != null){
+        //     mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite; // set the sprite on the main player
+        //     Debug.Log("Main player sprite");
+        //     Debug.Log(mainPlayer.GetComponent<SpriteRenderer>().sprite);
+        // }
     }
 
     public void NextScene(string name){

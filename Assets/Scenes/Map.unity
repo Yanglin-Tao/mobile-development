@@ -329,8 +329,8 @@ GameObject:
   - component: {fileID: 439357922}
   - component: {fileID: 439357923}
   m_Layer: 0
-  m_Name: player_curser
-  m_TagString: Player
+  m_Name: player_cursor
+  m_TagString: PlayerCursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2918,7 +2918,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedPlayer: {fileID: 609164819, guid: 6a58ca01722fe44d9949865d73b35dc2, type: 3}
-  mainPlayer: {fileID: 7660928845604792275, guid: 86f08b5f58e204e2bb993833fdd43747, type: 3}
 --- !u!4 &1732755799
 Transform:
   m_ObjectHideFlags: 0
