@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6986559da0c4e73acc00a9d17bda4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level4
+  chosenScene: Level4
 --- !u!58 &250901858
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6986559da0c4e73acc00a9d17bda4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level2
+  chosenScene: Level2
 --- !u!58 &543261395
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6986559da0c4e73acc00a9d17bda4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level1
+  chosenScene: Level1
 --- !u!58 &978498711
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2124,7 +2124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6986559da0c4e73acc00a9d17bda4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Level3
+  chosenScene: Level3
 --- !u!58 &1340294631
 CircleCollider2D:
   m_ObjectHideFlags: 0
