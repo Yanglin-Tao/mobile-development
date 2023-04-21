@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9fdf28923a114bb1899cf9137a26346
+guid: 8ffd702b41992463cad9f2503b627199
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 35
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: movements_0
+      name: melee_3_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 570
-        width: 44
-        height: 100
+        x: 15
+        y: 565
+        width: 60
+        height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,313 +143,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ab3f79f99e9d4f74984442b4a6100d5
-      internalID: 29772669
+      spriteID: 430b092ee05994b6d86c51eaa1a63a04
+      internalID: -1759501063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movements_1
+      name: melee_3_1
       rect:
         serializedVersion: 2
-        x: 112
-        y: 571
-        width: 46
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e52313e2084ce40b6ad98a2ac757b8c8
-      internalID: 1058606452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_2
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 572
-        width: 48
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ecec7481250c34c21b285ee2f9d877d8
-      internalID: 1407071038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_4
-      rect:
-        serializedVersion: 2
-        x: 359
-        y: 575
-        width: 57
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 153b12072c950456fb6e34ac922c39f0
-      internalID: -2014216747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_5
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 440
-        width: 39
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bf30705ab4da4447a2017431d7226bb
-      internalID: 1201825351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_7
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 437
-        width: 57
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9ba32586c74142a7a9b8afbe3f0cc75
-      internalID: -288702337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_8
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 434
-        width: 57
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 665e4f54d0b4a4a90a73f0a31416ab3b
-      internalID: -2030842246
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_9
-      rect:
-        serializedVersion: 2
-        x: 359
-        y: 431
-        width: 70
-        height: 105
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e9458c4279ca41e8a067738de8c51e4
-      internalID: 881777042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_10
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 303
-        width: 48
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c495b248d129a49b0a67922b16c73cea
-      internalID: 1722731752
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_12
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 301
-        width: 61
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e3be6daf16e347d0800eb698b62728e
-      internalID: 2043313110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_14
-      rect:
-        serializedVersion: 2
-        x: 363
-        y: 298
-        width: 61
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04b0bce1830324b43a2e9e1e6ec158b5
-      internalID: 1000571673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_15
-      rect:
-        serializedVersion: 2
-        x: 21
-        y: 170
+        x: 92
+        y: 565
         width: 64
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00450340793bd410382ee912d3bff91a
-      internalID: 2097108149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_16
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 168
-        width: 69
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c3b4860a54a7458280479def9833347
-      internalID: -1094478959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_17
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 167
-        width: 69
-        height: 106
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a976d7bbc47b64af0943f1f61eb61fa4
-      internalID: 19202175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_18
-      rect:
-        serializedVersion: 2
-        x: 296
-        y: 164
-        width: 98
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9e6d0a098a0d40b88b856e4cc8032f4
-      internalID: 1736673682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_19
-      rect:
-        serializedVersion: 2
-        x: 410
-        y: 159
-        width: 104
         height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -458,19 +164,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1ec3854b562a4f79814f4b2bcd46b34
-      internalID: 1977670023
+      spriteID: c3b52f819ceb6428586f69bf79bbe582
+      internalID: 761259171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movements_20
+      name: melee_3_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 30
-        width: 49
+        x: 169
+        y: 568
+        width: 79
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6c6ce1755394ebf92cec014cff5c6b
+      internalID: 1357993238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_3_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 436
+        width: 62
         height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -479,19 +206,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b7464cce778540fabdfbe13db402ba4
-      internalID: 680746418
+      spriteID: 0ab1bae3fc1d449c981e6c30cd4bd2f4
+      internalID: 1721359102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movements_21
+      name: melee_3_4
       rect:
         serializedVersion: 2
-        x: 124
-        y: 29
-        width: 49
+        x: 104
+        y: 435
+        width: 63
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ac79d7aa2f14b8da711017ee3dddcd
+      internalID: -884921704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_3_5
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 436
+        width: 73
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a5ece5b264e4b1a8dcb5ce60326dcb
+      internalID: 1355605681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_3_6
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 299
+        width: 65
         height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -500,20 +269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af2df71986f7340d2a5342dc0b306673
-      internalID: 1889093184
+      spriteID: 19ef62cf0c9e744389c1e26a7f5a6143
+      internalID: 551463066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movements_22
+      name: melee_3_7
       rect:
         serializedVersion: 2
-        x: 212
-        y: 27
-        width: 49
-        height: 110
+        x: 103
+        y: 299
+        width: 65
+        height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,20 +290,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08ea6a19329a24c35bcbdfc64527a871
-      internalID: -887095394
+      spriteID: 83bbfead37cde45ac8982e25edb6dc45
+      internalID: -1484559335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movements_24
+      name: melee_3_8
       rect:
         serializedVersion: 2
-        x: 373
+        x: 181
+        y: 301
+        width: 74
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6042cd9ee4ec64ac7957315f907e1126
+      internalID: -954408158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_3_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 161
+        width: 89
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855235e6ca67a46edab276ff7921e7b2
+      internalID: -967524286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_3_10
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 162
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4032aaba640a45be8dd7093ca31f476
+      internalID: -1106774769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_3_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 160
+        width: 105
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ec773267a6f4dd7851d380044decbc
+      internalID: 755636090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: melee_3_12
+      rect:
+        serializedVersion: 2
+        x: 18
         y: 26
-        width: 49
-        height: 111
+        width: 69
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,20 +395,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f6b6e2d80d9443a8a522adaa16d6127
-      internalID: 1274475097
+      spriteID: 99b699ef4d44743f591621b33cf31e3a
+      internalID: -770331797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movements_3
+      name: melee_3_13
       rect:
         serializedVersion: 2
-        x: 279
-        y: 572
-        width: 48
-        height: 100
+        x: 102
+        y: 26
+        width: 88
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -563,20 +416,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc4934546f4e348a0b5cd862ab03eab0
-      internalID: 138368582
+      spriteID: 144832c1043f545199d2924c7aeeff88
+      internalID: 1394454743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movements_6
+      name: melee_3_14
       rect:
         serializedVersion: 2
-        x: 114
-        y: 438
-        width: 52
-        height: 99
+        x: 221
+        y: 22
+        width: 118
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -584,20 +437,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9706f51ffb8b24330944f8dfbea8f6e6
-      internalID: 1454634345
+      spriteID: 71a9328585ed84df29d04a67076f2491
+      internalID: -396067983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: movements_11
+      name: melee_3_15
       rect:
         serializedVersion: 2
-        x: 117
-        y: 302
-        width: 55
-        height: 97
+        x: 365
+        y: 19
+        width: 143
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -605,50 +458,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c89d92ed923b404b8923f763cd19ed9
-      internalID: 847117810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_13
-      rect:
-        serializedVersion: 2
-        x: 287
-        y: 300
-        width: 48
-        height: 97
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c0690385dcf7412ab461e7fb00d33f3
-      internalID: 1029647892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: movements_23
-      rect:
-        serializedVersion: 2
-        x: 293
-        y: 28
-        width: 49
-        height: 109
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06e881a8153814c4b9f97ca9cf2513a9
-      internalID: -1750607880
+      spriteID: 9fd83c45309cc41a197ee119723c084b
+      internalID: 1798617300
       vertices: []
       indices: 
       edges: []
@@ -664,31 +475,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      movements_17: 19202175
-      movements_3: 138368582
-      movements_21: 1889093184
-      movements_8: -2030842246
-      movements_13: 1029647892
-      movements_12: 2043313110
-      movements_19: 1977670023
-      movements_23: -1750607880
-      movements_20: 680746418
-      movements_0: 29772669
-      movements_6: 1454634345
-      movements_9: 881777042
-      movements_5: 1201825351
-      movements_1: 1058606452
-      movements_4: -2014216747
-      movements_14: 1000571673
-      movements_16: -1094478959
-      movements_24: 1274475097
-      movements_7: -288702337
-      movements_10: 1722731752
-      movements_2: 1407071038
-      movements_18: 1736673682
-      movements_22: -887095394
-      movements_11: 847117810
-      movements_15: 2097108149
+      melee_3_8: -954408158
+      melee_3_1: 761259171
+      melee_3_9: -967524286
+      melee_3_4: -884921704
+      melee_3_7: -1484559335
+      melee_3_11: 755636090
+      melee_3_14: -396067983
+      melee_3_6: 551463066
+      melee_3_12: -770331797
+      melee_3_15: 1798617300
+      melee_3_10: -1106774769
+      melee_3_2: 1357993238
+      melee_3_3: 1721359102
+      melee_3_0: -1759501063
+      melee_3_13: 1394454743
+      melee_3_5: 1355605681
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
