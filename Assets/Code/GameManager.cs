@@ -19,9 +19,28 @@ public class GameManager : MonoBehaviour
     public GameObject selectedPlayer; // selected player from the choosing scene
     private Sprite currentSprite; // selected sprite loaded as currentSprite for the level
     public GameObject mainPlayer; // player to be loaded from selected one
+    private string currentChoosenScene;
+    private static GameManager instance = null;
+    public void SetChosenScene(string choosenScene) {
+        currentChoosenScene = choosenScene;
+    }
+    public string GetChosenScene() {
+       Debug.Log("Game Manager GetChosenScene menthod Current Choosen Scene: ");
+       Debug.Log(currentChoosenScene);
+       return currentChoosenScene;
+    }
 
     private void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(this.gameObject);
+
+        // After we do the check
         Scene scene = SceneManager.GetActiveScene();
         levelName = scene.name;
     }
