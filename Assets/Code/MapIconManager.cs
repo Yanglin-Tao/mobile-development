@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MapIconManager : MonoBehaviour
 {
-    public string sceneName;
+    public string chosenScene;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player")){
             // load the scene
-            Debug.Log("collide");
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene("ChooseCharacter");
+
+            // set the current scene in game manager to sceneName
+            // gameManager.setChosenScene = sceneName;
         }
     }
 }
