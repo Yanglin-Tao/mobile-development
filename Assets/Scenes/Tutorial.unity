@@ -265,6 +265,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 231350181464368815, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 231350181811875892, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 231350181816534389, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 231350182620650496, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
       propertyPath: m_Constraints
       value: 4
@@ -325,6 +337,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: JohnCena (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 231350182620650506, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 231350182620650506, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 231350182620650502, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
@@ -360,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 237882565}
-  attackRange: 2
+  attackRange: 1.5
   jumpForce: 1200
   jumpHeight: 1
   moveSpeed: 2

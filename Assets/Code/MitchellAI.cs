@@ -25,7 +25,7 @@ public class MitchellAI : MonoBehaviour
         attackscript = GetComponent<AIAttack>();
     }
 
-    void Update() 
+    void Update()
     {
         if (player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0){
             transform.localScale *= new Vector2(-1,1);
@@ -34,7 +34,7 @@ public class MitchellAI : MonoBehaviour
 
         if (distance < attackRange)
         {
-            
+
             attackscript.StartAttack();
             Debug.Log("Attacking player!");
         }
@@ -56,5 +56,14 @@ public class MitchellAI : MonoBehaviour
     bool IsGrounded()
     {
         return Physics2D.OverlapCircle(feet.position, .3f, ground);
+    }
+
+    private void OnDrawGizmos()
+    {
+        // Set the color of the gizmo
+        Gizmos.color = Color.red;
+
+        // Draw a wire sphere to show the attack range
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
