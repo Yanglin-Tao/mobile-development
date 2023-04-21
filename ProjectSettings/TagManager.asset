@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - PlayerHealthBar
   - EnemyHealthBar
+  - PlayerCursor
   layers:
   - Default
   - TransparentFX

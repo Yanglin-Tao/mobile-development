@@ -16,14 +16,14 @@ public class MapIconManager : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")){
+        if (collision.gameObject.CompareTag("PlayerCursor")){
             // load the scene
             SceneManager.LoadScene("ChooseCharacter");
-            Debug.Log("chosen scene: ");
-            Debug.Log(chosenScene);
+            // Debug.Log("chosen scene: ");
+            // Debug.Log(chosenScene);
             // set the current scene in game manager to sceneName
             _gameManager.SetChosenScene(chosenScene);
-            Debug.Log("SET CHOSEN SCENE RUNS");
+            // Debug.Log("SET CHOSEN SCENE RUNS");
         }
     }
 }

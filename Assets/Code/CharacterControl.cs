@@ -17,9 +17,6 @@ public class CharacterControl : MonoBehaviour
     {
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         chosenScene = _gameManager.GetChosenScene();
-        Debug.Log("GET CHOSEN SCENE RUNS");
-        Debug.Log("Characrter Controll Current Choosen Scene: ");
-        Debug.Log(chosenScene);
     }
     
     // Back Button
@@ -44,6 +41,8 @@ public class CharacterControl : MonoBehaviour
     public void Play() {
 #if UNITY_EDITOR
         PrefabUtility.SaveAsPrefabAsset(characterSprite, "Assets/Prefabs/currentChar.prefab"); // need the actual path 
+        Debug.Log("CHARACTER SPRITE SAVED AT INDEX: ");
+        Debug.Log(currentChar);
 #endif
         SceneManager.LoadScene(chosenScene); // next scene to load after choosing the character
     }
