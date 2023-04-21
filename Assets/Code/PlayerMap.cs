@@ -46,7 +46,7 @@ public class PlayerMap : MonoBehaviour
         // move the cursor towards the target position
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
-
+    
     private void MoveCursor()
     {
         // check if there are any touches on the screen

@@ -7,14 +7,22 @@ public class MapIconManager : MonoBehaviour
 {
     public string chosenScene;
 
+    GameManager _gameManager;
+
+    void Start()
+    {
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player")){
             // load the scene
             SceneManager.LoadScene("ChooseCharacter");
-
+            Debug.Log("chosen scene: ");
+            Debug.Log(chosenScene);
             // set the current scene in game manager to sceneName
-            // gameManager.setChosenScene = sceneName;
+            _gameManager.SetChosenScene(chosenScene);
         }
     }
 }
