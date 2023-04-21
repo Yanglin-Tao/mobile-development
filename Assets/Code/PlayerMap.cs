@@ -8,16 +8,22 @@ public class PlayerMap : MonoBehaviour
 
     private Vector3 targetPosition;
     private bool isFacingRight = true;
+    private bool followCursor = true;
 
     private void Start()
     {
         targetPosition = transform.position; // initialize the target position to the cursor's starting position
     }
 
+    public void StopFollowingCursor() {
+        followCursor = false;
+    }
+
     private void Update()
     {
         // check if there are any touches on the screen
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && followCursor)
+        // if (Input.touchCount > 0)
         {
             // get the position of the first touch
             Vector3 touchPosition = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
