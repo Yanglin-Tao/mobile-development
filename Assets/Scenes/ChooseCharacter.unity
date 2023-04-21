@@ -184,6 +184,17 @@ PrefabInstance:
       objectReference: {fileID: 7660928845604792275, guid: 86f08b5f58e204e2bb993833fdd43747, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
+--- !u!114 &150813872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5368506149926077311, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
+  m_PrefabInstance: {fileID: 150813871}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 511d045f375586245aa26ebb1dc41043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &251192841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1171,7 @@ MonoBehaviour:
   - {fileID: 680746418, guid: f9fdf28923a114bb1899cf9137a26346, type: 3}
   characterSprite: {fileID: 609164819}
   spriteRenderer: {fileID: 609164820}
-  chosenScene: 
+  _gameManager: {fileID: 150813872}
 --- !u!4 &1026610906
 Transform:
   m_ObjectHideFlags: 0

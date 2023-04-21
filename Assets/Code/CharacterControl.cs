@@ -10,12 +10,16 @@ public class CharacterControl : MonoBehaviour
     int currentChar = 0; // to keep track of different characters in a scene
     public GameObject characterSprite;
     public SpriteRenderer spriteRenderer;
-    public string chosenScene;
+    private string chosenScene;
     GameManager _gameManager;
 
     void Start()
     {
         _gameManager = GameObject.FindObjectOfType<GameManager>();
+        chosenScene = _gameManager.GetChosenScene();
+        Debug.Log("GET CHOSEN SCENE RUNS");
+        Debug.Log("Characrter Controll Current Choosen Scene: ");
+        Debug.Log(chosenScene);
     }
     
     // Back Button
@@ -41,9 +45,6 @@ public class CharacterControl : MonoBehaviour
 #if UNITY_EDITOR
         PrefabUtility.SaveAsPrefabAsset(characterSprite, "Assets/Prefabs/currentChar.prefab"); // need the actual path 
 #endif
-        chosenScene = _gameManager.GetChosenScene();
-        Debug.Log("Characrter Controll Current Choosen Scene: ");
-        Debug.Log(chosenScene);
         SceneManager.LoadScene(chosenScene); // next scene to load after choosing the character
     }
 }
