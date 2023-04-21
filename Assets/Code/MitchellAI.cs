@@ -36,7 +36,7 @@ public class MitchellAI : MonoBehaviour
         {
 
             attackscript.StartAttack();
-            Debug.Log("Attacking player!");
+            //Debug.Log("Attacking player!");
         }
         else
         {

@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
     }
 
     void FixedUpdate() {
+        print("THIS RAN");
         isGrounded = Physics2D.OverlapCircle(feet.position, .3f, ground);
         if (_gameManager.getHealth() > 0){
             float xSpeed = Input.GetAxis("Horizontal") * speed;
