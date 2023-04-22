@@ -19,11 +19,8 @@ public class MapIconManager : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerCursor")){
             // load the scene
             SceneManager.LoadScene("ChooseCharacter");
-            // Debug.Log("chosen scene: ");
-            // Debug.Log(chosenScene);
             // set the current scene in game manager to sceneName
             _gameManager.SetChosenScene(chosenScene);
-            // Debug.Log("SET CHOSEN SCENE RUNS");
         }
     }
 }
