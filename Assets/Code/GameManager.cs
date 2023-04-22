@@ -63,8 +63,6 @@ public class GameManager : MonoBehaviour
                 spriteRenderer.sprite = currentSprite;
             }
         }
-        // Debug.Log(currentSprite);
-        // mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite;
         // ------
         //lifeUI.text = "HEALTH: " + life;
     }
@@ -75,23 +73,12 @@ public class GameManager : MonoBehaviour
         currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
         if (mainPlayer != null)
         {
-            Debug.Log("FOUND MAIN PLAYER");
             SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
             if (spriteRenderer != null)
             {
                 spriteRenderer.sprite = currentSprite;
             }
         }
-
-        // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
-        // Debug.Log("OnSceneLoaded");
-        // Debug.Log(currentSprite);
-        // mainPlayer 
-        // if (mainPlayer != null){
-        //     mainPlayer.GetComponent<SpriteRenderer>().sprite = currentSprite; // set the sprite on the main player
-        //     Debug.Log("Main player sprite");
-        //     Debug.Log(mainPlayer.GetComponent<SpriteRenderer>().sprite);
-        // }
     }
 
     public void NextScene(string name){
