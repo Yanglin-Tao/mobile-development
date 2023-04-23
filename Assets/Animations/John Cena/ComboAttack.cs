@@ -17,20 +17,17 @@ public class ComboAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        if (anim){
+            print("THERE IS ANIM at start");
+        }
+    
     }
 
-    void Update()
+    public void Update()
     {
-        // Rearranges the order of the logic to check for mouse input first,
-        // then handle the animations and cooldown time.
-        // This should allow the player to trigger melee attacks while walking
-        // without the animations being overridden.
-        // Check for mouse input
-        if (Input.GetButtonDown("Fire1"))
-        {
-            ComboSystem();
-        }
-
+        print("1");
+        ComboSystem();
+        print("3");
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
             anim.SetBool("hit1", false);
@@ -58,9 +55,11 @@ public class ComboAttack : MonoBehaviour
         }
     }
 
-    void ComboSystem()
+    public void ComboSystem()
     {
-        //so it looks at how many clicks have been made and if one animation has finished playing starts another one.
+        print("2");
+
+    
         lastClickedTime = Time.time;
         noOfClicks++;
         if (noOfClicks == 1)

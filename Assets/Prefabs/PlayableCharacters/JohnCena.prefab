@@ -133,9 +133,9 @@ GameObject:
   - component: {fileID: 231350182620650496}
   - component: {fileID: 231350182620650497}
   - component: {fileID: 231350182620650502}
+  - component: {fileID: 231350182620650501}
   - component: {fileID: 231350182620650503}
   - component: {fileID: 231350182620650500}
-  - component: {fileID: 231350182620650501}
   m_Layer: 3
   m_Name: JohnCena
   m_TagString: Player
@@ -294,6 +294,20 @@ MonoBehaviour:
   health: 100
   jumpForce: 1200
   bulletSpeed: 900
+--- !u!114 &231350182620650501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231350182620650506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9515f2dec23c544b582aa2a5e5dfb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 1
+  player: {fileID: 231350182620650498}
 --- !u!95 &231350182620650503
 Animator:
   serializedVersion: 5
@@ -410,16 +424,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &231350182620650501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231350182620650506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b9515f2dec23c544b582aa2a5e5dfb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 1
