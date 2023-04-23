@@ -23,21 +23,27 @@ public class ComboAttack : MonoBehaviour
     
     }
 
+    public void clicked() {
+        lastClickedTime = Time.time;
+        noOfClicks++;
+    }
+
     public void Update()
     {
-        print("1");
+        print(noOfClicks);
         ComboSystem();
-        print("3");
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
             anim.SetBool("hit1", false);
+            noOfClicks = 0;
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
+            noOfClicks = 0;
             
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
         {
             anim.SetBool("hit3", false);
             noOfClicks = 0;
@@ -57,11 +63,9 @@ public class ComboAttack : MonoBehaviour
 
     public void ComboSystem()
     {
-        print("2");
-
     
         lastClickedTime = Time.time;
-        noOfClicks++;
+
         if (noOfClicks == 1)
         {
             anim.SetBool("hit1", true);
@@ -78,7 +82,6 @@ public class ComboAttack : MonoBehaviour
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
-            rb.velocity = new Vector2(1900, rb.velocity.y);
         }
     }
 }

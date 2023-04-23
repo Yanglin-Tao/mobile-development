@@ -2351,7 +2351,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 231350182620650501, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
         m_TargetAssemblyTypeName: ComboAttack, Assembly-CSharp
-        m_MethodName: doMelee
+        m_MethodName: clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
