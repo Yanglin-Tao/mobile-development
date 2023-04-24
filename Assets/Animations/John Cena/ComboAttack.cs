@@ -17,30 +17,29 @@ public class ComboAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+   
     }
 
-    void Update()
-    {
-        // Rearranges the order of the logic to check for mouse input first,
-        // then handle the animations and cooldown time.
-        // This should allow the player to trigger melee attacks while walking
-        // without the animations being overridden.
-        // Check for mouse input
-        if (Input.GetButtonDown("Fire1"))
-        {
-            ComboSystem();
-        }
+    public void clicked() {
+        lastClickedTime = Time.time;
+        noOfClicks++;
+    }
 
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
+    public void Update()
+    {
+        ComboSystem();
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
             anim.SetBool("hit1", false);
+            noOfClicks = 0;
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
+            noOfClicks = 0;
             
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
         {
             anim.SetBool("hit3", false);
             noOfClicks = 0;
@@ -58,11 +57,11 @@ public class ComboAttack : MonoBehaviour
         }
     }
 
-    void ComboSystem()
+    public void ComboSystem()
     {
-        //so it looks at how many clicks have been made and if one animation has finished playing starts another one.
+    
         lastClickedTime = Time.time;
-        noOfClicks++;
+
         if (noOfClicks == 1)
         {
             anim.SetBool("hit1", true);
@@ -79,7 +78,6 @@ public class ComboAttack : MonoBehaviour
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
-            rb.velocity = new Vector2(1900, rb.velocity.y);
         }
     }
 }
