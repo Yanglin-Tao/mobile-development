@@ -17,10 +17,7 @@ public class ComboAttack : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        if (anim){
-            print("THERE IS ANIM at start");
-        }
-    
+   
     }
 
     public void clicked() {
@@ -30,7 +27,6 @@ public class ComboAttack : MonoBehaviour
 
     public void Update()
     {
-        print(noOfClicks);
         ComboSystem();
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {

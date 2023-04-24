@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     private Collider2D _collider2D;
     public GameObject explosion;
     GameManager _gameManager;
+    private Spawner spawner;
 
     // Audio
     AudioSource _audioSource;
@@ -33,6 +34,8 @@ public class Player : MonoBehaviour
     public float bulletSpeed = 900;
     bool isGrounded = false;
     int current;
+    float lastTime;
+    bool inUlt;
 
 
     // Update is called once per frame
@@ -41,6 +44,7 @@ public class Player : MonoBehaviour
         Animator = GetComponent<Animator>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _audioSource = GetComponent<AudioSource>();
+        spawner = GetComponent<Spawner>();
 
     }
 
@@ -53,10 +57,20 @@ public class Player : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Fire2")){
-            GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
-            updateBulletdirection();
-            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
-            current = (current + 1) % Attacks.Length;
+            // GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
+            // updateBulletdirection();
+            // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+            // current = (current + 1) % Attacks.Length;
+
+
+            Animator.SetBool("ULT", true);
+            lastTime = Time.time;
+            inUlt = true;
+
+        }
+        if (Time.time - lastTime > 2f){
+            Animator.SetBool("ULT", false);
+            inUlt = false;
         }
 
 
@@ -71,7 +85,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(xSpeed, rb.velocity.y);
 
             float xScale = transform.localScale.x;
-            if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0)){
+            if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!inUlt)){
                 // get current localScale
                 Vector3 localScale = transform.localScale;
                 // flip x axis
@@ -152,4 +166,12 @@ public class Player : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(spawnPosition, meleeAttackRange); // Update with desired size for spawn position gizmo
     }
+
+
+
+
+
+
+
+
 }
