@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public Transform shootPosition;
     public LayerMask ground;
     public Transform feet;
+    public Ult ultStatus;
 
     // melee
     public float meleeAttackRange = 1f;
@@ -38,6 +39,7 @@ public class Player : MonoBehaviour
     bool inUlt;
 
 
+
     // Update is called once per frame
     void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -45,6 +47,7 @@ public class Player : MonoBehaviour
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _audioSource = GetComponent<AudioSource>();
         spawner = GetComponent<Spawner>();
+        ultStatus = GetComponent<Ult>();
 
     }
 
@@ -56,23 +59,28 @@ public class Player : MonoBehaviour
             _audioSource.PlayOneShot(jumpSound);
         }
 
-        if (Input.GetButtonDown("Fire2")){
-            // GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
-            // updateBulletdirection();
-            // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
-            // current = (current + 1) % Attacks.Length;
+        // if (Input.GetButtonDown("Fire2")){
+        //     // GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
+        //     // updateBulletdirection();
+        //     // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+        //     // current = (current + 1) % Attacks.Length;
 
 
-            Animator.SetBool("ULT", true);
-            lastTime = Time.time;
-            inUlt = true;
+        //     Animator.SetBool("ULT", true);
+        //     lastTime = Time.time;
+        //     inUlt = true;
+        // }
+        // if (Time.time - lastTime > 3f){
+        //     Animator.SetBool("ULT", false);
+        //     inUlt = false;
+        // }
 
-        }
-        if (Time.time - lastTime > 2f){
-            Animator.SetBool("ULT", false);
-            inUlt = false;
-        }
 
+        // if (inUlt){
+        //     Vector3 localScale = transform.localScale;
+        //     transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), localScale.y, localScale.z);
+
+        //}
 
         Animator.SetBool("Jump", !isGrounded);
 
@@ -85,7 +93,7 @@ public class Player : MonoBehaviour
             rb.velocity = new Vector2(xSpeed, rb.velocity.y);
 
             float xScale = transform.localScale.x;
-            if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!inUlt)){
+            if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!ultStatus.getUltStatus())){
                 // get current localScale
                 Vector3 localScale = transform.localScale;
                 // flip x axis
