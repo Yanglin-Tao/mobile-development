@@ -63,13 +63,19 @@ public class Player : MonoBehaviour
             Animator.SetBool("ULT", true);
             GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
             updateBulletdirection();
+            if (bulletSpeed < 0){
+                Vector3 localScale = newBullet.transform.localScale;
+                newBullet.transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
+
+            }
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
             current = (current + 1) % Attacks.Length;
 
             lastTime = Time.time;
 
         }
-        if (Time.time - lastTime > .1f){
+        if ((Time.time - lastTime > .3f) && (!ultStatus.FallingUlt()) ){
+            print("THIS RAN");
             Animator.SetBool("ULT", false);
         }
         Animator.SetBool("Jump", !isGrounded);

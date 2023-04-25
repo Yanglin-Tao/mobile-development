@@ -60,6 +60,7 @@ public class Ult : MonoBehaviour
             lastTime = Time.time;
             inUlt = true;
             clickEnabled = true;
+            stayStill = true;
         }
         
         if (clickEnabled && (Time.time - lastTime >= 5f))
@@ -70,6 +71,7 @@ public class Ult : MonoBehaviour
             inUlt = false;
             noOfClicks  = 0;
             lastTime = Time.time;
+            stayStill = false;
         }
 
 
