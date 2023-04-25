@@ -15,6 +15,7 @@ public class Ult : MonoBehaviour
     float lastTime;
     private bool clickEnabled = false;
     public bool stayStill = false;
+    public bool useThisUlt = false;
 
     private void Start()
     {
@@ -41,10 +42,14 @@ public class Ult : MonoBehaviour
         return inUlt;
     }
 
+    public bool FallingUlt(){
+        return useThisUlt;
+    }
+
     public void Update()
     {
 
-         if (((Input.GetButtonDown("Fire2") || (noOfClicks > 0)) && (Time.time - lastTime >= 10f))){
+         if (((Input.GetButtonDown("Fire2") || (noOfClicks > 0)) && (Time.time - lastTime >= 10f)) && (useThisUlt)){
             // GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
             // updateBulletdirection();
             // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
@@ -65,12 +70,10 @@ public class Ult : MonoBehaviour
             inUlt = false;
             noOfClicks  = 0;
             lastTime = Time.time;
-            // Do something here when the button is clicked
-            Debug.Log("Button clicked");
         }
 
 
-        if (getUltStatus()){
+        if (stayStill){
             Vector3 localScale = transform.localScale;
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), localScale.y, localScale.z);
         }
@@ -79,7 +82,6 @@ public class Ult : MonoBehaviour
 
     private void EnableClick()
     {
-
         clickEnabled = true;
     }
 

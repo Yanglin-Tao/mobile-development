@@ -76,7 +76,7 @@ public class AlienCombo : MonoBehaviour
         {
             anim.SetBool("hit1", false);
             anim.SetBool("hit2", true);
-            rb.AddForce(transform.forward * 1000);
+            rb.AddForce(new Vector2(1000, 0));
         }
         if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
