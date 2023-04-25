@@ -13,7 +13,7 @@ public class Ult : MonoBehaviour
     public Transform player;
     bool inUlt;
     float lastTime;
-    private bool clickEnabled = true;
+    private bool clickEnabled = false;
 
     private void Start()
     {
@@ -21,6 +21,7 @@ public class Ult : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Cena = GameObject.FindObjectOfType<Spawner>();
         lastClickedTime = -10f;
+        lastTime = -10f;
         // GetComponent<Button>().onClick.AddListener("Fire2");
     }
 
@@ -39,7 +40,8 @@ public class Ult : MonoBehaviour
     public void Update()
     {
 
-         if ((Input.GetButtonDown("Fire2") || (noOfClicks > 0)) && (Time.time - lastClickedTime > 10f)){
+        print(Time.time - lastTime);
+         if (((Input.GetButtonDown("Fire2") || (noOfClicks > 0)) && (Time.time - lastTime >= 10f))){
             // GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
             // updateBulletdirection();
             // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
@@ -49,18 +51,17 @@ public class Ult : MonoBehaviour
             Animator.SetBool("ULT", true);
             lastTime = Time.time;
             inUlt = true;
+            clickEnabled = true;
         }
         
-        if (clickEnabled)
+        if (clickEnabled && (Time.time - lastTime >= 5f))
         {
             // Disable clicking the button for the cooldown duration
             clickEnabled = false;
-
             Animator.SetBool("ULT", false);
-            // Invoke("EnableClick", 10);
             inUlt = false;
             noOfClicks  = 0;
-
+            lastTime = Time.time;
             // Do something here when the button is clicked
             Debug.Log("Button clicked");
         }
