@@ -14,6 +14,7 @@ public class Ult : MonoBehaviour
     bool inUlt;
     float lastTime;
     private bool clickEnabled = false;
+    public bool stayStill = false;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class Ult : MonoBehaviour
         Cena = GameObject.FindObjectOfType<Spawner>();
         lastClickedTime = -10f;
         lastTime = -10f;
-        // GetComponent<Button>().onClick.AddListener("Fire2");
+
     }
 
     public void clicked() {
@@ -34,13 +35,15 @@ public class Ult : MonoBehaviour
     }
 
     public bool getUltStatus(){
+        if (stayStill){
+            return false;
+        }
         return inUlt;
     }
 
     public void Update()
     {
 
-        print(Time.time - lastTime);
          if (((Input.GetButtonDown("Fire2") || (noOfClicks > 0)) && (Time.time - lastTime >= 10f))){
             // GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
             // updateBulletdirection();
@@ -67,7 +70,7 @@ public class Ult : MonoBehaviour
         }
 
 
-        if (inUlt){
+        if (getUltStatus()){
             Vector3 localScale = transform.localScale;
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), localScale.y, localScale.z);
         }
@@ -76,7 +79,7 @@ public class Ult : MonoBehaviour
 
     private void EnableClick()
     {
-        // Enable clicking the button again after the cooldown duration
+
         clickEnabled = true;
     }
 
