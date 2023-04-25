@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Fire2") && (Attacks.Length != 0)){
+            Animator.SetBool("ULT", true);
             GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
             updateBulletdirection();
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
@@ -68,7 +69,9 @@ public class Player : MonoBehaviour
             lastTime = Time.time;
 
         }
-
+        if (Time.time - lastTime > 1f){
+            Animator.SetBool("ULT", false);
+        }
         Animator.SetBool("Jump", !isGrounded);
 
     }
