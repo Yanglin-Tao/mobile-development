@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
             lastTime = Time.time;
 
         }
-        if (Time.time - lastTime > 1f){
+        if (Time.time - lastTime > .1f){
             Animator.SetBool("ULT", false);
         }
         Animator.SetBool("Jump", !isGrounded);
