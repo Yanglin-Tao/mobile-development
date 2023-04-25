@@ -79,10 +79,11 @@ public class BossCombo : MonoBehaviour
         }
         if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
+            print("THIS RAN");
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
             rb.AddForce(new Vector2(0, 1000));
         }
-        print(noOfClicks);
+        //print(noOfClicks);
     }
 }
