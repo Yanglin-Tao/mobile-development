@@ -13,6 +13,7 @@ public class Ult : MonoBehaviour
     public Transform player;
     bool inUlt;
     float lastTime;
+    private bool clickEnabled = true;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class Ult : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Cena = GameObject.FindObjectOfType<Spawner>();
         lastClickedTime = -10f;
+        // GetComponent<Button>().onClick.AddListener("Fire2");
     }
 
     public void clicked() {
@@ -43,16 +45,24 @@ public class Ult : MonoBehaviour
             // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
             // current = (current + 1) % Attacks.Length;
 
-            Cena.CenaUlt(lastClickedTime);
+            Cena.CenaUlt();
             Animator.SetBool("ULT", true);
             lastTime = Time.time;
             inUlt = true;
         }
+        
+        if (clickEnabled)
+        {
+            // Disable clicking the button for the cooldown duration
+            clickEnabled = false;
 
-        if (Time.time - lastTime > 2f){
             Animator.SetBool("ULT", false);
+            // Invoke("EnableClick", 10);
             inUlt = false;
             noOfClicks  = 0;
+
+            // Do something here when the button is clicked
+            Debug.Log("Button clicked");
         }
 
 
@@ -61,4 +71,13 @@ public class Ult : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), localScale.y, localScale.z);
         }
     }
+
+
+    private void EnableClick()
+    {
+        // Enable clicking the button again after the cooldown duration
+        clickEnabled = true;
+    }
+
+
 }

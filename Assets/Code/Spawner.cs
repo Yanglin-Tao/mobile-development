@@ -8,7 +8,6 @@ public class Spawner : MonoBehaviour
     public float rate;
     public int speed;
     public GameObject[] enemies;
-    private float CurrTime;
 
 
     // void Start(){
@@ -16,11 +15,9 @@ public class Spawner : MonoBehaviour
     // }
 
     // Update is called once per frame
-    public void CenaUlt(float currtime){
-        print("THIS RAN");
-        while (Time.time - currtime > 5f){
-            InvokeRepeating("SpawnEnemy", rate, rate);
-        }
+    public void CenaUlt(){
+        InvokeRepeating("SpawnEnemy", rate, rate);
+        Invoke("StopInvoke", 10);
     }
 
     public void SpawnEnemy()
@@ -28,5 +25,9 @@ public class Spawner : MonoBehaviour
         int Start_Posistion_X = Random.Range(-9, 17);
         int Start_Posistion_Y = 7;
         GameObject NPCBoss = Instantiate(enemies[Random.Range(0, enemies.Length)], new Vector3(Start_Posistion_X-4, Start_Posistion_Y, 0), Quaternion.identity);
+    }
+    private void StopInvoke()
+    {
+        CancelInvoke("SpawnEnemy");
     }
 }
