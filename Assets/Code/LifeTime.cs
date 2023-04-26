@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class LifeTime : MonoBehaviour
 {
+    public float lifeTime = 5.0f;
     void Start()
     {
-        Destroy(gameObject, 5);
+        Destroy(gameObject, lifeTime);
     }
 }
