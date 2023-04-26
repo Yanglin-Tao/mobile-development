@@ -29,13 +29,18 @@ public class Player : MonoBehaviour
     public float meleeDamage = 1f;
     public Transform meleeAttackSpawnPoint;
 
-    public float speed;
+    public float speed = 100;
     public int health;
     public float jumpForce = 900;
     public float bulletSpeed = 900;
     bool isGrounded = false;
     int current;
     float lastTime;
+
+    // ON SCREEN BUTTONS
+    public int clickedJ = 0;
+    public int clickedK = 0;
+
 
 
 
@@ -50,6 +55,79 @@ public class Player : MonoBehaviour
         ultStatus = GetComponent<Ult>();
 
     }
+
+    public void updateButtons(string key, int amount){
+        if (key == "J"){
+            clickedJ+=1;
+        }
+        if (key == "K"){
+            clickedK+=1;
+        }
+
+    }
+
+
+    public void MoveLeft(){
+        rb.velocity = new Vector2(-speed, rb.velocity.y);
+
+        float xScale = transform.localScale.x;
+        if (xScale > 0)
+        {
+            Vector3 localScale = transform.localScale;
+            transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
+        }
+
+        Animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+    }
+
+    public void MoveRight(){
+        rb.velocity = new Vector2(speed, rb.velocity.y);
+
+        float xScale = transform.localScale.x;
+        if (xScale < 0)
+        {
+            Vector3 localScale = transform.localScale;
+            transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
+        }
+
+        Animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+    }
+
+
+    public void Jump(){
+        if (isGrounded){
+            rb.AddForce(new Vector2(0, jumpForce));
+            // play jump sound
+            _audioSource.PlayOneShot(jumpSound);
+        }
+    }
+
+    public void ULT(){
+        Animator.SetBool("ULT", true);
+        GameObject newBullet;
+
+        if (specialCharge == 0){
+            newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+            current = (current + 1) % Attacks.Length;
+        }
+        else{
+            newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
+
+        }
+
+
+
+
+        updateBulletdirection();
+        if (bulletSpeed < 0){
+            Vector3 localScale = newBullet.transform.localScale;
+            newBullet.transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
+
+        }
+        lastTime = Time.time;
+    }
+
 
     void Update(){
         _gameManager.SetHealth(health);

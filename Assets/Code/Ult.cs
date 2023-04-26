@@ -55,7 +55,9 @@ public class Ult : MonoBehaviour
             // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
             // current = (current + 1) % Attacks.Length;
 
+        
             Cena.CenaUlt();
+            print("The above Ran");
             Animator.SetBool("ULT", true);
             lastTime = Time.time;
             inUlt = true;
