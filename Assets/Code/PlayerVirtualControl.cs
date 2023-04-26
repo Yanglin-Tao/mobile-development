@@ -45,7 +45,7 @@ public class PlayerVirtualControl : MonoBehaviour
     }
 
     void Update(){
-        _gameManager.SetLife(health);
+        _gameManager.SetHealth(health);
         // if (Input.GetButtonDown("Jump") && isGrounded){
         //     rb.AddForce(new Vector2(0, jumpForce));
         //     // play jump sound

@@ -8,11 +8,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //int score = 0;
-    int life = 0;
+    int health = 0;
     string levelName;
-    
+
     // public TMPro.TextMeshProUGUI scoreUI;
-    // public TMPro.TextMeshProUGUI lifeUI;
+    // public TMPro.TextMeshProUGUI healthUI;
 
     private bool GameOver = false;
     private bool enemyKilled = false;
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         levelName = scene.name;
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
-    
+
     void Start()
     {
         // Needed for the choose character scene
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
             }
         }
         // ------
-        //lifeUI.text = "HEALTH: " + life;
+        //healthUI.text = "HEALTH: " + health;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -91,20 +91,20 @@ public class GameManager : MonoBehaviour
 
 
     public float getHealth(){
-        return life;
+        return health;
     }
 
-    // please use SetLife for ADDING and SUBTRACTING life
-    // just use negative for the subtracting life
-    public void SetLife(int amount)
+    // please use SetHealth for ADDING and SUBTRACTING health
+    // just use negative for the subtracting health
+    public void SetHealth(int amount)
     {
-        life = amount;
-        if (life < 0){
+        health = amount;
+        if (health < 0){
             GameOver = true;
-            life = 0;
+            health = 0;
         }
-        //lifeUI.text = "HEALTH: " + life;
-        
+        //healthUI.text = "HEALTH: " + health;
+
     }
 
     public string getScene(){
