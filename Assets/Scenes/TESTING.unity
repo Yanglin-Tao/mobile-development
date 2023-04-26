@@ -860,7 +860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3140998184276503005, guid: 3a9619a7ea9995142aee310d72c0b887, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a9619a7ea9995142aee310d72c0b887, type: 3}
@@ -932,13 +932,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 728537815941870525, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
+      propertyPath: specialCharge
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728537815941870525, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
+      propertyPath: Attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 728537815941870525, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
+      propertyPath: Attacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 3923484442740317003, guid: f3d4c477a99d91747b333f4c6b754cf5, type: 3}
     - target: {fileID: 728537815941870526, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
       propertyPath: m_Name
       value: Graffiti
       objectReference: {fileID: 0}
     - target: {fileID: 728537815941870526, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 728537815941870528, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
       propertyPath: m_RootOrder
@@ -983,6 +995,10 @@ PrefabInstance:
     - target: {fileID: 728537815941870528, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 728537816660563301, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0913b5f7c1174040a8ef79ce4f4abdc, type: 3}
