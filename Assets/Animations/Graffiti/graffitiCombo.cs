@@ -12,11 +12,16 @@ public class graffitiCombo : MonoBehaviour
     float lastClickedTime = 0;
     float maxComboDelay = 1f;
     public Transform player;
+    public GameObject[] Spray;
+    private Player gArtist;
+    private float bulletSpeed;
+    public Transform shootPosition;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        gArtist = GetComponent<Player>();
     }
 
     public void clicked() {
@@ -81,6 +86,14 @@ public class graffitiCombo : MonoBehaviour
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
+            GameObject newBullet = Instantiate(Spray[0], shootPosition.position, Quaternion.identity, transform);
+            bulletSpeed = gArtist.updateBulletdirection();
+            if (bulletSpeed < 0){
+                Vector3 localScale = newBullet.transform.localScale;
+                newBullet.transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
+
+            }
+
         }
     }
 }

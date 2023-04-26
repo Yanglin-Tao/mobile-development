@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Graffiti : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator Animator;
@@ -69,7 +69,8 @@ public class Player : MonoBehaviour
                 current = (current + 1) % Attacks.Length;
             }
             else{
-                newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
+                print("THIS RAN");
+                newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity, transform);
 
             }
 
@@ -154,14 +155,13 @@ public class Player : MonoBehaviour
 
 
 
-    public float updateBulletdirection(){
+    void updateBulletdirection(){
         if (transform.localScale.x < 0){
             bulletSpeed = -Mathf.Abs(bulletSpeed);
         }
         else{
             bulletSpeed = Mathf.Abs(bulletSpeed);
         }
-        return bulletSpeed;
     }
 
     // Draw Gizmos for melee attack range in Scene view
