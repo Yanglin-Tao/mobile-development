@@ -185,7 +185,7 @@ MonoBehaviour:
   - {fileID: 3923484442740317003, guid: 55e036b3d35dd744e9aceb19d20df298, type: 3}
   shootPosition: {fileID: 1162892848175626146}
   meleeSound: {fileID: 8300000, guid: 183f6effd8c614f0c9eed9981b4ef37c, type: 3}
-  hitSound: {fileID: 8300000, guid: 1d99b054af3dc44bba2c29550dbce0c8, type: 3}
+  hitSound: {fileID: 8300000, guid: edf49a400e55f482b98768f981e71115, type: 3}
   meleeAttackRange: 1
   meleeDamage: 1
   meleeAttackSpawnPoint: {fileID: 1162892848743211411}
