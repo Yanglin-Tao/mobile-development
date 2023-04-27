@@ -2608,6 +2608,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MTA
       objectReference: {fileID: 0}
+    - target: {fileID: 8183874376336215528, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8183874376336215531, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
       propertyPath: m_Enabled
       value: 0
