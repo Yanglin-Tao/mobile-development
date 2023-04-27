@@ -1419,7 +1419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1885255641922117805, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.96
+      value: 3.3
       objectReference: {fileID: 0}
     - target: {fileID: 1885255641922117805, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1460,6 +1460,14 @@ PrefabInstance:
     - target: {fileID: 1885255641922117843, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
       propertyPath: m_Name
       value: FatBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885255643075118600, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885255643711721529, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
