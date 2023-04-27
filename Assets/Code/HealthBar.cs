@@ -6,14 +6,23 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
+    GameManager _gameManager;
+
+    private void Start() {
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
 
     private void Update() {
-        // Testing only
-        // if space key is pressed, add one to slider's value
-        if (Input.GetKeyDown(KeyCode.Space)){
-            // subtract slider value by random value from 1 to 30
-            slider.value -= Random.Range(1, 30);
-            Debug.Log(slider.value);
+        // get name of current attached game object
+        string name = gameObject.name;
+        // if name includes "Enemy"
+        if (name.Contains("Enemy")){
+            // get the enemy's health
+            SetSliderValue(_gameManager.getEnemyHealth());
+        }
+        else {
+            // get the player's health
+            SetSliderValue((int)_gameManager.getHealth());
         }
     }
 
