@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     }
 
     void Update(){
-        _gameManager.SetLife(health);
+        //_gameManager.SetLife(health);
         if (Input.GetButtonDown("Jump") && isGrounded){
             rb.AddForce(new Vector2(0, jumpForce));
             // play jump sound
@@ -99,19 +99,21 @@ public class Player : MonoBehaviour
         if (!clickGUARD){
             Animator.SetFloat("Speed", 0);
         }
-        // if (_gameManager.getHealth() > 0){
-        //     float xSpeed = Input.GetAxis("Horizontal") * speed;
-        //     rb.velocity = new Vector2(xSpeed, rb.velocity.y);
+// UNCOMMENT FROM HERE FOR VIRTUAL
+        if (_gameManager.getHealth() > 0){
+            float xSpeed = Input.GetAxis("Horizontal") * speed;
+            rb.velocity = new Vector2(xSpeed, rb.velocity.y);
 
-        //     float xScale = transform.localScale.x;
-        //     if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!ultStatus.getUltStatus())){
-        //         // get current localScale
-        //         Vector3 localScale = transform.localScale;
-        //         // flip x axis
-        //         transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
-        //     }
-        //     Animator.SetFloat("Speed", Mathf.Abs(xSpeed));
-        // }
+            float xScale = transform.localScale.x;
+            if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!ultStatus.getUltStatus())){
+                // get current localScale
+                Vector3 localScale = transform.localScale;
+                // flip x axis
+                transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
+            }
+            Animator.SetFloat("Speed", Mathf.Abs(xSpeed));
+        }
+// UNCOMMENT ABOVE HERE FOR VIRTUAL
         Animator.SetFloat("Health", _gameManager.getHealth());
         Animator.SetBool("Attack", false);
 
