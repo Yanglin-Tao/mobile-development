@@ -32,6 +32,7 @@ public class Ult : MonoBehaviour
             lastClickedTime = Time.time;
             noOfClicks++;
             inUlt = true;
+            clickEnabled = true;
         }
     }
 
