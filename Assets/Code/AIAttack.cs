@@ -7,13 +7,13 @@ public class AIAttack : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     public float cooldownTime = 1f;
-    private float nextFireTime = 0f;
+    //private float nextFireTime = 0f;
     public static int noOfClicks = 0;
-    float lastClickedTime = 0;
+    float lastClickedTime = 0f;
     float maxComboDelay = 1f;
 
     //difficultyLevel is out of 100. 1 is easiest and 100 is hardest
-    public int difficultyLevel = 95;
+    public int difficultyLevel = 5;
 
     private void Start()
     {
@@ -27,10 +27,14 @@ public class AIAttack : MonoBehaviour
         // This should allow the player to trigger melee attacks while walking
         // without the animations being overridden.
         // Check for mouse input
-        if (Random.Range(1, 100) < difficultyLevel)
-        {
-            ComboSystem();
+
+        if ((Time.time - lastClickedTime) > .6f){
+            if ((Random.Range(1, 1000) < difficultyLevel)){
+                ComboSystem();
+                lastClickedTime = Time.time;
+            }
         }
+    
 
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
@@ -51,11 +55,11 @@ public class AIAttack : MonoBehaviour
             noOfClicks = 0;
         }
 
-        //cooldown time
-        if (Time.time > nextFireTime)
-        {
-            nextFireTime = Time.time + cooldownTime;
-        }
+        // //cooldown time
+        // if (Time.time > nextFireTime)
+        // {
+        //     nextFireTime = Time.time + cooldownTime;
+        // }
     }
 
     void ComboSystem()
