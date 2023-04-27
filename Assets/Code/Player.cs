@@ -14,8 +14,6 @@ public class Player : MonoBehaviour
     // Audio
     AudioSource _audioSource;
     public AudioClip jumpSound;
-    public AudioClip meleeSound;
-    public AudioClip hitSound;
 
     public GameObject[] Attacks;
     public int specialCharge = 0;
@@ -23,11 +21,6 @@ public class Player : MonoBehaviour
     public LayerMask ground;
     public Transform feet;
     public Ult ultStatus;
-
-    // melee
-    public float meleeAttackRange = 1f;
-    public float meleeDamage = 1f;
-    public Transform meleeAttackSpawnPoint;
 
     public float speed;
     public int health;
@@ -112,48 +105,6 @@ public class Player : MonoBehaviour
 
     }
 
-
-    void PerformMeleeAttack()
-    {
-        // Get the direction the player is facing
-        int facingDirection = transform.localScale.x < 0 ? -1 : 1;
-
-        // Calculate the melee attack range in the direction the player is facing
-        Vector2 attackDirection = new Vector2(facingDirection, 0);
-        Vector2 attackPosition = (Vector2)transform.position + attackDirection * meleeAttackRange;
-
-        // Calculate the start position of the melee attack relative to the player
-        Vector2 spawnPosition = (Vector2)meleeAttackSpawnPoint.position;
-
-        // Detect all colliders within the melee attack range centered at the spawn point
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, meleeAttackRange);
-
-        bool hitEnemy = false;
-        foreach (Collider2D collider in colliders)
-        {
-            // Perform melee attack on detected game objects with "Enemy" tag
-            if (collider.gameObject.tag == "Enemy")
-            {
-                hitEnemy = true;
-                Debug.Log("Melee attack hit: " + collider.gameObject.name);
-            }
-        }
-        if (hitEnemy)
-        {
-            // Play hit sound
-            _audioSource.PlayOneShot(hitSound);
-        }
-        else
-        {
-            // Play melee sound
-            _audioSource.PlayOneShot(meleeSound);
-        }
-    }
-
-
-
-
-
     public float updateBulletdirection(){
         if (transform.localScale.x < 0){
             bulletSpeed = -Mathf.Abs(bulletSpeed);
@@ -163,23 +114,4 @@ public class Player : MonoBehaviour
         }
         return bulletSpeed;
     }
-
-    // Draw Gizmos for melee attack range in Scene view
-    void OnDrawGizmos()
-    {
-        // Get the direction the player is facing
-        int facingDirection = transform.localScale.x < 0 ? -1 : 1;
-
-        // Calculate the start position of the melee attack relative to the player
-        Vector2 attackDirection = new Vector2(facingDirection, 0);
-        Vector2 attackPosition = (Vector2)transform.position + attackDirection * meleeAttackRange;
-
-        // Calculate the start position of the melee attack relative to the player
-        Vector2 spawnPosition = (Vector2)meleeAttackSpawnPoint.position;
-
-        // Draw a wire sphere gizmo to represent the spawn position of the melee attack
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(spawnPosition, meleeAttackRange); // Update with desired size for spawn position gizmo
-    }
-
 }

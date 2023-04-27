@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     //int score = 0;
     int health = 0;
+    int enemyHealth = 100;
     string levelName;
 
     // public TMPro.TextMeshProUGUI scoreUI;
@@ -105,6 +106,18 @@ public class GameManager : MonoBehaviour
         }
         //healthUI.text = "HEALTH: " + health;
 
+    }
+
+    public int getEnemyHealth(){
+        return enemyHealth;
+    }
+
+    public void SetEnemyHealth(int newEnemyHealth)
+    {
+        enemyHealth = newEnemyHealth;
+        if (enemyHealth < 0){
+            enemyHealth = 0;
+        }
     }
 
     public string getScene(){
