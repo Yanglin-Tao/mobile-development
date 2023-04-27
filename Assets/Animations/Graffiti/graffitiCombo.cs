@@ -7,7 +7,7 @@ public class graffitiCombo : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     public float cooldownTime = 1f;
-    private float nextFireTime = 0f;
+    // private float nextFireTime = 0f;
     public static int noOfClicks = 0;
     float lastClickedTime = 0;
     float maxComboDelay = 1f;
@@ -74,15 +74,16 @@ public class graffitiCombo : MonoBehaviour
         }
 
         //cooldown time
-        if (Time.time > nextFireTime)
-        {
-            nextFireTime = Time.time + cooldownTime;
-        }
+        // if (Time.time > nextFireTime)
+        // {
+        //     nextFireTime = Time.time + cooldownTime;
+        // }
+        //print(noOfClicks);
     }
 
     public void ComboSystem()
     {
-        lastClickedTime = Time.time;
+        //lastClickedTime = Time.time;
 
         if (noOfClicks == 1)
         {

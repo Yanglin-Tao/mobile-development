@@ -13,7 +13,7 @@ public class AIAttack : MonoBehaviour
     float maxComboDelay = 1f;
 
     //difficultyLevel is out of 100. 1 is easiest and 100 is hardest
-    public int difficultyLevel = 5;
+    public int difficultyLevel = 8;
 
     private void Start()
     {

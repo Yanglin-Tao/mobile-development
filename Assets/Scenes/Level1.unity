@@ -1365,6 +1365,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTime: 1
   difficultyLevel: 5
+--- !u!114 &1120013526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120013514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eed4dc141064ec88864f45f45140f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 10000
+  movement: 4
 --- !u!1 &1467311569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,7 +2528,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 3967efdae30d04135b9f9e5f3b82bdc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2604,9 +2618,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8183874376336215447, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8183874376336215528, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
       propertyPath: m_Name
       value: MTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183874376336215528, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8183874376336215531, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
       propertyPath: m_Enabled
