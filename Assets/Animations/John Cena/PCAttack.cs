@@ -28,7 +28,7 @@ public class PCAttack : MonoBehaviour
     public void Update()
     {
 
-        if (Input.GetButtonDown("Fire1") || noOfClicks > 0){
+        if (Input.GetButtonDown("Fire1")){
             ComboSystem();
         }
         

@@ -157,7 +157,11 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: 4d3f444275d6c4d88bb0b613af732369, type: 3}
   meleeSound: {fileID: 8300000, guid: 183f6effd8c614f0c9eed9981b4ef37c, type: 3}
   hitSound: {fileID: 8300000, guid: edf49a400e55f482b98768f981e71115, type: 3}
-  Attacks: []
+  Attacks:
+  - {fileID: 5676977240588434479, guid: 28382a15fa3fc724b8f1be9701045160, type: 3}
+  - {fileID: 5676977240588434479, guid: 0f87aa1f89becb54d8f1f7e1ffd19a11, type: 3}
+  - {fileID: 5676977240588434479, guid: b1e7df87e8c611e41809109981656fe8, type: 3}
+  - {fileID: 5676977240588434479, guid: 4fbc67b20c2151449af5abdb86c1bb6d, type: 3}
   specialCharge: 0
   shootPosition: {fileID: 3407320146239172424}
   ground:
@@ -316,8 +320,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTime: 1
   player: {fileID: 3407320145250129380}
-  stayStill: 0
-  useThisUlt: 1
 --- !u!1 &3407320146239172425
 GameObject:
   m_ObjectHideFlags: 0

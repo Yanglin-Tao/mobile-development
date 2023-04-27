@@ -80,5 +80,6 @@ public class AIAttack : MonoBehaviour
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
         }
+        print(noOfClicks);
     }
 }
