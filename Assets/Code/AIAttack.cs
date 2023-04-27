@@ -12,8 +12,8 @@ public class AIAttack : MonoBehaviour
     float lastClickedTime = 0;
     float maxComboDelay = 1f;
 
-    //difficultyLevel is out of 10. 1 is easiest and 10 is hardest
-    public int difficultyLevel = 5;
+    //difficultyLevel is out of 100. 1 is easiest and 100 is hardest
+    public int difficultyLevel = 95;
 
     private void Start()
     {
@@ -27,7 +27,7 @@ public class AIAttack : MonoBehaviour
         // This should allow the player to trigger melee attacks while walking
         // without the animations being overridden.
         // Check for mouse input
-        if (Random.Range(1, 11) < difficultyLevel)
+        if (Random.Range(1, 100) < difficultyLevel)
         {
             ComboSystem();
         }
@@ -73,13 +73,11 @@ public class AIAttack : MonoBehaviour
         {
             anim.SetBool("hit1", false);
             anim.SetBool("hit2", true);
-            rb.AddForce(new Vector2(0, 1200));
         }
         if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
         }
-        print(noOfClicks);
     }
 }
