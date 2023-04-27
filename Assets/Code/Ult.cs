@@ -46,14 +46,15 @@ public class Ult : MonoBehaviour
         return useThisUlt;
     }
 
+
     public void Update()
     {
 
-         if (((Input.GetButtonDown("Fire2") || (noOfClicks > 0)) && (Time.time - lastTime >= 10f)) && (useThisUlt)){
-            // GameObject newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
-            // updateBulletdirection();
-            // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
-            // current = (current + 1) % Attacks.Length;
+        if ((Input.GetButtonDown("Fire2"))){
+            clicked();
+        }
+        
+        if (((noOfClicks > 0) && (Time.time - lastTime >= 10f)) && (useThisUlt)){
 
             Cena.CenaUlt();
             Animator.SetBool("ULT", true);
