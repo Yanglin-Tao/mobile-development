@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //int score = 0;
-    int health = 0;
+    // player health
+    int health = 100;
     int enemyHealth = 100;
     string levelName;
 
