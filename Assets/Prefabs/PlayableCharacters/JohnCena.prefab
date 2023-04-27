@@ -302,6 +302,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTime: 1
   player: {fileID: 4992775623614622205}
+  meleeSound: {fileID: 8300000, guid: 183f6effd8c614f0c9eed9981b4ef37c, type: 3}
+  hitSound: {fileID: 8300000, guid: edf49a400e55f482b98768f981e71115, type: 3}
+  meleeAttackRange: 1
+  meleeDamage: 1
+  meleeAttackSpawnPoint: {fileID: 4992775624422699147}
 --- !u!114 &5078949021038594524
 MonoBehaviour:
   m_ObjectHideFlags: 0
