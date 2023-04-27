@@ -29,6 +29,9 @@ public class PCAttack : MonoBehaviour
     {
 
         if (Input.GetButtonDown("Fire1")){
+            clicked();
+        }
+        if (noOfClicks > 0){
             ComboSystem();
         }
         
@@ -64,8 +67,8 @@ public class PCAttack : MonoBehaviour
     public void ComboSystem()
     {
     
-        lastClickedTime = Time.time;
-        noOfClicks++;
+        // lastClickedTime = Time.time;
+        // noOfClicks++;
 
         if (noOfClicks == 1)
         {

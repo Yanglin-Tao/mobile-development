@@ -419,8 +419,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerVirtualControl, Assembly-CSharp
+      - m_Target: {fileID: 495163915}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: MoveRight
         m_Mode: 1
         m_Arguments:
@@ -698,19 +698,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6059439895503294473, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6059439895503294473, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7995605
+      value: -1.87
       objectReference: {fileID: 0}
     - target: {fileID: 6059439895503294473, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7716255
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 6059439895503294473, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.8197174
+      value: -0.224
       objectReference: {fileID: 0}
     - target: {fileID: 6059439895503294473, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -739,6 +739,10 @@ PrefabInstance:
     - target: {fileID: 6059439895503294473, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6059439895503294477, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
+      propertyPath: speed
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
@@ -1757,8 +1761,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerVirtualControl, Assembly-CSharp
+      - m_Target: {fileID: 495163915}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: MoveLeft
         m_Mode: 1
         m_Arguments:
@@ -2366,8 +2370,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 231350182620650501, guid: f3ce56c15f4917b4d82ded64806a8aa8, type: 3}
-        m_TargetAssemblyTypeName: ComboAttack, Assembly-CSharp
+      - m_Target: {fileID: 495163912}
+        m_TargetAssemblyTypeName: PCAttack, Assembly-CSharp
         m_MethodName: clicked
         m_Mode: 1
         m_Arguments:
@@ -2500,6 +2504,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495163911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6278756446265438248, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
+  m_PrefabInstance: {fileID: 74802325}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &495163912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6278756446265438249, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
+  m_PrefabInstance: {fileID: 74802325}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e508b35ea390d43bc82a15fd7e0531, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &495163915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6059439895503294477, guid: d56326f1bde7e504d8448acf78dc69e3, type: 3}
+  m_PrefabInstance: {fileID: 74802325}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5657ef51489c4084c9cecea2e2373bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556998438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,7 +2798,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &696428957
 GameObject:
@@ -3381,8 +3418,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerVirtualControl, Assembly-CSharp
+      - m_Target: {fileID: 495163915}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
         m_Arguments:
@@ -4607,9 +4644,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerVirtualControl, Assembly-CSharp
-        m_MethodName: PerformMeleeAttack
+      - m_Target: {fileID: 495163911}
+        m_TargetAssemblyTypeName: Ult, Assembly-CSharp
+        m_MethodName: clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

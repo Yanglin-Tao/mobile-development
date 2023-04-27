@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour
     int current;
     float lastTime;
 
+    private bool clickGUARD = false;
 
 
 
@@ -94,23 +96,75 @@ public class Player : MonoBehaviour
 
     void FixedUpdate() {
         isGrounded = Physics2D.OverlapCircle(feet.position, .3f, ground);
-        if (_gameManager.getHealth() > 0){
-            float xSpeed = Input.GetAxis("Horizontal") * speed;
-            rb.velocity = new Vector2(xSpeed, rb.velocity.y);
-
-            float xScale = transform.localScale.x;
-            if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!ultStatus.getUltStatus())){
-                // get current localScale
-                Vector3 localScale = transform.localScale;
-                // flip x axis
-                transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
-            }
-            Animator.SetFloat("Speed", Mathf.Abs(xSpeed));
+        if (!clickGUARD){
+            Animator.SetFloat("Speed", 0);
         }
+        // if (_gameManager.getHealth() > 0){
+        //     float xSpeed = Input.GetAxis("Horizontal") * speed;
+        //     rb.velocity = new Vector2(xSpeed, rb.velocity.y);
+
+        //     float xScale = transform.localScale.x;
+        //     if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!ultStatus.getUltStatus())){
+        //         // get current localScale
+        //         Vector3 localScale = transform.localScale;
+        //         // flip x axis
+        //         transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
+        //     }
+        //     Animator.SetFloat("Speed", Mathf.Abs(xSpeed));
+        // }
         Animator.SetFloat("Health", _gameManager.getHealth());
         Animator.SetBool("Attack", false);
 
     }
+
+// Mobile Stuff
+    public void Jump(){
+        if (isGrounded){
+            rb.AddForce(new Vector2(0, jumpForce));
+            // play jump sound
+            _audioSource.PlayOneShot(jumpSound);
+        }
+    }
+
+    public void MoveLeft(){
+        clickGUARD = true;
+        rb.velocity = new Vector2(-speed, rb.velocity.y);
+
+        float xScale = transform.localScale.x;
+        if (xScale > 0)
+        {
+            Vector3 localScale = transform.localScale;
+            transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
+        }
+
+        Animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        clickGUARD = false;
+    }
+
+    public void MoveRight()
+    {
+        clickGUARD = true;
+        rb.velocity = new Vector2(speed, rb.velocity.y);
+
+        float xScale = transform.localScale.x;
+        if (xScale < 0)
+        {
+            Vector3 localScale = transform.localScale;
+            transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
+        }
+
+        Animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        clickGUARD = false;
+    }
+
+
+
+
+
+
+
+
+
 
 
     void PerformMeleeAttack()
