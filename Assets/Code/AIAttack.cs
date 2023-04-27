@@ -9,11 +9,11 @@ public class AIAttack : MonoBehaviour
     public float cooldownTime = 1f;
     //private float nextFireTime = 0f;
     public static int noOfClicks = 0;
-    float lastClickedTime = 0f;
+    float lastClickedTime = .6f;
     float maxComboDelay = 1f;
 
-    //difficultyLevel is out of 100. 1 is easiest and 100 is hardest
-    public int difficultyLevel = 8;
+    //difficultyLevel is out of 3. 3 is easiest and 1 is hardest
+    public int difficultyLevel = 1000;
 
     private void Start()
     {
@@ -28,13 +28,18 @@ public class AIAttack : MonoBehaviour
         // without the animations being overridden.
         // Check for mouse input
 
-        if ((Time.time - lastClickedTime) > .6f){
-            if ((Random.Range(1, 1000) < difficultyLevel)){
-                ComboSystem();
-                lastClickedTime = Time.time;
-            }
+        // if ((Time.time - lastClickedTime) > .6f){
+        //     if ((Random.Range(1, 1000) < difficultyLevel)){
+        //         print(Time.time);
+        //         ComboSystem();
+        //         lastClickedTime = Time.time;
+        //     }
+        // }
+
+        if ((Time.time - lastClickedTime) > 2f){
+            StartCoroutine(LoopWithDelay(Random.Range(1, 4), 0.4f));
+            lastClickedTime = Time.time;
         }
-    
 
         if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
@@ -65,7 +70,6 @@ public class AIAttack : MonoBehaviour
     void ComboSystem()
     {
         //so it looks at how many clicks have been made and if one animation has finished playing starts another one.
-        lastClickedTime = Time.time;
         noOfClicks++;
         if (noOfClicks == 1)
         {
@@ -82,6 +86,16 @@ public class AIAttack : MonoBehaviour
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
+        }
+    }
+
+    IEnumerator LoopWithDelay(int attackCombo, float hitDelay) {
+        for (int i = 0; i < attackCombo; i++) {
+            // Do something
+            ComboSystem();
+            
+            // Wait for 0.6 seconds before continuing to the next iteration
+            yield return new WaitForSeconds(hitDelay);
         }
     }
 }
