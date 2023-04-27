@@ -40,8 +40,6 @@ public class Player : MonoBehaviour
 
     private bool clickGUARD = false;
 
-
-
     // Update is called once per frame
     void Start(){
         rb = GetComponent<Rigidbody2D>();
@@ -50,7 +48,6 @@ public class Player : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         spawner = GetComponent<Spawner>();
         ultStatus = GetComponent<Ult>();
-
     }
 
     void Update(){
@@ -74,9 +71,6 @@ public class Player : MonoBehaviour
                 newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
 
             }
-
-
-
 
             updateBulletdirection();
             if (bulletSpeed < 0){
@@ -159,16 +153,6 @@ public class Player : MonoBehaviour
         clickGUARD = false;
     }
 
-
-
-
-
-
-
-
-
-
-
     void PerformMeleeAttack()
     {
         // Get the direction the player is facing
@@ -205,10 +189,6 @@ public class Player : MonoBehaviour
             _audioSource.PlayOneShot(meleeSound);
         }
     }
-
-
-
-
 
     public float updateBulletdirection(){
         if (transform.localScale.x < 0){
