@@ -6814,8 +6814,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 998774260, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 998774260, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: useThisUlt
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 998774267, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7385766529999354063, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_Layer
@@ -6883,7 +6891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7385766531164760605, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385766531164760673, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7385766531164760674, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_Name
