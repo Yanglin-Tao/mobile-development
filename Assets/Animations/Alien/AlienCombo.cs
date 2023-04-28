@@ -13,10 +13,13 @@ public class AlienCombo : MonoBehaviour
     float maxComboDelay = 1f;
     public Transform player;
 
+    GameManager _gameManager;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     public void clicked() {
@@ -59,6 +62,9 @@ public class AlienCombo : MonoBehaviour
         if (Time.time > nextFireTime)
         {
             nextFireTime = Time.time + cooldownTime;
+        }
+        if (_gameManager.getEnemyHealth() <= 0){
+            _gameManager.NextScene("EndWin");
         }
     }
 
