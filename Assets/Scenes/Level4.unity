@@ -6895,7 +6895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7385766531164760674, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b361623e301a2864681d92283a4df3c4, type: 3}
@@ -7033,7 +7033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 751862919}
-  attackRange: 2
+  attackRange: 1.5
   jumpForce: 5
   jumpHeight: 1
   moveSpeed: 2
@@ -7101,11 +7101,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320917947983522214, guid: 53d386c692395466f946a718747f0ba3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.0644
+      value: -11.95
       objectReference: {fileID: 0}
     - target: {fileID: 7320917947983522214, guid: 53d386c692395466f946a718747f0ba3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4604
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 7320917947983522214, guid: 53d386c692395466f946a718747f0ba3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7563,11 +7563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320917947983522214, guid: 53d386c692395466f946a718747f0ba3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.1399
+      value: 12.03
       objectReference: {fileID: 0}
     - target: {fileID: 7320917947983522214, guid: 53d386c692395466f946a718747f0ba3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4604
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 7320917947983522214, guid: 53d386c692395466f946a718747f0ba3, type: 3}
       propertyPath: m_LocalPosition.z
