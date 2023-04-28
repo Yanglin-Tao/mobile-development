@@ -27,9 +27,9 @@ public class MitchellAI : MonoBehaviour
 
     void Update()
     {
-        if (player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0){
-            transform.localScale *= new Vector2(-1,1);
-        }
+        // if (player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0){
+        //     transform.localScale *= new Vector2(-1,1);
+        // }
         float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance < attackRange)
@@ -40,13 +40,13 @@ public class MitchellAI : MonoBehaviour
         }
         else
         {
-            // move towards the player
-            Vector2 direction = player.position - transform.position;
-            rb.velocity = direction.normalized * moveSpeed;
-            float xspeed = direction.x * speed;
-            Animator.SetFloat("Speed", Mathf.Abs(xspeed));
+            // // move towards the player
+            // Vector2 direction = player.position - transform.position;
+            // rb.velocity = direction.normalized * moveSpeed;
+            // float xspeed = direction.x * speed;
+            // Animator.SetFloat("Speed", Mathf.Abs(xspeed));
 
-            // jump to higher platform if player jumps
+            // // jump to higher platform if player jumps
             // if (player.position.y > 0 && IsGrounded()){
             //     rb.AddForce(new Vector2(0f, jumpForce));
             // }
