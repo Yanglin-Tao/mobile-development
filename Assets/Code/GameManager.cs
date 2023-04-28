@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemy;
     private string currentChoosenScene;
     private static GameManager instance = null;
-
+    // private static GameManager instance;
 
     public void SetChosenScene(string choosenScene) {
         currentChoosenScene = choosenScene;
@@ -106,14 +106,16 @@ public class GameManager : MonoBehaviour
     // just use negative for the subtracting health
     public void SetHealth(int amount)
     {
-        health = amount;
-        // player damaged
-        mainPlayer.GetComponent<Animator>().SetBool("Damage", true);
-        if (health < 0){
-            GameOver = true;
-            health = 0;
+        if (mainPlayer != null){
+            health = amount;
+            // player damaged
+            mainPlayer.GetComponent<Animator>().SetBool("Damage", true);
+            if (health < 0){
+                GameOver = true;
+                health = 0;
+            }
+            //healthUI.text = "HEALTH: " + health;
         }
-        //healthUI.text = "HEALTH: " + health;
     }
 
     public int getEnemyHealth(){

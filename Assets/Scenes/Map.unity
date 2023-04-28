@@ -777,7 +777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e61727459df14165b336bb704f2c8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: ChooseCharacter
+  sceneName: Level1
 --- !u!1 &543261391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Drag&Drop To Play!
+  m_text: Click To Play!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -1524,7 +1524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e61727459df14165b336bb704f2c8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: ChooseCharacter
+  sceneName: Level4
 --- !u!114 &832635712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3677,7 +3677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e61727459df14165b336bb704f2c8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: ChooseCharacter
+  sceneName: Level2
 --- !u!114 &1654281562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3937,7 +3937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedPlayer: {fileID: 609164819, guid: 6a58ca01722fe44d9949865d73b35dc2, type: 3}
-  mainPlayer: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!4 &1732755799
 Transform:
   m_ObjectHideFlags: 0
@@ -4343,7 +4343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e61727459df14165b336bb704f2c8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: ChooseCharacter
+  sceneName: Level3
 --- !u!114 &1990365021
 MonoBehaviour:
   m_ObjectHideFlags: 0
