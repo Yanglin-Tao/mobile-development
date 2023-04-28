@@ -2885,9 +2885,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: FatBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 1885255641922117843, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1885255643075118600, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885255643075118603, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885255643087925886, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885255643711721528, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1885255643711721529, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
       propertyPath: m_LocalPosition.x

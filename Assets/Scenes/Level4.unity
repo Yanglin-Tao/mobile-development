@@ -6816,13 +6816,25 @@ PrefabInstance:
       propertyPath: useThisUlt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7385766529999354063, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7385766530020134073, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 7385766530020134074, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7385766530319260296, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385766530319260297, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7385766531164760604, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_RootOrder
@@ -6875,6 +6887,10 @@ PrefabInstance:
     - target: {fileID: 7385766531164760674, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_Name
       value: Alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385766531164760674, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7385766531164760674, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_TagString
