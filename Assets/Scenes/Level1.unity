@@ -831,9 +831,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2044,10 +2044,10 @@ MonoBehaviour:
   rate: 0.5
   speed: 10
   enemies:
-  - {fileID: 8409139053285674014, guid: 4cf2d6e742bda3d45b64a2046a3138b1, type: 3}
-  - {fileID: 8409139053285674014, guid: 3e670e0800b7f604abc5d283c638b6e8, type: 3}
-  - {fileID: 8409139053285674014, guid: c0788a2f70dd0444787e405f553ed702, type: 3}
-  - {fileID: 8409139053285674014, guid: 5ec2cc7a25e86c143b207299c88cb7bf, type: 3}
+  - {fileID: 5676977240588434479, guid: 28382a15fa3fc724b8f1be9701045160, type: 3}
+  - {fileID: 5676977240588434479, guid: 0f87aa1f89becb54d8f1f7e1ffd19a11, type: 3}
+  - {fileID: 5676977240588434479, guid: b1e7df87e8c611e41809109981656fe8, type: 3}
+  - {fileID: 5676977240588434479, guid: 4fbc67b20c2151449af5abdb86c1bb6d, type: 3}
   - {fileID: 8409139053285674014, guid: 640b5e4293ac7f843988f675fa273d75, type: 3}
   - {fileID: 8409139053285674014, guid: 1659176923a131f42a77039e7c835f36, type: 3}
 --- !u!61 &1100021145
@@ -4720,9 +4720,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 3
+  m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
