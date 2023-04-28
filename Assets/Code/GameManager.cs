@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public GameObject selectedPlayer; // selected player from the choosing scene
     private Sprite currentSprite; // selected sprite loaded as currentSprite for the level
     // public GameObject mainPlayer; // player to be loaded from selected one
-    private GameObject mainPlayer;
-    public GameObject enemy;
+    public GameObject mainPlayer;
+    private GameObject enemy;
     private string currentChoosenScene;
     private static GameManager instance = null;
 
