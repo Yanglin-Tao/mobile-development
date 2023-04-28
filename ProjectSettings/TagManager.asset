@@ -11,6 +11,7 @@ TagManager:
   - PlayerHealthBar
   - EnemyHealthBar
   - PlayerCursor
+  - badThing
   layers:
   - Default
   - TransparentFX

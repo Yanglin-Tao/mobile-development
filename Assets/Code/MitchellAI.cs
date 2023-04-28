@@ -66,4 +66,11 @@ public class MitchellAI : MonoBehaviour
         // Draw a wire sphere to show the attack range
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+
+     private void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Attack")){
+            Destroy(other.gameObject);
+        }
+    }
+
 }
