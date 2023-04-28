@@ -1163,7 +1163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4992775623614622205, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.28
       objectReference: {fileID: 0}
     - target: {fileID: 4992775623614622205, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4254,6 +4254,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 1
+  meleeSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  meleeAttackRange: 1
+  meleeDamage: 1
+  meleeAttackSpawnPoint: {fileID: 0}
   difficultyLevel: 5
 --- !u!114 &1388371281
 MonoBehaviour:
