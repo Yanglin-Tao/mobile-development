@@ -14,16 +14,25 @@ public class HealthBar : MonoBehaviour
 
     private void Update() {
         // get name of current attached game object
-        string name = gameObject.name;
+        // string name = gameObject.name;
+        string tag = gameObject.tag;
         // if name includes "Enemy"
-        if (name.Contains("Enemy")){
+        if (tag == "EnemyHealthBar"){
             // get the enemy's health
-            SetSliderValue(_gameManager.getEnemyHealth());
+            SetSliderValue((int)_gameManager.getEnemyHealth());
         }
         else {
             // get the player's health
             SetSliderValue((int)_gameManager.getHealth());
         }
+        // if (name.Contains("Enemy")){
+        //     // get the enemy's health
+        //     SetSliderValue((int)_gameManager.getEnemyHealth());
+        // }
+        // else {
+        //     // get the player's health
+        //     SetSliderValue((int)_gameManager.getHealth());
+        // }
     }
 
     public void InitiateSliderValue(int health){
