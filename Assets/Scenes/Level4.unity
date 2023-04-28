@@ -413,6 +413,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32658441}
   m_CullTransparentMesh: 1
+--- !u!4 &48331918 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7385766529999354062, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+  m_PrefabInstance: {fileID: 538432440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &70039860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6807,6 +6812,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 998774260, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: useThisUlt
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7385766530020134073, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03
@@ -6989,6 +6998,71 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &751862907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7385766531164760674, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+  m_PrefabInstance: {fileID: 538432440}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &751862908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751862907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afec1d81063ab974ab8b55edce1b043c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 751862919}
+  attackRange: 2
+  jumpForce: 5
+  jumpHeight: 1
+  moveSpeed: 2
+  speed: 10
+  feet: {fileID: 48331918}
+  ground:
+    serializedVersion: 2
+    m_Bits: 247
+--- !u!114 &751862909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751862907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d883114bd1017de479607fce8b3b956b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 1
+  meleeSound: {fileID: 8300000, guid: 183f6effd8c614f0c9eed9981b4ef37c, type: 3}
+  hitSound: {fileID: 8300000, guid: edf49a400e55f482b98768f981e71115, type: 3}
+  meleeAttackRange: 1
+  meleeDamage: 10
+  meleeAttackSpawnPoint: {fileID: 2059624907}
+  difficultyLevel: 5
+--- !u!114 &751862910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751862907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eed4dc141064ec88864f45f45140f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 10000
+  movement: 4
+--- !u!4 &751862919 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7385766531164760604, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+  m_PrefabInstance: {fileID: 538432440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &779069123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9534,6 +9608,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036480091}
   m_CullTransparentMesh: 1
+--- !u!4 &2059624907 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7385766530319260296, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+  m_PrefabInstance: {fileID: 538432440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2092367812
 GameObject:
   m_ObjectHideFlags: 0
