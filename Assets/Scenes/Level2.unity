@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: useThisUlt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1162892846920044804, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1162892846920044807, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
       propertyPath: m_RootOrder
       value: 11
