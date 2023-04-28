@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     private Sprite currentSprite; // selected sprite loaded as currentSprite for the level
     // public GameObject mainPlayer; // player to be loaded from selected one
     private GameObject mainPlayer;
+    public GameObject enemy;
     private string currentChoosenScene;
     private static GameManager instance = null;
 
@@ -56,6 +57,7 @@ public class GameManager : MonoBehaviour
         // Needed for the choose character scene
         // ------
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
         currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
         if (mainPlayer != null)
         {
@@ -117,10 +119,22 @@ public class GameManager : MonoBehaviour
     public void SetEnemyHealth(int newEnemyHealth)
     {
         enemyHealth = newEnemyHealth;
-        if (enemyHealth < 0){
+        enemy.GetComponent<Animator>().SetBool("Damage", true);
+        StartCoroutine(ResetDamageAnimation());
+        if (enemyHealth < 0)
+        {
             enemyHealth = 0;
         }
+
     }
+
+    IEnumerator ResetDamageAnimation()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        enemy.GetComponent<Animator>().SetBool("Damage", false);
+    }
+
 
     public string getScene(){
         return levelName;
