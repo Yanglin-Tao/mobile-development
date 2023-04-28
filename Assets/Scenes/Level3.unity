@@ -2844,6 +2844,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2235255309836051090, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2235255309836051091, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.04
@@ -2851,6 +2855,10 @@ PrefabInstance:
     - target: {fileID: 2235255310435258944, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235255310435258947, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2235255310562566849, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_FlipX
@@ -2903,6 +2911,14 @@ PrefabInstance:
     - target: {fileID: 2235255310562566862, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_Name
       value: Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235255310562566862, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235255310735204176, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2235255310735204177, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_LocalPosition.x
