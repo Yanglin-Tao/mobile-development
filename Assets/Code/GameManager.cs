@@ -56,8 +56,8 @@ public class GameManager : MonoBehaviour
     {
         // Needed for the choose character scene
         // ------
-        // mainPlayer = GameObject.FindGameObjectWithTag("Player");
-        // enemy = GameObject.FindGameObjectWithTag("Enemy");
+        mainPlayer = GameObject.FindGameObjectWithTag("Player");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
         currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
         if (mainPlayer != null)
         {
