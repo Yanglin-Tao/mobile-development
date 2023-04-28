@@ -101,12 +101,13 @@ public class GameManager : MonoBehaviour
     public void SetHealth(int amount)
     {
         health = amount;
+        // player damaged
+        mainPlayer.GetComponent<Animator>().SetBool("Damage", true);
         if (health < 0){
             GameOver = true;
             health = 0;
         }
         //healthUI.text = "HEALTH: " + health;
-
     }
 
     public int getEnemyHealth(){
