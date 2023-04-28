@@ -6725,10 +6725,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to Subway Smashers, a 2D fighting game with subway-themed characters!
-    Choose from a diverse cast of subway riders and engage in fast-paced battles.
-    Get ready to hop on the subway, and smash your opponents in this ultimate underground
-    game!
+  m_text: "The MTA stopped and you have now arrived at your destination. Due to the
+    unpredictability of the train, it actually takes you to an alien space wreck.
+    The aliens aren\u2019t happy that you are here so they will be targeting you.
+    Attack back with A button and do combo attacks by clicking C button one to three
+    times."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7507,7 +7508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1117088950
 Transform:
   m_ObjectHideFlags: 0
