@@ -76,6 +76,10 @@ public class RobotCombo : MonoBehaviour
         {
             nextFireTime = Time.time + cooldownTime;
         }
+
+        if (_gameManager.getEnemyHealth() <= 0){
+            _gameManager.NextScene("Map");
+        }
     }
 
     public void ComboSystem()

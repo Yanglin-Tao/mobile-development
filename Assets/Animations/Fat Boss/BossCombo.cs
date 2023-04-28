@@ -77,7 +77,7 @@ public class BossCombo : MonoBehaviour
         }
 
         if (_gameManager.getEnemyHealth() <= 0){
-            _gameManager.NextScene("Level3");
+            _gameManager.NextScene("Map");
         }
     }
 
