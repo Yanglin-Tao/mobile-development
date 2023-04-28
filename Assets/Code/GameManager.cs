@@ -142,7 +142,8 @@ public class GameManager : MonoBehaviour
             QuitGame();
         }
         if (GameOver){
-            //StartCoroutine(NextScene(6, ));
+            // go to EndFail scene
+            SceneManager.LoadScene("EndFail");
             GameOver = false;
         }
         screenChecker();
