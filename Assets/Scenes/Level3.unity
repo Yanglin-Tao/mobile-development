@@ -2944,6 +2944,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2235255310562566862, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2235255310735204176, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -2981,7 +2985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1319198820}
-  attackRange: 2
+  attackRange: 1.5
   jumpForce: 5
   jumpHeight: 1
   moveSpeed: 2
