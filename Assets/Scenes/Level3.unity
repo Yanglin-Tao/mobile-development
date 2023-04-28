@@ -123,17 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &64353772 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1885255641922117843, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
-  m_PrefabInstance: {fileID: 1822141042}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &64353773 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5826618362727686606, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
   m_PrefabInstance: {fileID: 1822141042}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64353772}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
@@ -144,10 +139,21 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1885255641922117840, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
   m_PrefabInstance: {fileID: 1822141042}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64353772}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5657ef51489c4084c9cecea2e2373bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &64353776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3836361218574346112, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+  m_PrefabInstance: {fileID: 1822141042}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34bff596486b83842b7570978a6765cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &139556245
@@ -1259,9 +1265,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 64353772}
-        m_TargetAssemblyTypeName: PCAttack, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 64353776}
+        m_TargetAssemblyTypeName: BossCombo, Assembly-CSharp
+        m_MethodName: clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1766,9 +1766,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1385437906}
-        m_TargetAssemblyTypeName: PCAttack, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1385437912}
+        m_TargetAssemblyTypeName: graffitiCombo, Assembly-CSharp
+        m_MethodName: clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3053,17 +3053,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361243576}
   m_CullTransparentMesh: 1
---- !u!1 &1385437906 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1162892846920044921, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
-  m_PrefabInstance: {fileID: 17945593}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1385437907 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 12901989, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
   m_PrefabInstance: {fileID: 17945593}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385437906}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
@@ -3074,10 +3069,21 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1162892846920044922, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
   m_PrefabInstance: {fileID: 17945593}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1385437906}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5657ef51489c4084c9cecea2e2373bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1385437912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 12901986, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
+  m_PrefabInstance: {fileID: 17945593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949518f0fd25471499b4df82aebf6567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1500369114
