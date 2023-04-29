@@ -155,8 +155,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 1686634913543773074, guid: 35d7e152d229ecd4eb8fa72bf26e33cd, type: 3}
   jumpSound: {fileID: 8300000, guid: 4d3f444275d6c4d88bb0b613af732369, type: 3}
-  meleeSound: {fileID: 8300000, guid: 183f6effd8c614f0c9eed9981b4ef37c, type: 3}
-  hitSound: {fileID: 8300000, guid: edf49a400e55f482b98768f981e71115, type: 3}
   Attacks: []
   specialCharge: 0
   shootPosition: {fileID: 4992775624775160657}
@@ -165,9 +163,6 @@ MonoBehaviour:
     m_Bits: 247
   feet: {fileID: 4992775624415921608}
   ultStatus: {fileID: 0}
-  meleeAttackRange: 0.5
-  meleeDamage: 1
-  meleeAttackSpawnPoint: {fileID: 4992775624422699147}
   speed: 9
   health: 100
   jumpForce: 1200
@@ -302,6 +297,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownTime: 1
   player: {fileID: 4992775623614622205}
+  meleeSound: {fileID: 0}
+  hitSound: {fileID: 0}
+  meleeAttackRange: 1
+  meleeDamage: 1
+  meleeAttackSpawnPoint: {fileID: 0}
 --- !u!114 &5078949021038594524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +318,7 @@ MonoBehaviour:
   player: {fileID: 4992775623614622205}
   stayStill: 0
   useThisUlt: 1
+  ultSound: {fileID: 8300000, guid: df247b683c49149bca5713dc6dd0ae5d, type: 3}
 --- !u!1 &4992775624415921611
 GameObject:
   m_ObjectHideFlags: 0
