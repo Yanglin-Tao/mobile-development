@@ -19,4 +19,13 @@ public class StartPause : MonoBehaviour
         Time.timeScale = 1;
         // Debug.Log("game resumed");
     }
+
+    public void QuitGame(){
+        // Quit the application
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            UnityEngine.Application.Quit();
+        #endif
+    }
 }
