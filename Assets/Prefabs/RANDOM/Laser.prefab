@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6406461188436014403}
   - component: {fileID: 7073969543308470285}
   - component: {fileID: -9124966204725915021}
+  - component: {fileID: -5354958641416277997}
   m_Layer: 6
   m_Name: Laser
   m_TagString: Attack
@@ -147,3 +148,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 3
+--- !u!114 &-5354958641416277997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9188719843131421159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ed4983d9e7440c598bbc54e2195d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ultDamage: 5
+  ultRange: 0.6
