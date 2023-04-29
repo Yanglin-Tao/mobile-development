@@ -87,19 +87,19 @@ public class Player : MonoBehaviour
             Animator.SetFloat("Speed", 0);
         }
 // UNCOMMENT FROM HERE FOR VIRTUAL MOVEMENT LEFT AND RIGHT
-        if (_gameManager.getHealth() > 0){
-            float xSpeed = Input.GetAxis("Horizontal") * speed;
-            rb.velocity = new Vector2(xSpeed, rb.velocity.y);
+        // if (_gameManager.getHealth() > 0){
+        //     float xSpeed = Input.GetAxis("Horizontal") * speed;
+        //     rb.velocity = new Vector2(xSpeed, rb.velocity.y);
 
-            float xScale = transform.localScale.x;
-            if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!ultStatus.getUltStatus())){
-                // get current localScale
-                Vector3 localScale = transform.localScale;
-                // flip x axis
-                transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
-            }
-            Animator.SetFloat("Speed", Mathf.Abs(xSpeed));
-        }
+        //     float xScale = transform.localScale.x;
+        //     if ((xSpeed < 0 && xScale > 0) || (xSpeed > 0 && xScale < 0) && (!ultStatus.getUltStatus())){
+        //         // get current localScale
+        //         Vector3 localScale = transform.localScale;
+        //         // flip x axis
+        //         transform.localScale = new Vector3(-xScale, localScale.y, localScale.z);
+        //     }
+        //     Animator.SetFloat("Speed", Mathf.Abs(xSpeed));
+        // }
 // UNCOMMENT ABOVE HERE FOR VIRTUAL MOVEMENT LEFT AND RIGHT
         Animator.SetFloat("Health", _gameManager.getHealth());
         Animator.SetBool("Attack", false);
