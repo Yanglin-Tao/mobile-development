@@ -16,9 +16,12 @@ public class Ult : MonoBehaviour
     private bool clickEnabled = false;
     public bool stayStill = false;
     public bool useThisUlt = false;
+    AudioSource _audioSource;
+    public AudioClip ultSound;
 
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Cena = GameObject.FindObjectOfType<Spawner>();
@@ -53,8 +56,9 @@ public class Ult : MonoBehaviour
 
         if ((Input.GetButtonDown("Fire2"))){
             clicked();
+            _audioSource.PlayOneShot(ultSound);
         }
-        
+
         if (((noOfClicks > 0) && (Time.time - lastTime >= 10f)) && (useThisUlt)){
 
             Cena.CenaUlt();
@@ -64,7 +68,7 @@ public class Ult : MonoBehaviour
             clickEnabled = true;
             stayStill = true;
         }
-        
+
         if (clickEnabled && (Time.time - lastTime >= 5f))
         {
             // Disable clicking the button for the cooldown duration
