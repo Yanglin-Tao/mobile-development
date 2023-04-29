@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
         if (enemyHealth < 0)
         {
             enemyHealth = 0;
+            setEnemyKilled(true);
         }
 
     }
@@ -166,6 +167,11 @@ public class GameManager : MonoBehaviour
             // go to EndFail scene
             SceneManager.LoadScene("EndFail");
             GameOver = false;
+        }
+        if (enemyKilled){
+            // go to EndWin scene
+            SceneManager.LoadScene("EndWin");
+            enemyKilled = false;
         }
         screenChecker();
     }
