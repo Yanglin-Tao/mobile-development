@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Graffiti
       objectReference: {fileID: 0}
+    - target: {fileID: 1162892846920044921, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
 --- !u!1001 &708319685
@@ -303,6 +307,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FatBoss
       objectReference: {fileID: 0}
+    - target: {fileID: 1885255641922117843, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826618362727686606, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: ultSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c700ffd8cbd74efcae6d032d2b75da8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
 --- !u!1 &802762153
@@ -335,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedPlayer: {fileID: 609164819, guid: 6a58ca01722fe44d9949865d73b35dc2, type: 3}
+  enemy: {fileID: 0}
 --- !u!4 &802762155
 Transform:
   m_ObjectHideFlags: 0
@@ -485,6 +498,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot
       objectReference: {fileID: 0}
+    - target: {fileID: 2235255310562566862, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386737957906954223, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: ultSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d7bd87c911b4b4ecca2466efe24f63b6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
 --- !u!1001 &1072181082
@@ -494,6 +515,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1701130662, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
+      propertyPath: ultSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ecf1285f86cb24ec79a717c97751feb2, type: 3}
     - target: {fileID: 8183874376336215446, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -541,6 +566,10 @@ PrefabInstance:
     - target: {fileID: 8183874376336215528, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
       propertyPath: m_Name
       value: MTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183874376336215528, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0266f3bd8d4aae445954caad23fb0535, type: 3}
@@ -598,6 +627,10 @@ PrefabInstance:
     - target: {fileID: 7385766531164760674, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_Name
       value: Alien
+      objectReference: {fileID: 0}
+    - target: {fileID: 7385766531164760674, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b361623e301a2864681d92283a4df3c4, type: 3}
@@ -790,6 +823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JohnCena
       objectReference: {fileID: 0}
+    - target: {fileID: 4992775623614622197, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4992775623614622205, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -834,6 +871,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5078949021038594524, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
+      propertyPath: ultSound
+      value: 
+      objectReference: {fileID: 8300000, guid: df247b683c49149bca5713dc6dd0ae5d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
 --- !u!1 &1627606158
