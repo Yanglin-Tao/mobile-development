@@ -9139,12 +9139,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Subway Smashers onboarding!  In this game, you should attack
-    your enemy with ''A'' button. You are also allowed to do combo attacks by clicking
-    ''C'' button one to three times, i.e. one click for single attack, two clicks
-    for double attack, and three clicks for triple attacks!
-
-'
+  m_text: "The MTA stopped and you have now arrived at your destination. Due to the
+    unpredictability of the train, it actually takes you to an alien space wreck.
+    The aliens aren\u2019t happy that you are here so they will be targeting you.
+    Attack back with A button and do combo attacks by clicking C button one to three
+    times.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

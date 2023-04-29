@@ -513,10 +513,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Subway Smashers onboarding!  In this game, you should attack
-    your enemy with ''A'' button. You are also allowed to do combo attacks by clicking
-    ''C'' button one to three times, i.e. one click for single attack, two clicks
-    for double attack, and three clicks for triple attacks!
+  m_text: 'You fled to your office right now. However, your boss is not good mood
+    and will randomly attack employees. Move with the LEFT and RIGHT buttons and
+    jump with the UP button. Attack back with A button and do combo attacks by clicking
+    C button one to three times.
+
 
 '
   m_isRightToLeft: 0

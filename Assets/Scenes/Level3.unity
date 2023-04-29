@@ -453,12 +453,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Welcome to Subway Smashers onboarding!  In this game, you should attack
-    your enemy with ''A'' button. You are also allowed to do combo attacks by clicking
-    ''C'' button one to three times, i.e. one click for single attack, two clicks
-    for double attack, and three clicks for triple attacks!
-
-'
+  m_text: "You decided to continue your journey. Now you have arrived a robot factory,
+    but the robots here aren\u2019t friendly either. They are very likely to attack
+    human beings. Attack back with A button and do combo attacks by clicking C button
+    one to three times.\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
