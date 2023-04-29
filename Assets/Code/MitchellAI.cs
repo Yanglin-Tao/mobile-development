@@ -5,7 +5,7 @@ using UnityEngine;
 public class MitchellAI : MonoBehaviour
 {
     public Transform player;
-    public float attackRange = 2f;
+    public float attackRange = 4f;
     public float jumpForce = 5f;
     public float jumpHeight = 1f;
     public float moveSpeed = 2f;
@@ -34,7 +34,6 @@ public class MitchellAI : MonoBehaviour
 
         if (distance < attackRange)
         {
-
             attackscript.StartAttack();
             //Debug.Log("Attacking player!");
         }

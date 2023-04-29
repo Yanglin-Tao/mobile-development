@@ -125,6 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5634789814670176942, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
+    - {fileID: 5853491998628671184, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
 --- !u!4 &196090378652130567 stripped
 Transform:
@@ -141,22 +142,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5853491998628671186, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
   m_PrefabInstance: {fileID: 6017760028580741951}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &138320557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196090380050230765}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTime: 1
-  player: {fileID: 196090380050230675}
-  stayStill: 0
-  useThisUlt: 0
 --- !u!114 &138320556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +161,22 @@ MonoBehaviour:
   meleeAttackRange: 1
   meleeDamage: 1
   meleeAttackSpawnPoint: {fileID: 196090378652130567}
+--- !u!114 &138320557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196090380050230765}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTime: 1
+  player: {fileID: 196090380050230675}
+  stayStill: 0
+  useThisUlt: 0
 --- !u!114 &1120013524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +218,7 @@ MonoBehaviour:
   meleeDamage: 10
   meleeAttackSpawnPoint: {fileID: 196090378652130567}
   difficultyLevel: 5
+  CPUname: None
 --- !u!114 &1120013526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,3 +233,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 10000
   movement: 4
+--- !u!60 &7834370487970875885
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196090380050230765}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1142857, y: 2.857143}
+    newSize: {x: 4.090909, y: 3.9545455}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.55714285, y: -1.2571429}
+      - {x: 0.55379766, y: -1.4522631}
+      - {x: -0.45181817, y: -1.4542578}
+      - {x: -0.5552404, y: 0.5182748}
+      - {x: 0.010572553, y: 1.4651215}
+      - {x: 0.49828148, y: 0.41872013}

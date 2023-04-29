@@ -26,6 +26,7 @@ public class AIAttack : MonoBehaviour
 
     //difficultyLevel is out of 3. 3 is easiest and 1 is hardest
     public int difficultyLevel = 1000;
+    public string CPUname = "None";
 
     private void Start()
     {
@@ -49,7 +50,7 @@ public class AIAttack : MonoBehaviour
         //         lastClickedTime = Time.time;
         //     }
         // }
-
+        print("THIS RAN");
         if ((Time.time - lastClickedTime) > 2f){
             StartCoroutine(LoopWithDelay(Random.Range(1, 4), 0.4f));
             lastClickedTime = Time.time;
@@ -100,6 +101,9 @@ public class AIAttack : MonoBehaviour
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
+            if (CPUname == "FatBoss"){
+                rb.AddForce(new Vector2(0, 1000));
+            }
         }
     }
 
