@@ -114,13 +114,6 @@ public class Player : MonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
 // Mobile Stuff
     public void Jump(){
         if (isGrounded){
@@ -147,6 +140,11 @@ public class Player : MonoBehaviour
 
     private bool CheckIsAttacked()
     {
+        // if time is paused, return false
+        if (Time.timeScale == 0)
+        {
+            return false;
+        }
         // if player's health changed in the last frame
         if (health > (int)_gameManager.getHealth())
         {
