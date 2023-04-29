@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class StartPause : MonoBehaviour
 {
+    AudioSource _audioSource;
+    public AudioClip startSound;
+
     void Start()
     {
         Time.timeScale = 0;
         // Debug.Log("game paused");
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void PauseGame ()
@@ -18,6 +22,7 @@ public class StartPause : MonoBehaviour
     {
         Time.timeScale = 1;
         // Debug.Log("game resumed");
+        _audioSource.PlayOneShot(startSound);
     }
 
     public void QuitGame(){
