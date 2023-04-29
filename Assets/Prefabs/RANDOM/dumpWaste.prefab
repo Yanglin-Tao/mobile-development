@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4964155099790475936}
   - component: {fileID: 5937748455615567663}
   - component: {fileID: -8784812845036528982}
+  - component: {fileID: 2576198543233377632}
   m_Layer: 0
   m_Name: dumpWaste
   m_TagString: Attack
@@ -168,3 +169,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.65, y: 0.1760286}
   m_EdgeRadius: 0
+--- !u!114 &2576198543233377632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3923484442740317003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ed4983d9e7440c598bbc54e2195d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ultDamage: 5

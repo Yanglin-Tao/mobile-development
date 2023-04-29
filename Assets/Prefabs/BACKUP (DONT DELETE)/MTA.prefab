@@ -120,6 +120,7 @@ MonoBehaviour:
   player: {fileID: 8183874376336215446}
   stayStill: 0
   useThisUlt: 0
+  ultSound: {fileID: 8300000, guid: ecf1285f86cb24ec79a717c97751feb2, type: 3}
 --- !u!114 &1701130663
 MonoBehaviour:
   m_ObjectHideFlags: 0

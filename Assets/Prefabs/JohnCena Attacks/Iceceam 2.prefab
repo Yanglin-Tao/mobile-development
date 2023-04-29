@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6558173016185721863}
   - component: {fileID: 5051546829505093284}
   - component: {fileID: 890044120907351213}
+  - component: {fileID: 5097888037777687210}
   m_Layer: 0
   m_Name: Iceceam 2
   m_TagString: Attack
@@ -147,3 +148,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 1
+--- !u!114 &5097888037777687210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8409139053285674014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ed4983d9e7440c598bbc54e2195d57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ultDamage: 5
+  ultRange: 1
