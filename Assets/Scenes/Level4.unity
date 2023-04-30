@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197c9bbdd218f4977b6743113e11fa43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSound: {fileID: 0}
 --- !u!1001 &21146941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -448,13 +449,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2235255310435258944, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.21
+      objectReference: {fileID: 0}
     - target: {fileID: 2235255310562566854, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2235255310562566854, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.48
+      value: -5.69
       objectReference: {fileID: 0}
     - target: {fileID: 2235255310562566854, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -495,6 +500,14 @@ PrefabInstance:
     - target: {fileID: 2235255310562566862, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: m_Name
       value: Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235255310735204177, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235255310735204177, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 3386737957906954223, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: useThisUlt
@@ -6880,6 +6893,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7385766531164760672, guid: b361623e301a2864681d92283a4df3c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7385766531164760673, guid: b361623e301a2864681d92283a4df3c4, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7309,6 +7326,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7385766531164760604, guid: b361623e301a2864681d92283a4df3c4, type: 3}
   m_PrefabInstance: {fileID: 538432440}
   m_PrefabAsset: {fileID: 0}
+--- !u!60 &751862920
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751862907}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4, y: 3.142857}
+    newSize: {x: 4.090909, y: 3.9545455}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.5906771, y: -0.07642841}
+      - {x: -0.5600009, y: -1.4642687}
+      - {x: 0.2619626, y: -1.4600079}
+      - {x: 0.41428572, y: 0}
+      - {x: 0.41717356, y: 0.023085594}
+      - {x: 0.43209827, y: 0.024861693}
+      - {x: -0.06933403, y: 1.906655}
 --- !u!1001 &779069123
 PrefabInstance:
   m_ObjectHideFlags: 0
