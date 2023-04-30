@@ -122,6 +122,11 @@ public class GameManager : MonoBehaviour
         return enemyHealth;
     }
 
+    public void resetHealth() {
+        health = 100;
+        enemyHealth = 100;
+    }
+
     public void SetEnemyHealth(int newEnemyHealth)
     {
         enemyHealth = newEnemyHealth;
@@ -165,12 +170,14 @@ public class GameManager : MonoBehaviour
         }
         if (GameOver){
             // go to EndFail scene
+            resetHealth();
             SceneManager.LoadScene("EndFail");
             GameOver = false;
         }
         if (enemyKilled){
-            // go to Map scene
-            SceneManager.LoadScene("Map");
+            // go to EndWin scene
+            resetHealth();
+            SceneManager.LoadScene("EndWin");
             enemyKilled = false;
         }
         screenChecker();
@@ -188,6 +195,7 @@ public class GameManager : MonoBehaviour
     IEnumerator NextScene(int seconds, string level) {
         int counter = seconds;
         yield return new WaitForSeconds(seconds);
+        // resetHealth();
         SceneManager.LoadScene(level);
     }
 }
