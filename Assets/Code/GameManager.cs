@@ -169,8 +169,8 @@ public class GameManager : MonoBehaviour
             GameOver = false;
         }
         if (enemyKilled){
-            // go to EndWin scene
-            SceneManager.LoadScene("EndWin");
+            // go to Map scene
+            SceneManager.LoadScene("Map");
             enemyKilled = false;
         }
         screenChecker();
