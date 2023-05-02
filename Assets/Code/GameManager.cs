@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public bool unlockLevel3 = false;
     public bool unlockLevel4 = false;
 
-    public void unlockScene(string unlockedLevel){
+    public void unlockLevel(string unlockedLevel){
         if (unlockedLevel == "Level2"){
             unlockLevel2 = true;
         }
