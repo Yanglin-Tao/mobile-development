@@ -1002,6 +1002,10 @@ PrefabInstance:
       propertyPath: mainPlayer
       value: 
       objectReference: {fileID: 7660928845604792275, guid: 86f08b5f58e204e2bb993833fdd43747, type: 3}
+    - target: {fileID: 5368506149926077311, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
+      propertyPath: enemyHealth
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
 --- !u!1001 &325788122
@@ -3958,9 +3962,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 1
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 150
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 150
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

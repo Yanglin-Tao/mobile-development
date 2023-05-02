@@ -9,8 +9,8 @@ public class GameManager : MonoBehaviour
 {
     //int score = 0;
     // player health
-    int health = 100;
-    int enemyHealth = 100;
+    public int health = 100;
+    public int enemyHealth = 100;
     string levelName;
 
     // public TMPro.TextMeshProUGUI scoreUI;
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public bool unlockLevel3 = false;
     public bool unlockLevel4 = false;
 
-    private string currentLevel;
+    private string currentLevel = "Level1";
 
     public void unlockLevel(string unlockedLevel){
         if (unlockedLevel == "Level2"){
@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
     }
 
     public bool checkUnlock(string levelName){
+        if (levelName == "Level1"){
+            return true;
+        }
         if (levelName == "Level2"){
             return unlockLevel2;
         }
@@ -106,7 +109,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        string currentLevel = SceneManager.GetActiveScene().name;
+        // currentLevel = SceneManager.GetActiveScene().name;
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         if (mainPlayer){
             // Debug.Log("found main player!");
@@ -164,12 +167,14 @@ public class GameManager : MonoBehaviour
     public void SetEnemyHealth(int newEnemyHealth)
     {
         enemyHealth = newEnemyHealth;
-        enemy.GetComponent<Animator>().SetBool("Damage", true);
-        StartCoroutine(ResetDamageAnimation());
-        if (enemyHealth < 0)
-        {
-            enemyHealth = 0;
-            setEnemyKilled(true);
+        if (enemy){
+            enemy.GetComponent<Animator>().SetBool("Damage", true);
+            StartCoroutine(ResetDamageAnimation());
+            if (enemyHealth < 0)
+            {
+                enemyHealth = 0;
+                setEnemyKilled(true);
+            }
         }
 
     }
@@ -210,6 +215,7 @@ public class GameManager : MonoBehaviour
             GameOver = false;
         }
         if (enemyKilled){
+            // currentLevel = SceneManager.GetActiveScene().name;
             if (currentLevel == "Level4"){
                 // go to EndWin scene
                 resetHealth();
@@ -220,19 +226,26 @@ public class GameManager : MonoBehaviour
                 resetHealth();
                 if (currentLevel == "Level1"){
                     unlockLevel("Level2");
+                    // Debug.Log("Level2 unlockec!");
+                    currentLevel = "Level2";
                 }
                 else if (currentLevel == "Level2"){
+                    // unlockLevel("Level2");
                     unlockLevel("Level3");
+                    currentLevel = "Level3";
                 }
                 else if (currentLevel == "Level3"){
+                    // unlockLevel("Level2");
+                    // unlockLevel("Level3");
                     unlockLevel("Level4");
+                    currentLevel = "Level4";
                 }
                 SceneManager.LoadScene("Map");
                 enemyKilled = false;
             }
         }
         screenChecker();
-        // Debug.Log(enemyHealth);
+        Debug.Log(enemyHealth);
     }
 
     void QuitGame()

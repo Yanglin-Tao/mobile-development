@@ -109,7 +109,7 @@ public class AIAttack : MonoBehaviour
 
     void PerformMeleeAttack()
     {
-        Debug.Log("Perform melee attack");
+        // Debug.Log("Perform melee attack");
         // Get the direction the player is facing
         int facingDirection = transform.localScale.x < 0 ? -1 : 1;
 
