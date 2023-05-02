@@ -60,8 +60,9 @@ public class Ult : MonoBehaviour
         }
 
         if (((noOfClicks > 0) && (Time.time - lastTime >= 10f)) && (useThisUlt)){
-
-            Cena.CenaUlt();
+            if (Cena != null){
+                Cena.CenaUlt();
+            }
             Animator.SetBool("ULT", true);
             lastTime = Time.time;
             inUlt = true;
