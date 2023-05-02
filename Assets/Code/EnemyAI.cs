@@ -31,7 +31,11 @@ public class EnemyAI : MonoBehaviour
     {
         
     }
+<<<<<<< Updated upstream
 
+=======
+    // Mitchell's Changes
+>>>>>>> Stashed changes
     IEnumerator Follow() {
         while(true){
             yield return new WaitForSeconds(0.1f);
@@ -44,4 +48,8 @@ public class EnemyAI : MonoBehaviour
             }
         }
     }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 }
