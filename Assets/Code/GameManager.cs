@@ -27,6 +27,37 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
     // private static GameManager instance;
 
+    public bool unlockLevel2 = false;
+    public bool unlockLevel3 = false;
+    public bool unlockLevel4 = false;
+
+    public void unlockScene(string unlockedLevel){
+        if (unlockedLevel == "Level2"){
+            unlockLevel2 = true;
+        }
+        else if (unlockedLevel == "Level3"){
+            unlockLevel3 = true;
+        }
+        else if (unlockedLevel == "Level4"){
+            unlockLevel4 = true;
+        }
+    }
+
+    public bool checkUnlock(string levelName){
+        if (levelName == "Level2"){
+            return unlockLevel2;
+        }
+        else if (levelName == "Level3"){
+            return unlockLevel3;
+        }
+        else if (levelName == "Level4"){
+            return unlockLevel4;
+        }
+        else{
+            return false;
+        }
+    }
+
     public void SetChosenScene(string choosenScene) {
         currentChoosenScene = choosenScene;
     }

@@ -4,9 +4,17 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
     public string sceneName;
+    GameManager _gameManager;
+
+    void Start(){
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
+    }
+
 
     public void SceneLoader()
     {
-        SceneManager.LoadScene(sceneName);
+        if (_gameManager.checkUnlock(sceneName)){
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }
