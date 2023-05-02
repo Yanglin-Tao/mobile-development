@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         Animator = GetComponent<Animator>();
         _gameManager = GameObject.FindObjectOfType<GameManager>();
         _audioSource = GetComponent<AudioSource>();
-        spawner = GetComponent<Spawner>();
+        spawner = GameObject.FindObjectOfType<Spawner>();
         ultStatus = GetComponent<Ult>();
     }
 
