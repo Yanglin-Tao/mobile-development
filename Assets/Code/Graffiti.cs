@@ -69,7 +69,7 @@ public class Graffiti : MonoBehaviour
                 current = (current + 1) % Attacks.Length;
             }
             else{
-                print("THIS RAN");
+                // print("THIS RAN");
                 newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity, transform);
 
             }
