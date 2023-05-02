@@ -63,6 +63,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // choose character methods
     public void SetChosenScene(string choosenScene) {
         currentChoosenScene = choosenScene;
     }
@@ -94,15 +95,15 @@ public class GameManager : MonoBehaviour
         // ------
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
-        currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
-        if (mainPlayer != null)
-        {
-            SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.sprite = currentSprite;
-            }
-        }
+        // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
+        // if (mainPlayer != null)
+        // {
+        //     SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
+        //     if (spriteRenderer != null)
+        //     {
+        //         spriteRenderer.sprite = currentSprite;
+        //     }
+        // }
         // ------
         //healthUI.text = "HEALTH: " + health;
     }
@@ -115,15 +116,15 @@ public class GameManager : MonoBehaviour
             // Debug.Log("found main player!");
         }
         enemy = GameObject.FindGameObjectWithTag("Enemy");
-        currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
-        if (mainPlayer != null)
-        {
-            SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.sprite = currentSprite;
-            }
-        }
+        // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
+        // if (mainPlayer != null)
+        // {
+        //     SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
+        //     if (spriteRenderer != null)
+        //     {
+        //         spriteRenderer.sprite = currentSprite;
+        //     }
+        // }
     }
 
     public void NextScene(string name){
@@ -245,7 +246,7 @@ public class GameManager : MonoBehaviour
             }
         }
         screenChecker();
-        Debug.Log(enemyHealth);
+        // Debug.Log(enemyHealth);
     }
 
     void QuitGame()

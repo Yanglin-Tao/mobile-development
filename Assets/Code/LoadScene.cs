@@ -25,9 +25,9 @@ public class LoadScene : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode){
         _gameManager = GameObject.FindObjectOfType<GameManager>();
-        if (_gameManager != null){
-            Debug.Log("found game manager");
-        }
+        // if (_gameManager != null){
+        //     Debug.Log("found game manager");
+        // }
     }
 
     public void SceneLoader()
