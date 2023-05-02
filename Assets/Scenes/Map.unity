@@ -2713,6 +2713,7 @@ GameObject:
   - component: {fileID: 1286494695}
   - component: {fileID: 1286494697}
   - component: {fileID: 1286494696}
+  - component: {fileID: 1286494698}
   m_Layer: 5
   m_Name: Spaceship Lock
   m_TagString: Untagged
@@ -2778,6 +2779,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286494694}
   m_CullTransparentMesh: 1
+--- !u!114 &1286494698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286494694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c31bf6647cc4bb6ab06e6b63f24a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Level4
 --- !u!1 &1302145852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3336,6 +3350,7 @@ GameObject:
   - component: {fileID: 1415545305}
   - component: {fileID: 1415545307}
   - component: {fileID: 1415545306}
+  - component: {fileID: 1415545308}
   m_Layer: 5
   m_Name: Office Lock
   m_TagString: Untagged
@@ -3401,6 +3416,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1415545304}
   m_CullTransparentMesh: 1
+--- !u!114 &1415545308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415545304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c31bf6647cc4bb6ab06e6b63f24a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Level2
 --- !u!1 &1441774240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4245,6 +4273,7 @@ GameObject:
   - component: {fileID: 1709366031}
   - component: {fileID: 1709366033}
   - component: {fileID: 1709366032}
+  - component: {fileID: 1709366034}
   m_Layer: 5
   m_Name: Factory Lock
   m_TagString: Untagged
@@ -4310,6 +4339,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709366030}
   m_CullTransparentMesh: 1
+--- !u!114 &1709366034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709366030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c31bf6647cc4bb6ab06e6b63f24a0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Level3
 --- !u!1 &1732755797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,6 +4383,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedPlayer: {fileID: 609164819, guid: 6a58ca01722fe44d9949865d73b35dc2, type: 3}
   enemy: {fileID: 0}
+  unlockLevel2: 0
+  unlockLevel3: 0
+  unlockLevel4: 0
 --- !u!4 &1732755799
 Transform:
   m_ObjectHideFlags: 0

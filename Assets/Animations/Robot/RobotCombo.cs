@@ -79,6 +79,7 @@ public class RobotCombo : MonoBehaviour
 
         if (_gameManager.getEnemyHealth() <= 0){
             _gameManager.NextScene("Map");
+            _gameManager.unlockLevel("Level4");
         }
     }
 
