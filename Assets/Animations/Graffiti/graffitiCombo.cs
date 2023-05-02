@@ -79,9 +79,6 @@ public class graffitiCombo : MonoBehaviour
         //     nextFireTime = Time.time + cooldownTime;
         // }
         //print(noOfClicks);
-        if (_gameManager.getEnemyHealth() <= 0){
-            _gameManager.NextScene("Map");
-        }
     }
 
     public void ComboSystem()

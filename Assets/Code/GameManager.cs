@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public bool unlockLevel3 = false;
     public bool unlockLevel4 = false;
 
+    private string currentLevel;
+
     public void unlockLevel(string unlockedLevel){
         if (unlockedLevel == "Level2"){
             unlockLevel2 = true;
@@ -104,9 +106,10 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        string currentLevel = SceneManager.GetActiveScene().name;
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         if (mainPlayer){
-            Debug.Log("found main player!");
+            // Debug.Log("found main player!");
         }
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
@@ -174,8 +177,9 @@ public class GameManager : MonoBehaviour
     IEnumerator ResetDamageAnimation()
     {
         yield return new WaitForSeconds(0.5f);
-
-        enemy.GetComponent<Animator>().SetBool("Damage", false);
+        if (enemy){
+            enemy.GetComponent<Animator>().SetBool("Damage", false);
+        }
     }
 
 
@@ -206,12 +210,29 @@ public class GameManager : MonoBehaviour
             GameOver = false;
         }
         if (enemyKilled){
-            // go to EndWin scene
-            resetHealth();
-            SceneManager.LoadScene("EndWin");
-            enemyKilled = false;
+            if (currentLevel == "Level4"){
+                // go to EndWin scene
+                resetHealth();
+                SceneManager.LoadScene("EndWin");
+                enemyKilled = false;
+            }
+            else{
+                resetHealth();
+                if (currentLevel == "Level1"){
+                    unlockLevel("Level2");
+                }
+                else if (currentLevel == "Level2"){
+                    unlockLevel("Level3");
+                }
+                else if (currentLevel == "Level3"){
+                    unlockLevel("Level4");
+                }
+                SceneManager.LoadScene("Map");
+                enemyKilled = false;
+            }
         }
         screenChecker();
+        // Debug.Log(enemyHealth);
     }
 
     void QuitGame()
