@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ult : MonoBehaviour
 {
     private Animator Animator;
     private Rigidbody2D rb;
     private Spawner Cena;
-    public float cooldownTime = 1f;
     public static int noOfClicks = 0;
     float lastClickedTime = 0;
     public Transform player;
@@ -18,6 +18,12 @@ public class Ult : MonoBehaviour
     public bool useThisUlt = false;
     AudioSource _audioSource;
     public AudioClip ultSound;
+
+    // Cool down timer
+    public float cooldownTime = 15f;
+    public TMPro.TextMeshProUGUI cooldownText;
+    private bool isCooldown = false;
+    private float timer = 0f;
 
     private void Start()
     {
@@ -31,11 +37,14 @@ public class Ult : MonoBehaviour
     }
 
     public void clicked() {
-        if (Time.time - lastClickedTime > 10f){
+        if (!isCooldown && Time.time - lastClickedTime > 10f){
             lastClickedTime = Time.time;
             noOfClicks++;
             inUlt = true;
             clickEnabled = true;
+            isCooldown = true;
+            timer = cooldownTime;
+            // cooldownText.gameObject.SetActive(true);
         }
     }
 
@@ -94,9 +103,20 @@ public class Ult : MonoBehaviour
 
         // bool ultState = Animator.GetBool("ULT");
         // Debug.Log("ULT state: " + ultState);
+        if (isCooldown)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 10 && timer > 0){
+                cooldownText.gameObject.SetActive(true);
+                cooldownText.text = "Cooldown: " + Mathf.Round(timer).ToString() + "s";
+            }
+            if (timer <= 0){
+                isCooldown = false;
+                cooldownText.gameObject.SetActive(false);
+            }
+        }
 
     }
-
 
     private void EnableClick()
     {
