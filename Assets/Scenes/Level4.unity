@@ -526,17 +526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b709f2bac142b443a5b40d15f7792e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &21146943 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3386737957906954223, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
-  m_PrefabInstance: {fileID: 21146941}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &21146944 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2235255310562566850, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
@@ -7579,9 +7568,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 21146943}
-        m_TargetAssemblyTypeName: Ult, Assembly-CSharp
-        m_MethodName: clicked
+      - m_Target: {fileID: 21146944}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
