@@ -56,14 +56,19 @@ public class Ult : MonoBehaviour
 
         if ((Input.GetButtonDown("Fire2"))){
             clicked();
-            _audioSource.PlayOneShot(ultSound);
+            // if cooled down, then play ult sound
+            // _audioSource.PlayOneShot(ultSound);
+            if (clickEnabled){
+                _audioSource.PlayOneShot(ultSound);
+            } 
         }
 
-        if (((noOfClicks > 0) && (Time.time - lastTime >= 10f)) && (useThisUlt)){
-            if (Cena != null){
+        if ((noOfClicks > 0) && (Time.time - lastTime >= 10f)){
+            if (Cena != null && useThisUlt){
                 Cena.CenaUlt();
             }
-            Animator.SetBool("ULT", true);
+            Animator.SetBool("ULT", true);    
+            _audioSource.PlayOneShot(ultSound);
             lastTime = Time.time;
             inUlt = true;
             clickEnabled = true;
@@ -86,6 +91,10 @@ public class Ult : MonoBehaviour
             Vector3 localScale = transform.localScale;
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), localScale.y, localScale.z);
         }
+
+        // bool ultState = Animator.GetBool("ULT");
+        // Debug.Log("ULT state: " + ultState);
+
     }
 
 

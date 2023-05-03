@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
         }
         if ((Time.time - lastTime > .3f) && (!ultStatus.FallingUlt()) ){
             Animator.SetBool("ULT", false);
+            // Debug.Log("set to false");
         }
         Animator.SetBool("Jump", !isGrounded);
 
