@@ -8,13 +8,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //int score = 0;
-    // player health
-    public int health = 100;
-    public int enemyHealth = 100;
-    string levelName;
 
-    // public TMPro.TextMeshProUGUI scoreUI;
-    // public TMPro.TextMeshProUGUI healthUI;
+    // player health
+    // public int health = 100;
+    // public int enemyHealth = 100;
+    public int health;
+    public int enemyHealth;
+    
+    // public int maxHealth;
+    // public int maxEnemyHealth;
+    string levelName;
 
     private bool GameOver = false;
     public bool enemyKilled = false;
@@ -75,6 +78,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        // Debug.Log("awake");
         if (instance != null && instance != this)
         {
             Destroy(this.gameObject);
@@ -84,9 +88,9 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         // After we do the check
-        Scene scene = SceneManager.GetActiveScene();
-        levelName = scene.name;
-        // SceneManager.sceneLoaded += OnSceneLoaded;
+        // Scene scene = SceneManager.GetActiveScene();
+        // levelName = scene.name;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void Start(){
@@ -94,23 +98,50 @@ public class GameManager : MonoBehaviour
         enemy = GameObject.FindGameObjectWithTag("Enemy");
     }
 
-    private void OnEnable()
-    {
-        // Register the OnSceneLoaded method to be called when a new scene is loaded
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+    // private void OnEnable()
+    // {
+    //     // Register the OnSceneLoaded method to be called when a new scene is loaded
+    //     SceneManager.sceneLoaded += OnSceneLoaded;
+    // }
 
-    private void OnDisable()
-    {
-        // Unregister the OnSceneLoaded method when this script is disabled or destroyed
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    // private void OnDisable()
+    // {
+    //     // Unregister the OnSceneLoaded method when this script is disabled or destroyed
+    //     SceneManager.sceneLoaded -= OnSceneLoaded;
+    // }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // Debug.Log("on scene loaded");
         // currentLevel = SceneManager.GetActiveScene().name;
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
+
+        // set maximum player health
+        if (mainPlayer != null){
+            Player playerScript = mainPlayer.GetComponent<Player>();
+            if (playerScript != null) {
+                health = playerScript.health;
+                // maxHealth = health;
+                // Debug.Log("player found with tag");
+            }
+        }
+
+        // set maximum enemy health
+        if (scene.name == "Level1"){
+            enemyHealth = 100;
+        }
+        else if (scene.name == "Level2"){
+            enemyHealth = 150;
+        }
+        else if (scene.name == "Level3"){
+            enemyHealth = 100;
+        }
+        else if (scene.name == "Level4"){
+            enemyHealth = 100;
+        }
+        
+        // CHOOSE CHARACTER CODE
         // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
         // if (mainPlayer != null)
         // {
@@ -156,11 +187,11 @@ public class GameManager : MonoBehaviour
         return enemyHealth;
     }
 
-    public void resetHealth() {
-        health = 100;
-        enemyHealth = 100;
-        // Debug.Log("health reset");
-    }
+    // public void resetHealth() {
+    //     health = 100;
+    //     enemyHealth = 100;
+    //     // Debug.Log("reset health to 100");
+    // }
 
     public void SetEnemyHealth(int newEnemyHealth)
     {
@@ -208,7 +239,7 @@ public class GameManager : MonoBehaviour
         }
         if (GameOver){
             // go to EndFail scene
-            resetHealth();
+            // resetHealth();
             SceneManager.LoadScene("EndFail");
             GameOver = false;
         }
@@ -216,12 +247,12 @@ public class GameManager : MonoBehaviour
             // currentLevel = SceneManager.GetActiveScene().name;
             if (currentLevel == "Level4"){
                 // go to EndWin scene
-                resetHealth();
+                // resetHealth();
                 SceneManager.LoadScene("EndWin");
                 enemyKilled = false;
             }
             else{
-                resetHealth();
+                // resetHealth();
                 if (currentLevel == "Level1"){
                     unlockLevel("Level2");
                     // Debug.Log("Level2 unlocked!");
