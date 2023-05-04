@@ -116,7 +116,7 @@ public class graffitiCombo : MonoBehaviour
 
     void PerformMeleeAttack()
     {
-        Debug.Log("Perform melee attack");
+        // Debug.Log("Perform melee attack");
         // Get the direction the player is facing
         int facingDirection = transform.localScale.x < 0 ? -1 : 1;
 
@@ -141,7 +141,6 @@ public class graffitiCombo : MonoBehaviour
                 int enemyHealth = _gameManager.getEnemyHealth();
                 // Debug.Log("Enemy health: " + enemyHealth);
                 _gameManager.SetEnemyHealth(enemyHealth - (int)meleeDamage);
-                 Debug.Log("melee attack hit enemy");
                 // Debug.Log("Enemy health: " + enemyHealth);
                 // Debug.Log("Melee attack hit: " + collider.gameObject.name);
             }
