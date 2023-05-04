@@ -35,15 +35,15 @@ public class BossCombo : MonoBehaviour
     public void clicked() {
         lastClickedTime = Time.time;
         noOfClicks++;
+        if (noOfClicks <= 3) {
+            PerformMeleeAttack();
+        }
     }
 
     public void Update()
     {
         if (Input.GetButtonDown("Fire1")){
             clicked();
-            if (noOfClicks <= 3) {
-                PerformMeleeAttack();
-            }
         }
         if (noOfClicks > 0){
             ComboSystem();

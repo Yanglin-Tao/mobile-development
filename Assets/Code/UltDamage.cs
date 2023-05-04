@@ -25,7 +25,7 @@ public class UltDamage : MonoBehaviour
                 // Deal damage to the enemy
                 int enemyHealth = _gameManager.getEnemyHealth();
                 _gameManager.SetEnemyHealth(enemyHealth - (int)ultDamage);
-                // Debug.Log("Enemy health deducted");
+                Debug.Log("Enemy health deducted");
                 // destroy itself
                 Destroy(gameObject);
             }
