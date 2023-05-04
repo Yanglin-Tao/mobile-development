@@ -39,15 +39,18 @@ public class graffitiCombo : MonoBehaviour
     public void clicked() {
         lastClickedTime = Time.time;
         noOfClicks++;
+        if (noOfClicks <= 3) {
+            PerformMeleeAttack();
+        }
     }
 
     public void Update()
     {
         if (Input.GetButtonDown("Fire1")){
             clicked();
-            if (noOfClicks <= 3) {
-                PerformMeleeAttack();
-            }
+            // if (noOfClicks <= 3) {
+            //     PerformMeleeAttack();
+            // }
         }
         if (noOfClicks > 0){
             ComboSystem();
@@ -138,6 +141,7 @@ public class graffitiCombo : MonoBehaviour
                 int enemyHealth = _gameManager.getEnemyHealth();
                 // Debug.Log("Enemy health: " + enemyHealth);
                 _gameManager.SetEnemyHealth(enemyHealth - (int)meleeDamage);
+                 Debug.Log("melee attack hit enemy");
                 // Debug.Log("Enemy health: " + enemyHealth);
                 // Debug.Log("Melee attack hit: " + collider.gameObject.name);
             }
