@@ -721,6 +721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   enemyHealth: 100
+  enemyKilled: 0
   selectedPlayer: {fileID: 609164819, guid: 6a58ca01722fe44d9949865d73b35dc2, type: 3}
   enemy: {fileID: 0}
   unlockLevel2: 0
