@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     public bool enemyKilled = false;
     public GameObject selectedPlayer; // selected player from the choosing scene
     private Sprite currentSprite; // selected sprite loaded as currentSprite for the level
-    public GameObject mainPlayer; // player to be loaded from selected one
-    // private GameObject mainPlayer;
+    // public GameObject mainPlayer; // player to be loaded from selected one
+    private GameObject mainPlayer;
     public GameObject enemy;
     private string currentChoosenScene;
     private static GameManager instance = null;
@@ -89,24 +89,10 @@ public class GameManager : MonoBehaviour
         // SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // void Start()
-    // {
-    //     // Needed for the choose character scene
-    //     // ------
-    //     mainPlayer = GameObject.FindGameObjectWithTag("Player");
-    //     enemy = GameObject.FindGameObjectWithTag("Enemy");
-    //     // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
-    //     // if (mainPlayer != null)
-    //     // {
-    //     //     SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
-    //     //     if (spriteRenderer != null)
-    //     //     {
-    //     //         spriteRenderer.sprite = currentSprite;
-    //     //     }
-    //     // }
-    //     // ------
-    //     //healthUI.text = "HEALTH: " + health;
-    // }
+    void Start(){
+        mainPlayer = GameObject.FindGameObjectWithTag("Player");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+    }
 
     private void OnEnable()
     {
