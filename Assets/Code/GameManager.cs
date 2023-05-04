@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour
     // public TMPro.TextMeshProUGUI healthUI;
 
     private bool GameOver = false;
-    private bool enemyKilled = false;
+    public bool enemyKilled = false;
     public GameObject selectedPlayer; // selected player from the choosing scene
     private Sprite currentSprite; // selected sprite loaded as currentSprite for the level
-    // public GameObject mainPlayer; // player to be loaded from selected one
-    private GameObject mainPlayer;
+    public GameObject mainPlayer; // player to be loaded from selected one
+    // private GameObject mainPlayer;
     public GameObject enemy;
     private string currentChoosenScene;
     private static GameManager instance = null;
@@ -86,35 +86,44 @@ public class GameManager : MonoBehaviour
         // After we do the check
         Scene scene = SceneManager.GetActiveScene();
         levelName = scene.name;
+        // SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // void Start()
+    // {
+    //     // Needed for the choose character scene
+    //     // ------
+    //     mainPlayer = GameObject.FindGameObjectWithTag("Player");
+    //     enemy = GameObject.FindGameObjectWithTag("Enemy");
+    //     // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
+    //     // if (mainPlayer != null)
+    //     // {
+    //     //     SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
+    //     //     if (spriteRenderer != null)
+    //     //     {
+    //     //         spriteRenderer.sprite = currentSprite;
+    //     //     }
+    //     // }
+    //     // ------
+    //     //healthUI.text = "HEALTH: " + health;
+    // }
+
+    private void OnEnable()
+    {
+        // Register the OnSceneLoaded method to be called when a new scene is loaded
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void Start()
+    private void OnDisable()
     {
-        // Needed for the choose character scene
-        // ------
-        mainPlayer = GameObject.FindGameObjectWithTag("Player");
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
-        // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
-        // if (mainPlayer != null)
-        // {
-        //     SpriteRenderer spriteRenderer = mainPlayer.GetComponent<SpriteRenderer>();
-        //     if (spriteRenderer != null)
-        //     {
-        //         spriteRenderer.sprite = currentSprite;
-        //     }
-        // }
-        // ------
-        //healthUI.text = "HEALTH: " + health;
+        // Unregister the OnSceneLoaded method when this script is disabled or destroyed
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // currentLevel = SceneManager.GetActiveScene().name;
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
-        if (mainPlayer){
-            // Debug.Log("found main player!");
-        }
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         // currentSprite = selectedPlayer.GetComponent<SpriteRenderer>().sprite;
         // if (mainPlayer != null)
@@ -147,6 +156,7 @@ public class GameManager : MonoBehaviour
         if (mainPlayer != null){
             health = amount;
             // player damaged
+            // Debug.Log("Set health runs");
             mainPlayer.GetComponent<Animator>().SetBool("Damage", true);
             if (health < 0){
                 GameOver = true;
@@ -163,6 +173,7 @@ public class GameManager : MonoBehaviour
     public void resetHealth() {
         health = 100;
         enemyHealth = 100;
+        // Debug.Log("health reset");
     }
 
     public void SetEnemyHealth(int newEnemyHealth)
@@ -227,18 +238,17 @@ public class GameManager : MonoBehaviour
                 resetHealth();
                 if (currentLevel == "Level1"){
                     unlockLevel("Level2");
-                    // Debug.Log("Level2 unlockec!");
+                    // Debug.Log("Level2 unlocked!");
                     currentLevel = "Level2";
                 }
                 else if (currentLevel == "Level2"){
-                    // unlockLevel("Level2");
                     unlockLevel("Level3");
+                    // Debug.Log("Level3 unlocked!");
                     currentLevel = "Level3";
                 }
                 else if (currentLevel == "Level3"){
-                    // unlockLevel("Level2");
-                    // unlockLevel("Level3");
                     unlockLevel("Level4");
+                    // Debug.Log("Level4 unlocked!");
                     currentLevel = "Level4";
                 }
                 SceneManager.LoadScene("Map");

@@ -999,9 +999,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368506149926077311, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 6727161043192610340}
+    - target: {fileID: 5368506149926077311, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
       propertyPath: mainPlayer
       value: 
-      objectReference: {fileID: 7660928845604792275, guid: 86f08b5f58e204e2bb993833fdd43747, type: 3}
+      objectReference: {fileID: 140645304}
     - target: {fileID: 5368506149926077311, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
       propertyPath: enemyHealth
       value: 150
@@ -9875,3 +9879,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ebf6579adeefdf45b7d77eacef1075f, type: 3}
+--- !u!1 &6727161043192610340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5148295345759420745, guid: 0ebf6579adeefdf45b7d77eacef1075f, type: 3}
+  m_PrefabInstance: {fileID: 6727161043192610339}
+  m_PrefabAsset: {fileID: 0}

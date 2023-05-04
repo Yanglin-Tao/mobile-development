@@ -33,7 +33,7 @@ public class LoadScene : MonoBehaviour
     public void SceneLoader()
     {
         if (_gameManager != null){
-            Debug.Log(_gameManager.checkUnlock(sceneName));
+            // Debug.Log(_gameManager.checkUnlock(sceneName));
             if (_gameManager.checkUnlock(sceneName)){
                 SceneManager.LoadScene(sceneName);
             }

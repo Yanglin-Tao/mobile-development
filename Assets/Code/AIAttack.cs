@@ -126,11 +126,11 @@ public class AIAttack : MonoBehaviour
         bool hitPlayer = false;
         foreach (Collider2D collider in colliders)
         {
-            // Perform melee attack on detected game objects with "Enemy" tag
+            // Perform melee attack on detected game objects with "Player" tag
             if (collider.gameObject.tag == "Player")
             {
                 hitPlayer = true;
-                // Deal damage to the enemy
+                // Deal damage to the player
                 float playerHealth = _gameManager.getHealth();
                 _gameManager.SetHealth((int)playerHealth - (int)meleeDamage);
             }
