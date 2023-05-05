@@ -65,7 +65,6 @@ public class BossCombo : MonoBehaviour
             noOfClicks = 0;
         }
 
-        print(Time.time - lastClickedTime);
         if (Time.time - lastClickedTime > maxComboDelay)
         {
             noOfClicks = 0;

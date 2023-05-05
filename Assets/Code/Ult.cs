@@ -85,7 +85,9 @@ public class Ult : MonoBehaviour
             lastTime = Time.time;
             inUlt = true;
             clickEnabled = true;
-            stayStill = true;
+            if (useThisUlt){
+                stayStill = true;
+            }
         }
 
         if (clickEnabled && (Time.time - lastTime >= 5f))

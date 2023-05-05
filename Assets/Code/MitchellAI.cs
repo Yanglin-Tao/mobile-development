@@ -70,20 +70,27 @@ public class MitchellAI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Attack")){
-            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
+            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 3);
             Destroy(other.gameObject);
         }
         if(other.CompareTag("ICECREAM")){
-            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 5);
+            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
             Destroy(other.gameObject);
         }
     }
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnCollisionEnter2D(Collision2D other) {
+        print("THIS RAN");
         if(other.gameObject.CompareTag("Attack")){
             _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
-            Destroy(other.gameObject);
         }
     }
+
+
+    // void OnCollisionEnter2D(Collision2D col)
+    // {
+    //     Debug.Log("OnCollisionEnter2D");
+    // }
+
 
 }
