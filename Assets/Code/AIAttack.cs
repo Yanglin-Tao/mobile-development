@@ -51,8 +51,14 @@ public class AIAttack : MonoBehaviour
         //     }
         // }
         // print("THIS RAN");
+        print((Time.time - lastClickedTime));
         if ((Time.time - lastClickedTime) > 2f){
-            StartCoroutine(LoopWithDelay(Random.Range(1, 4), 0.4f));
+            if (CPUname == "FatBoss"){
+                StartCoroutine(LoopWithDelay(Random.Range(3, 5), 0.3f));
+            }
+            else{
+                StartCoroutine(LoopWithDelay(Random.Range(1, 4), 0.4f));
+            }
             lastClickedTime = Time.time;
         }
 

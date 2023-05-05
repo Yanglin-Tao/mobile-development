@@ -33,7 +33,7 @@ public class MitchellAI : MonoBehaviour
         //     transform.localScale *= new Vector2(-1,1);
         // }
         float distance = Vector2.Distance(transform.position, player.position);
-
+        print(distance);
         if (distance < attackRange)
         {
             attackscript.StartAttack();
