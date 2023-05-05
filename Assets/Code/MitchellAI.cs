@@ -73,6 +73,10 @@ public class MitchellAI : MonoBehaviour
             _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
             Destroy(other.gameObject);
         }
+        if(other.CompareTag("ICECREAM")){
+            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 5);
+            Destroy(other.gameObject);
+        }
     }
 
     private void OnCollisionEnter(Collision other) {

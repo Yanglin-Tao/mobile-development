@@ -2386,7 +2386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1206e36019935554583bb1b6337c7175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0.5
+  rate: 0.3
   speed: 10
   enemies:
   - {fileID: 8409139053285674014, guid: 4cf2d6e742bda3d45b64a2046a3138b1, type: 3}

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7976406591056577496}
   m_Layer: 0
   m_Name: Iceceam 1
-  m_TagString: Attack
+  m_TagString: ICECREAM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
