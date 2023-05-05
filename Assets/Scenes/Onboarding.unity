@@ -1221,6 +1221,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5078949021038594524, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
+      propertyPath: ultSound
+      value: 
+      objectReference: {fileID: 8300000, guid: df247b683c49149bca5713dc6dd0ae5d, type: 3}
+    - target: {fileID: 5078949021038594524, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
       propertyPath: cooldownText
       value: 
       objectReference: {fileID: 569793629}
