@@ -42,9 +42,7 @@ public class BossCombo : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetButtonDown("Fire1")){
-            clicked();
-        }
+        //print(noOfClicks);
         if (noOfClicks > 0){
             ComboSystem();
         }
@@ -65,6 +63,7 @@ public class BossCombo : MonoBehaviour
             noOfClicks = 0;
         }
 
+        print(Time.time - lastClickedTime);
         if (Time.time - lastClickedTime > maxComboDelay)
         {
             noOfClicks = 0;

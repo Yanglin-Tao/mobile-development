@@ -51,7 +51,6 @@ public class AIAttack : MonoBehaviour
         //     }
         // }
         // print("THIS RAN");
-        print((Time.time - lastClickedTime));
         if ((Time.time - lastClickedTime) > 2f){
             if (CPUname == "FatBoss"){
                 StartCoroutine(LoopWithDelay(Random.Range(3, 5), 0.3f));
@@ -62,15 +61,15 @@ public class AIAttack : MonoBehaviour
             lastClickedTime = Time.time;
         }
 
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
             anim.SetBool("hit1", false);
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
         {
             anim.SetBool("hit3", false);
             noOfClicks = 0;
