@@ -75,15 +75,22 @@ public class CPUShooting : MonoBehaviour
         {
             // Disable clicking the button for the cooldown duration
             if (CPUname == "Shooting"){
-                Animator.SetBool("ULT", true);
-                StartCoroutine(Shoot());
-            }
+                Vector3 myPos = transform.position; 
+                Vector3 otherObjectPos = user.position;
+                // Check if the other object is 5 pixels away in X direction
+                float distanceX = Mathf.Abs(myPos.x - otherObjectPos.x);
+                if (distanceX > 1f)
+                {
+                    Animator.SetBool("ULT", true);
+                    StartCoroutine(Shoot());
+                }
             clickEnabled = false;
             Animator.SetBool("ULT", false);
             inUlt = false;
             noOfClicks  = 0;
             lastTime = Time.time;
             stayStill = false;
+            }
         }
 
 

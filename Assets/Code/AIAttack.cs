@@ -7,18 +7,33 @@ public class AIAttack : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     public float cooldownTime = 1f;
-    private float nextFireTime = 0f;
+    //private float nextFireTime = 0f;
     public static int noOfClicks = 0;
-    float lastClickedTime = 0;
+    float lastClickedTime = .6f;
     float maxComboDelay = 1f;
 
-    //difficultyLevel is out of 10. 1 is easiest and 10 is hardest
-    public int difficultyLevel = 5;
+    GameManager _gameManager;
+
+    AudioSource _audioSource;
+    public AudioClip meleeSound;
+    public AudioClip hitSound;
+
+
+    // melee
+    public float meleeAttackRange = 1f;
+    public float meleeDamage = 1f;
+    public Transform meleeAttackSpawnPoint;
+
+    //difficultyLevel is out of 3. 3 is easiest and 1 is hardest
+    public int difficultyLevel = 1000;
+    public string CPUname = "None";
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        _audioSource = GetComponent<AudioSource>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
     public void StartAttack()
     {
@@ -27,11 +42,6 @@ public class AIAttack : MonoBehaviour
         // This should allow the player to trigger melee attacks while walking
         // without the animations being overridden.
         // Check for mouse input
-<<<<<<< Updated upstream
-        if (Random.Range(1, 11) < difficultyLevel)
-        {
-            ComboSystem();
-=======
 
         // if ((Time.time - lastClickedTime) > .6f){
         //     if ((Random.Range(1, 1000) < difficultyLevel)){
@@ -40,21 +50,26 @@ public class AIAttack : MonoBehaviour
         //         lastClickedTime = Time.time;
         //     }
         // }
+        // print("THIS RAN");
         if ((Time.time - lastClickedTime) > 2f){
-            StartCoroutine(LoopWithDelay(Random.Range(1, 4), 0.4f));
+            if (CPUname == "FatBoss"){
+                StartCoroutine(LoopWithDelay(Random.Range(3, 5), 0.3f));
+            }
+            else{
+                StartCoroutine(LoopWithDelay(Random.Range(1, 4), 0.4f));
+            }
             lastClickedTime = Time.time;
->>>>>>> Stashed changes
         }
 
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
             anim.SetBool("hit1", false);
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
         {
             anim.SetBool("hit3", false);
             noOfClicks = 0;
@@ -65,17 +80,16 @@ public class AIAttack : MonoBehaviour
             noOfClicks = 0;
         }
 
-        //cooldown time
-        if (Time.time > nextFireTime)
-        {
-            nextFireTime = Time.time + cooldownTime;
-        }
+        // //cooldown time
+        // if (Time.time > nextFireTime)
+        // {
+        //     nextFireTime = Time.time + cooldownTime;
+        // }
     }
 
     void ComboSystem()
     {
         //so it looks at how many clicks have been made and if one animation has finished playing starts another one.
-        lastClickedTime = Time.time;
         noOfClicks++;
         if (noOfClicks == 1)
         {
@@ -87,14 +101,11 @@ public class AIAttack : MonoBehaviour
         {
             anim.SetBool("hit1", false);
             anim.SetBool("hit2", true);
-            rb.AddForce(new Vector2(0, 1200));
         }
         if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
-<<<<<<< Updated upstream
-=======
             if (CPUname == "FatBoss"){
                 rb.AddForce(new Vector2(0, 1000));
             }
@@ -103,7 +114,7 @@ public class AIAttack : MonoBehaviour
 
     void PerformMeleeAttack()
     {
-        //Debug.Log("Perform melee attack");
+        // Debug.Log("Perform melee attack");
         // Get the direction the player is facing
         int facingDirection = transform.localScale.x < 0 ? -1 : 1;
 
@@ -120,11 +131,11 @@ public class AIAttack : MonoBehaviour
         bool hitPlayer = false;
         foreach (Collider2D collider in colliders)
         {
-            // Perform melee attack on detected game objects with "Enemy" tag
+            // Perform melee attack on detected game objects with "Player" tag
             if (collider.gameObject.tag == "Player")
             {
                 hitPlayer = true;
-                // Deal damage to the enemy
+                // Deal damage to the player
                 float playerHealth = _gameManager.getHealth();
                 _gameManager.SetHealth((int)playerHealth - (int)meleeDamage);
             }
@@ -151,8 +162,6 @@ public class AIAttack : MonoBehaviour
 
             // Wait for 0.6 seconds before continuing to the next iteration
             yield return new WaitForSeconds(hitDelay);
->>>>>>> Stashed changes
         }
-        print(noOfClicks);
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &560342211014353525
+--- !u!1001 &2353466805796430650
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5853491998628671148, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.1227655
+      value: 0.76415825
       objectReference: {fileID: 0}
     - target: {fileID: 5853491998628671148, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1535649
+      value: -1.1172426
       objectReference: {fileID: 0}
     - target: {fileID: 5853491998628671148, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
       propertyPath: m_LocalPosition.z
@@ -79,9 +79,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: MTA
       objectReference: {fileID: 0}
+    - target: {fileID: 5853491998628671186, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5853491999839143945, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.069
+      value: 1.36
       objectReference: {fileID: 0}
     - target: {fileID: 5853491999839143945, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
       propertyPath: m_LocalPosition.y
@@ -90,43 +94,53 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -5634789814670176942, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
---- !u!1 &6268302252246600871 stripped
+--- !u!4 &8183874376336215446 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5853491998628671148, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
+  m_PrefabInstance: {fileID: 2353466805796430650}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8183874376336215528 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5853491998628671186, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
-  m_PrefabInstance: {fileID: 560342211014353525}
+  m_PrefabInstance: {fileID: 2353466805796430650}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &729722084
+--- !u!114 &1701130662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6268302252246600871}
+  m_GameObject: {fileID: 8183874376336215528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 1
-  player: {fileID: 0}
+  player: {fileID: 8183874376336215446}
   stayStill: 0
   useThisUlt: 0
---- !u!114 &729722085
+--- !u!114 &1701130663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6268302252246600871}
+  m_GameObject: {fileID: 8183874376336215528}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b069112f9311364f910c3c5594525e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTime: 1
-  player: {fileID: 6268302252246600921}
---- !u!4 &6268302252246600921 stripped
+  player: {fileID: 8183874376336215446}
+  meleeSound: {fileID: 8300000, guid: 183f6effd8c614f0c9eed9981b4ef37c, type: 3}
+  hitSound: {fileID: 8300000, guid: edf49a400e55f482b98768f981e71115, type: 3}
+  meleeAttackRange: 1
+  meleeDamage: 1
+  meleeAttackSpawnPoint: {fileID: 8183874377584770306}
+--- !u!4 &8183874377584770306 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5853491998628671148, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
-  m_PrefabInstance: {fileID: 560342211014353525}
+  m_CorrespondingSourceObject: {fileID: 5853491999477800504, guid: 8ca1f6178a795e548bd78691601b8fde, type: 3}
+  m_PrefabInstance: {fileID: 2353466805796430650}
   m_PrefabAsset: {fileID: 0}

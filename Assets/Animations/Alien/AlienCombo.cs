@@ -13,10 +13,13 @@ public class AlienCombo : MonoBehaviour
     float maxComboDelay = 1f;
     public Transform player;
 
+    GameManager _gameManager;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     public void clicked() {
@@ -60,6 +63,7 @@ public class AlienCombo : MonoBehaviour
         {
             nextFireTime = Time.time + cooldownTime;
         }
+
     }
 
     public void ComboSystem()

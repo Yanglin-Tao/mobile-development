@@ -11,11 +11,7 @@ TagManager:
   - PlayerHealthBar
   - EnemyHealthBar
   - PlayerCursor
-<<<<<<< Updated upstream
-=======
   - badThing
-  - AIattacks
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

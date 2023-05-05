@@ -52,7 +52,7 @@ public class Graffiti : MonoBehaviour
     }
 
     void Update(){
-        _gameManager.SetLife(health);
+        _gameManager.SetHealth(health);
         if (Input.GetButtonDown("Jump") && isGrounded){
             rb.AddForce(new Vector2(0, jumpForce));
             // play jump sound
@@ -62,14 +62,14 @@ public class Graffiti : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && (Attacks.Length != 0)){
             Animator.SetBool("ULT", true);
             GameObject newBullet;
-        
+
             if (specialCharge == 0){
                 newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
                 newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
                 current = (current + 1) % Attacks.Length;
             }
             else{
-                print("THIS RAN");
+                // print("THIS RAN");
                 newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity, transform);
 
             }

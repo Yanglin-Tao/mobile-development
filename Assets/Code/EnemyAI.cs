@@ -31,11 +31,21 @@ public class EnemyAI : MonoBehaviour
     {
         
     }
-<<<<<<< Updated upstream
 
-=======
+    // IEnumerator Follow() {
+    //     while(true){
+    //         yield return new WaitForSeconds(0.1f);
+    //         if(Vector2.Distance(transform.position, user.position) < distance && Vector2.Distance(transform.position, user.position) > 1){
+    //             if (user.position.x > transform.position.x && transform.localScale.x < 0 || user.position.x < transform.position.x && transform.localScale.x > 0){
+    //                 transform.localScale *= new Vector2(-1,1);
+    //             }
+    //             Vector2 angle_direction = (user.position - transform.position);
+    //             _rigidbody.velocity = angle_direction.normalized * movement;
+    //         }
+    //     }
+    // }
+
     // Mitchell's Changes
->>>>>>> Stashed changes
     IEnumerator Follow() {
         while(true){
             yield return new WaitForSeconds(0.1f);
@@ -43,13 +53,20 @@ public class EnemyAI : MonoBehaviour
                 if (user.position.x > transform.position.x && transform.localScale.x < 0 || user.position.x < transform.position.x && transform.localScale.x > 0){
                     transform.localScale *= new Vector2(-1,1);
                 }
-                Vector2 angle_direction = (user.position - transform.position);
-                _rigidbody.velocity = angle_direction.normalized * movement;
+                Vector2 direction = (user.position - transform.position).normalized;
+                _rigidbody.velocity = new Vector2(direction.x * movement, _rigidbody.velocity.y);
             }
+            float horizontalDistance = Mathf.Abs(transform.position.x - user.position.x);
+            if (horizontalDistance > 1f){
+                Animator.SetFloat("Speed", 1f);
+            } 
+            else{
+                Animator.SetFloat("Speed", 0f);
+            } 
+
         }
     }
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
+
+
 }
