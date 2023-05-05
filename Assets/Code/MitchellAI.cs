@@ -69,7 +69,6 @@ public class MitchellAI : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        print("THIS RAN");
         if(other.CompareTag("Attack")){
             _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
             Destroy(other.gameObject);

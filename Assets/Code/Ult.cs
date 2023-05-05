@@ -97,7 +97,6 @@ public class Ult : MonoBehaviour
 
 
         if (stayStill){
-            print("THIS RAN");
             Vector3 localScale = transform.localScale;
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), localScale.y, localScale.z);
         }
