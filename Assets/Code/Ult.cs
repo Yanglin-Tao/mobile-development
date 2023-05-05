@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Ult : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class Ult : MonoBehaviour
     public TMPro.TextMeshProUGUI cooldownText;
     private bool isCooldown = false;
     private float timer = 0f;
+    private GameObject mainPlayer;
+    private Scene scene;
+
 
     private void Start()
     {
@@ -33,7 +37,8 @@ public class Ult : MonoBehaviour
         Cena = GameObject.FindObjectOfType<Spawner>();
         lastClickedTime = -10f;
         lastTime = -10f;
-
+        mainPlayer = GameObject.FindGameObjectWithTag("Player");
+        scene = SceneManager.GetActiveScene();
     }
 
     public void clicked() {
@@ -69,6 +74,12 @@ public class Ult : MonoBehaviour
             if (Cena != null && useThisUlt){
                 Cena.CenaUlt();
             }
+            // Debug.Log(scene.name);
+            // Debug.Log(mainPlayer != null);
+            if (mainPlayer != null && (scene.name == "Level3" || scene.name == "Level4")){
+                Player playerScript = mainPlayer.GetComponent<Player>();
+                playerScript.Shoot();
+            }
             Animator.SetBool("ULT", true);    
             _audioSource.PlayOneShot(ultSound);
             lastTime = Time.time;
@@ -99,9 +110,17 @@ public class Ult : MonoBehaviour
         if (isCooldown)
         {
             timer -= Time.deltaTime;
-            if (timer <= 10 && timer > 0){
-                cooldownText.gameObject.SetActive(true);
-                cooldownText.text = "Cooldown: " + Mathf.Round(timer).ToString() + "s";
+            if (scene.name == "Level3" || scene.name == "Level4"){
+                if (timer > 0){
+                    cooldownText.gameObject.SetActive(true);
+                    cooldownText.text = "Cooldown: " + Mathf.Round(timer).ToString() + "s";
+                }
+            }
+            else{
+                if (timer <= 10 && timer > 0){
+                    cooldownText.gameObject.SetActive(true);
+                    cooldownText.text = "Cooldown: " + Mathf.Round(timer).ToString() + "s";
+                }
             }
             if (timer <= 0){
                 isCooldown = false;

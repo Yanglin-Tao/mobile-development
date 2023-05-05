@@ -100,6 +100,7 @@ public class Player : MonoBehaviour
     }
 
     public void Shoot(){
+        Debug.Log("shoot runs");
         if (Attacks.Length != 0){
             Animator.SetBool("ULT", true);
             GameObject newBullet;

@@ -882,7 +882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5368506149926077304, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5368506149926077310, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
       propertyPath: m_RootOrder
@@ -2885,9 +2885,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 64353775}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: Shoot
+      - m_Target: {fileID: 1822141053}
+        m_TargetAssemblyTypeName: Ult, Assembly-CSharp
+        m_MethodName: clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4090,10 +4090,10 @@ PrefabInstance:
     - target: {fileID: 5826618362727686606, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
       propertyPath: cooldownText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11444}
     - target: {fileID: 5826618362727686606, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
       propertyPath: cooldownTime
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1885255641922117841, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
@@ -4137,6 +4137,17 @@ PolygonCollider2D:
       - {x: -0.12857144, y: -0.8857143}
       - {x: -0.1, y: -1.1714286}
       - {x: -0.1, y: -1.1428572}
+--- !u!114 &1822141053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5826618362727686606, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+  m_PrefabInstance: {fileID: 1822141042}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822141043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1838187791
 GameObject:
   m_ObjectHideFlags: 0
