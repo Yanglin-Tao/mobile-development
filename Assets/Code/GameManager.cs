@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Debug.Log("on scene loaded");
+        Debug.Log("on scene loaded");
         // currentLevel = SceneManager.GetActiveScene().name;
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
@@ -175,7 +175,7 @@ public class GameManager : MonoBehaviour
             // player damaged
             // Debug.Log("Set health runs");
             mainPlayer.GetComponent<Animator>().SetBool("Damage", true);
-            if (health < 0){
+            if (health <= 0){
                 GameOver = true;
                 health = 0;
             }
@@ -274,6 +274,7 @@ public class GameManager : MonoBehaviour
         }
         screenChecker();
         // Debug.Log(enemyHealth);
+        Debug.Log(health);
     }
 
     void QuitGame()

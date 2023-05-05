@@ -9928,6 +9928,10 @@ PrefabInstance:
       propertyPath: cooldownTime
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 5078949021038594525, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
+      propertyPath: meleeDamage
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4992775623614622206, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
@@ -9985,6 +9989,10 @@ PrefabInstance:
     - target: {fileID: 5148295345759420745, guid: 0ebf6579adeefdf45b7d77eacef1075f, type: 3}
       propertyPath: m_Name
       value: FatBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727161043041657247, guid: 0ebf6579adeefdf45b7d77eacef1075f, type: 3}
+      propertyPath: meleeDamage
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ebf6579adeefdf45b7d77eacef1075f, type: 3}
