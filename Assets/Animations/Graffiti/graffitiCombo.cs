@@ -107,12 +107,12 @@ public class graffitiCombo : MonoBehaviour
         {
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
-            GameObject newBullet = Instantiate(Spray[0], shootPosition.position, Quaternion.identity, transform);
+            //GameObject newBullet = Instantiate(Spray[0], shootPosition.position, Quaternion.identity, transform);
             GameObject newBullet1 = Instantiate(Spray[1], shootPosition.position, Quaternion.identity, transform);
             bulletSpeed = gArtist.updateBulletdirection();
             if (bulletSpeed < 0){
-                Vector3 localScale = newBullet.transform.localScale;
-                newBullet.transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
+                Vector3 localScale = newBullet1.transform.localScale;
+                //newBullet.transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
                 newBullet1.transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
             }
 

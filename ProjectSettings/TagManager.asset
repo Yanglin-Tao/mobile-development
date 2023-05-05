@@ -12,6 +12,7 @@ TagManager:
   - EnemyHealthBar
   - PlayerCursor
   - badThing
+  - ICECREAM
   layers:
   - Default
   - TransparentFX
