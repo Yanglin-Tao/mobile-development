@@ -129,16 +129,16 @@ public class GameManager : MonoBehaviour
 
         // set maximum enemy health
         if (scene.name == "Level1"){
-            enemyHealth = 100;
+            enemyHealth = 175;
         }
         else if (scene.name == "Level2"){
-            enemyHealth = 150;
+            enemyHealth = 200;
         }
         else if (scene.name == "Level3"){
-            enemyHealth = 100;
+            enemyHealth = 175;
         }
         else if (scene.name == "Level4"){
-            enemyHealth = 100;
+            enemyHealth = 175;
         }
         
         // CHOOSE CHARACTER CODE
