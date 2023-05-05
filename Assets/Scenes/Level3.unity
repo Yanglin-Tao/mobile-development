@@ -4060,6 +4060,10 @@ PrefabInstance:
       value: FatBoss
       objectReference: {fileID: 0}
     - target: {fileID: 5826618362727686606, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
+      propertyPath: ultSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7c700ffd8cbd74efcae6d032d2b75da8, type: 3}
+    - target: {fileID: 5826618362727686606, guid: 7e87dad6a2a6d8049bf06a662573901a, type: 3}
       propertyPath: useThisUlt
       value: 0
       objectReference: {fileID: 0}
