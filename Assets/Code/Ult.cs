@@ -37,7 +37,7 @@ public class Ult : MonoBehaviour
     }
 
     public void clicked() {
-        if (!isCooldown && Time.time - lastClickedTime > 10f){
+        if (!isCooldown && Time.time - lastClickedTime > 10f && Time.time > 0.1){
             lastClickedTime = Time.time;
             noOfClicks++;
             inUlt = true;
@@ -63,14 +63,7 @@ public class Ult : MonoBehaviour
     public void Update()
     {
 
-        if ((Input.GetButtonDown("Fire2"))){
-            clicked();
-            // if cooled down, then play ult sound
-            // _audioSource.PlayOneShot(ultSound);
-            if (clickEnabled){
-                _audioSource.PlayOneShot(ultSound);
-            } 
-        }
+    if (Time.time > 0.1){
 
         if ((noOfClicks > 0) && (Time.time - lastTime >= 10f)){
             if (Cena != null && useThisUlt){
@@ -116,6 +109,7 @@ public class Ult : MonoBehaviour
             }
         }
 
+        }
     }
 
     private void EnableClick()

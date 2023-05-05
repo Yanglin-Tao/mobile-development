@@ -46,34 +46,36 @@ public class graffitiCombo : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetButtonDown("Fire1")){
-            clicked();
-            // if (noOfClicks <= 3) {
-            //     PerformMeleeAttack();
+        if (Time.time > 0){
+            // if (Input.GetButtonDown("Fire1")){
+            //     clicked();
+            //     // if (noOfClicks <= 3) {
+            //     //     PerformMeleeAttack();
+            //     // }
             // }
-        }
-        if (noOfClicks > 0){
-            ComboSystem();
-        }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
-        {
-            anim.SetBool("hit1", false);
-            noOfClicks = 0;
-        }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
-        {
-            anim.SetBool("hit2", false);
-            noOfClicks = 0;
-        }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
-        {
-            anim.SetBool("hit3", false);
-            noOfClicks = 0;
-        }
+            if (noOfClicks > 0){
+                ComboSystem();
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
+            {
+                anim.SetBool("hit1", false);
+                noOfClicks = 0;
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
+            {
+                anim.SetBool("hit2", false);
+                noOfClicks = 0;
+            }
+            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
+            {
+                anim.SetBool("hit3", false);
+                noOfClicks = 0;
+            }
 
-        if (Time.time - lastClickedTime > maxComboDelay)
-        {
-            noOfClicks = 0;
+            if (Time.time - lastClickedTime > maxComboDelay)
+            {
+                noOfClicks = 0;
+            }
         }
 
         //cooldown time

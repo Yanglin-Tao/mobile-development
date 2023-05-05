@@ -47,54 +47,55 @@ public class Player : MonoBehaviour
     }
 
     public void clickFunction(){
-        noOfClicks+=1;
+        if (Time.time > 0.1f){
+            noOfClicks+=1;
+        }
     }
 
     void Update(){
-        //_gameManager.SetLife(health);
-        if (Input.GetButtonDown("Jump") && isGrounded){
-            rb.AddForce(new Vector2(0, jumpForce));
-            // play jump sound
-            _audioSource.PlayOneShot(jumpSound);
-        }
-
-        if (Input.GetButtonDown("Fire2")){
-            clickFunction();
-        }
-
-        if (noOfClicks >= 1 && (Attacks.Length != 0)){
-
-            Animator.SetBool("ULT", true);
-            GameObject newBullet;
-
-            if (specialCharge == 0){
-                newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
-                // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
-                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
-                current = (current + 1) % Attacks.Length;
+        //print(Time.time);
+        if (Time.time > 0.1f){
+            //_gameManager.SetLife(health);
+            if (Input.GetButtonDown("Jump") && isGrounded){
+                rb.AddForce(new Vector2(0, jumpForce));
+                // play jump sound
+                _audioSource.PlayOneShot(jumpSound);
             }
-            else{
-                newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
-                //newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0));
-                current = (current + 1) % Attacks.Length;
+
+            if (noOfClicks >= 1 && (Attacks.Length != 0)){
+
+                Animator.SetBool("ULT", true);
+                GameObject newBullet;
+
+                if (specialCharge == 0){
+                    newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
+                    // newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(bulletSpeed, 0));
+                    newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0)); 
+                    current = (current + 1) % Attacks.Length;
+                }
+                else{
+                    newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
+                    //newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0));
+                    current = (current + 1) % Attacks.Length;
+                }
+                
+                /*
+                updateBulletdirection();
+                if (bulletSpeed < 0){
+                    Vector3 localScale = newBullet.transform.localScale;
+                    newBullet.transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
+
+                }*/
+                lastTime = Time.time;
+                noOfClicks-=1;
+
             }
-            
-            /*
-            updateBulletdirection();
-            if (bulletSpeed < 0){
-                Vector3 localScale = newBullet.transform.localScale;
-                newBullet.transform.localScale = new Vector3(-localScale.x, localScale.y, localScale.z);
-
-            }*/
-            lastTime = Time.time;
-            noOfClicks-=1;
-
+            if ((Time.time - lastTime > .3f) && (!ultStatus.FallingUlt()) ){
+                Animator.SetBool("ULT", false);
+                // Debug.Log("set to false");
+            }
+            Animator.SetBool("Jump", !isGrounded);
         }
-        if ((Time.time - lastTime > .3f) && (!ultStatus.FallingUlt()) ){
-            Animator.SetBool("ULT", false);
-            // Debug.Log("set to false");
-        }
-        Animator.SetBool("Jump", !isGrounded);
 
     }
 

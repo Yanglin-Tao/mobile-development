@@ -52,7 +52,6 @@ public class AIAttack : MonoBehaviour
         // }
         // print("THIS RAN");
         if ((Time.time - lastClickedTime) > 2f){
-            print("THIS IS RUNNING ");
             StartCoroutine(LoopWithDelay(Random.Range(1, 4), 0.4f));
             lastClickedTime = Time.time;
         }
