@@ -506,8 +506,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3386737957906954223, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+      propertyPath: cooldownText
+      value: 
+      objectReference: {fileID: 1296340074}
+    - target: {fileID: 3386737957906954223, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: cooldownTime
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3386737957906954231, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: meleeDamage
@@ -540,6 +544,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5657ef51489c4084c9cecea2e2373bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &21146945 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3386737957906954223, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
+  m_PrefabInstance: {fileID: 21146941}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21146943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &48331918 stripped
@@ -8334,9 +8349,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 21146944}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: Shoot
+      - m_Target: {fileID: 21146945}
+        m_TargetAssemblyTypeName: Ult, Assembly-CSharp
+        m_MethodName: clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
