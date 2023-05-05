@@ -57,15 +57,15 @@ public class AIAttack : MonoBehaviour
             lastClickedTime = Time.time;
         }
 
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
             anim.SetBool("hit1", false);
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
         {
             anim.SetBool("hit3", false);
             noOfClicks = 0;
@@ -152,9 +152,9 @@ public class AIAttack : MonoBehaviour
         for (int i = 0; i < attackCombo; i++) {
             // Do something
             ComboSystem();
-            // if (noOfClicks <= 3) {
-            //     PerformMeleeAttack();
-            // }
+            if (noOfClicks <= 3) {
+                PerformMeleeAttack();
+            }
 
             // Wait for 0.6 seconds before continuing to the next iteration
             yield return new WaitForSeconds(hitDelay);
