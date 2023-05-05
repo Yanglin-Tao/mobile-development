@@ -12,6 +12,7 @@ public class MitchellAI : MonoBehaviour
     public int speed = 10;
     float xspeed;
 
+    GameManager _gameManager;
     private Rigidbody2D rb;
     public Transform feet;
     public LayerMask ground;
@@ -23,6 +24,7 @@ public class MitchellAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         attackscript = GetComponent<AIAttack>();
+        _gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     void Update()
@@ -66,8 +68,16 @@ public class MitchellAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 
-     private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Attack")){
+            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
+            Destroy(other.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.CompareTag("Attack")){
+            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
             Destroy(other.gameObject);
         }
     }

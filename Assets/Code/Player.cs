@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     public float xDirection;
 
     private bool clickGUARD = false;
+    int noOfClicks;
 
     // Update is called once per frame
     void Start(){
@@ -42,6 +43,11 @@ public class Player : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
         spawner = GameObject.FindObjectOfType<Spawner>();
         ultStatus = GetComponent<Ult>();
+        noOfClicks = 0;
+    }
+
+    public void clickFunction(){
+        noOfClicks+=1;
     }
 
     void Update(){
@@ -52,7 +58,12 @@ public class Player : MonoBehaviour
             _audioSource.PlayOneShot(jumpSound);
         }
 
-        if (Input.GetButtonDown("Fire2") && (Attacks.Length != 0)){
+        if (Input.GetButtonDown("Fire2")){
+            clickFunction();
+        }
+
+        if (noOfClicks >= 1 && (Attacks.Length != 0)){
+
             Animator.SetBool("ULT", true);
             GameObject newBullet;
 
@@ -64,8 +75,10 @@ public class Player : MonoBehaviour
             }
             else{
                 newBullet = Instantiate(Attacks[current], shootPosition.position, Quaternion.identity);
-                newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0));
+                //newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(xDirection*bulletSpeed, 0));
+                current = (current + 1) % Attacks.Length;
             }
+            
             /*
             updateBulletdirection();
             if (bulletSpeed < 0){
@@ -74,6 +87,7 @@ public class Player : MonoBehaviour
 
             }*/
             lastTime = Time.time;
+            noOfClicks-=1;
 
         }
         if ((Time.time - lastTime > .3f) && (!ultStatus.FallingUlt()) ){
@@ -219,4 +233,8 @@ public class Player : MonoBehaviour
         }
         return bulletSpeed;
     }
+
+
+
+
 }

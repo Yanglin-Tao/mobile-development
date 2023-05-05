@@ -215,13 +215,25 @@ PrefabInstance:
       propertyPath: meleeDamage
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 12901986, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
+      propertyPath: Spray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 12901986, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
+      propertyPath: Spray.Array.data[1]
+      value: 
+      objectReference: {fileID: 3923484442740317003, guid: 69ea4fdf8dc59b240b97fab63d84692d, type: 3}
     - target: {fileID: 12901989, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
       propertyPath: ultSound
       value: 
       objectReference: {fileID: 8300000, guid: f828fd714e5384a53aad625e8c21ef16, type: 3}
     - target: {fileID: 12901989, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
-      propertyPath: useThisUlt
+      propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 12901989, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
+      propertyPath: useThisUlt
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 12901989, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
       propertyPath: cooldownText
@@ -283,6 +295,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Graffiti
       objectReference: {fileID: 0}
+    - target: {fileID: 1162892846920044922, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
+      propertyPath: specialCharge
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1162892848175626146, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
 --- !u!114 &133429790 stripped
@@ -294,17 +314,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 949518f0fd25471499b4df82aebf6567, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &133429791 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 12901989, guid: 656973fedb577d74a8e520ea0b91caff, type: 3}
-  m_PrefabInstance: {fileID: 133429789}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251754928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ebc287c25bf2754a81e49af8263cf10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &133429792 stripped
@@ -563,6 +572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 257532313}
+  maxPlayerHealth: 0
+  maxEnemyHealth: 0
 --- !u!1 &272798675
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,9 +2223,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 133429791}
-        m_TargetAssemblyTypeName: Ult, Assembly-CSharp
-        m_MethodName: clicked
+      - m_Target: {fileID: 133429792}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: clickFunction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4006,6 +4017,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1888510208}
+  maxPlayerHealth: 0
+  maxEnemyHealth: 0
 --- !u!1 &1987606434
 GameObject:
   m_ObjectHideFlags: 0
@@ -4955,7 +4968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5368506149926077304, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5368506149926077310, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
       propertyPath: m_RootOrder
@@ -5073,6 +5086,10 @@ PrefabInstance:
     - target: {fileID: 196090380050230765, guid: 392a940937757294cb1a7b5c234539c4, type: 3}
       propertyPath: m_Name
       value: MTA
+      objectReference: {fileID: 0}
+    - target: {fileID: 196090380050230765, guid: 392a940937757294cb1a7b5c234539c4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 392a940937757294cb1a7b5c234539c4, type: 3}

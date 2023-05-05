@@ -274,7 +274,7 @@ public class GameManager : MonoBehaviour
         }
         screenChecker();
         // Debug.Log(enemyHealth);
-        Debug.Log(health);
+        //Debug.Log(health);
     }
 
     void QuitGame()
