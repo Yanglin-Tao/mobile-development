@@ -10,7 +10,7 @@ public class BossCombo : MonoBehaviour
     private float nextFireTime = 0f;
     public static int noOfClicks = 0;
     float lastClickedTime = 0;
-    float maxComboDelay = 1f;
+    float maxComboDelay = .35f;
     public Transform player;
 
     GameManager _gameManager;
@@ -21,7 +21,7 @@ public class BossCombo : MonoBehaviour
 
     // melee
     public float meleeAttackRange = 1f;
-    public float meleeDamage = 1f;
+    public float meleeDamage = 3f;
     public Transform meleeAttackSpawnPoint;
 
     private void Start()
@@ -33,10 +33,12 @@ public class BossCombo : MonoBehaviour
     }
 
     public void clicked() {
-        lastClickedTime = Time.time;
-        noOfClicks++;
-        if (noOfClicks <= 3) {
-            PerformMeleeAttack();
+        if (noOfClicks < 3){
+            lastClickedTime = Time.time;
+            noOfClicks++;
+            if (noOfClicks <= 3) {
+                PerformMeleeAttack();
+            }
         }
     }
 
@@ -46,18 +48,18 @@ public class BossCombo : MonoBehaviour
         if (noOfClicks > 0){
             ComboSystem();
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee1"))
         {
             anim.SetBool("hit1", false);
             noOfClicks = 0;
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
             anim.SetBool("hit2", false);
             noOfClicks = 0;
 
         }
-        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
+        if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime >= .8f && anim.GetCurrentAnimatorStateInfo(0).IsName("melee3"))
         {
             anim.SetBool("hit3", false);
             noOfClicks = 0;
@@ -78,8 +80,6 @@ public class BossCombo : MonoBehaviour
 
     public void ComboSystem()
     {
-        lastClickedTime = Time.time;
-
         if (noOfClicks == 1)
         {
             anim.SetBool("hit1", true);
@@ -94,7 +94,6 @@ public class BossCombo : MonoBehaviour
         }
         if (noOfClicks >= 3 && anim.GetCurrentAnimatorStateInfo(0).IsName("melee2"))
         {
-            print("THIS RAN");
             anim.SetBool("hit2", false);
             anim.SetBool("hit3", true);
             rb.AddForce(new Vector2(0, 1000));

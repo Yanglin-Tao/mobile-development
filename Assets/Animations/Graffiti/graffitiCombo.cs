@@ -37,10 +37,12 @@ public class graffitiCombo : MonoBehaviour
     }
 
     public void clicked() {
-        lastClickedTime = Time.time;
-        noOfClicks++;
-        if (noOfClicks <= 3) {
-            PerformMeleeAttack();
+        if (noOfClicks < 3){
+            lastClickedTime = Time.time;
+            noOfClicks++;
+            if (noOfClicks <= 3) {
+                PerformMeleeAttack();
+            }
         }
     }
 

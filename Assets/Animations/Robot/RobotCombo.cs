@@ -10,7 +10,7 @@ public class RobotCombo : MonoBehaviour
     private float nextFireTime = 0f;
     public static int noOfClicks = 0;
     float lastClickedTime = 0;
-    float maxComboDelay = 1f;
+    float maxComboDelay = .25f;
     public Transform player;
 
     GameManager _gameManager;
@@ -34,18 +34,17 @@ public class RobotCombo : MonoBehaviour
     }
 
     public void clicked() {
-        lastClickedTime = Time.time;
-        noOfClicks++;
-        if (noOfClicks <= 3) {
-            PerformMeleeAttack();
+        if (noOfClicks < 3){
+            lastClickedTime = Time.time;
+            noOfClicks++;
+            if (noOfClicks <= 3) {
+                PerformMeleeAttack();
+            }
         }
     }
 
     public void Update()
     {
-        if (Input.GetButtonDown("Fire1")){
-            clicked();
-        }
         if (noOfClicks > 0){
             ComboSystem();
         }
@@ -80,8 +79,6 @@ public class RobotCombo : MonoBehaviour
 
     public void ComboSystem()
     {
-        lastClickedTime = Time.time;
-
         if (noOfClicks == 1)
         {
             anim.SetBool("hit1", true);
