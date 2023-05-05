@@ -32,12 +32,8 @@ public class MitchellAI : MonoBehaviour
         // if (player.position.x > transform.position.x && transform.localScale.x < 0 || player.position.x < transform.position.x && transform.localScale.x > 0){
         //     transform.localScale *= new Vector2(-1,1);
         // }
-<<<<<<< Updated upstream
         float distance = Mathf.Abs(transform.position.x - player.position.x);
 
-=======
-        float distance = Vector2.Distance(transform.position, player.position);
->>>>>>> Stashed changes
         if (distance < attackRange)
         {
             attackscript.StartAttack();
