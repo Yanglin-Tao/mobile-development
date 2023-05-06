@@ -1058,7 +1058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5368506149926077304, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5368506149926077310, guid: 3a7d6d23e3d214bda969ca0a552012b3, type: 3}
       propertyPath: m_RootOrder
@@ -9870,7 +9870,7 @@ PrefabInstance:
       objectReference: {fileID: 503814109}
     - target: {fileID: 5078949021038594524, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
       propertyPath: cooldownTime
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5078949021038594525, guid: c5a7a89498854a04d8495a9b604e9275, type: 3}
       propertyPath: meleeDamage

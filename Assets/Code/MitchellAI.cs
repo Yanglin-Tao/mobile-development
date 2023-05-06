@@ -80,7 +80,7 @@ public class MitchellAI : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        print("THIS RAN");
+        // print("THIS RAN");
         if(other.gameObject.CompareTag("Attack")){
             _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
         }

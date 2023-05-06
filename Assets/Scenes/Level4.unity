@@ -511,7 +511,7 @@ PrefabInstance:
       objectReference: {fileID: 1296340074}
     - target: {fileID: 3386737957906954223, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: cooldownTime
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3386737957906954231, guid: 33350a539669f0c41a39596146da1d8a, type: 3}
       propertyPath: meleeDamage

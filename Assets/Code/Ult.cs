@@ -21,7 +21,7 @@ public class Ult : MonoBehaviour
     public AudioClip ultSound;
 
     // Cool down timer
-    public float cooldownTime = 15f;
+    [SerializeField] private float cooldownTime;
     public TMPro.TextMeshProUGUI cooldownText;
     private bool isCooldown = false;
     private float timer = 0f;
@@ -35,21 +35,22 @@ public class Ult : MonoBehaviour
         Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Cena = GameObject.FindObjectOfType<Spawner>();
-        lastClickedTime = -10f;
-        lastTime = -10f;
+        // lastClickedTime = -10f;
+        // lastTime = -10f;
+        lastClickedTime = -cooldownTime;
+        lastTime = -cooldownTime;
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         scene = SceneManager.GetActiveScene();
+        // Debug.Log(cooldownTime);
     }
 
     public void clicked() {
-        Debug.Log("clicked");
-        if (!isCooldown && Time.time - lastClickedTime > 10f && Time.time > 0.1){
+        if (!isCooldown && Time.time - lastClickedTime > cooldownTime && Time.time > 0.1){
             lastClickedTime = Time.time;
             noOfClicks++;
             inUlt = true;
             clickEnabled = true;
             isCooldown = true;
-            Debug.Log("cooling down");
             timer = cooldownTime;
             // cooldownText.gameObject.SetActive(true);
         }
@@ -69,12 +70,15 @@ public class Ult : MonoBehaviour
 
     public void Update()
     {
-
+    // Debug.Log(cooldownTime);
     if (Time.time > 0.1){
 
-        if ((noOfClicks > 0) && (Time.time - lastTime >= 10f)){
+        Debug.Log(Time.time - lastTime);
+        if ((noOfClicks > 0) && (Time.time - lastTime >= cooldownTime)){
+            Debug.Log("Time.time - lastTime >= cooldownTime");
             if (Cena != null && useThisUlt){
                 Cena.CenaUlt();
+                Debug.Log("Cena ULT");
             }
 
             if (mainPlayer != null && (scene.name == "Level1")){
@@ -99,15 +103,31 @@ public class Ult : MonoBehaviour
             }
         }
 
-        if (clickEnabled && (Time.time - lastTime >= 5f))
-        {
-            // Disable clicking the button for the cooldown duration
-            clickEnabled = false;
-            Animator.SetBool("ULT", false);
-            inUlt = false;
-            noOfClicks  = 0;
-            lastTime = Time.time;
-            stayStill = false;
+        // Level2 cool down 
+        if (scene.name == "Level2"){
+            if (clickEnabled && (Time.time - lastTime >= 5f))
+            {
+                // Disable clicking the button for the cooldown duration
+                clickEnabled = false;
+                Animator.SetBool("ULT", false);
+                inUlt = false;
+                noOfClicks  = 0;
+                // lastTime = Time.time;
+                stayStill = false;
+            }
+        }
+        // Level1, Level3, and Level4 cool down
+        else{
+            if (clickEnabled && (Time.time - lastTime >= 0))
+            {
+                // Disable clicking the button for the cooldown duration
+                clickEnabled = false;
+                Animator.SetBool("ULT", false);
+                inUlt = false;
+                noOfClicks  = 0;
+                lastTime = Time.time;
+                stayStill = false;
+            }
         }
 
 
@@ -128,7 +148,8 @@ public class Ult : MonoBehaviour
                 }
             }
             else{
-                if (timer <= 10 && timer > 0){
+                // Debug.Log(cooldownTime);
+                if (timer <= cooldownTime - 5f && timer > 0){
                     cooldownText.gameObject.SetActive(true);
                     cooldownText.text = "Cooldown: " + Mathf.Round(timer).ToString() + "s";
                 }
@@ -140,6 +161,7 @@ public class Ult : MonoBehaviour
         }
 
         }
+
     }
 
     private void EnableClick()
