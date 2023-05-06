@@ -70,7 +70,12 @@ public class Ult : MonoBehaviour
 
     if (Time.time > 0.1){
 
+<<<<<<< Updated upstream
         if ((noOfClicks > 0) && (Time.time - lastTime >= 10f)){
+=======
+        //Debug.Log(Time.time - lastTime);
+        if ((noOfClicks > 0) && (Time.time - lastTime >= cooldownTime)){
+>>>>>>> Stashed changes
             if (Cena != null && useThisUlt){
                 Cena.CenaUlt();
             }

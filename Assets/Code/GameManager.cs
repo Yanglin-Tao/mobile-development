@@ -112,7 +112,6 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("on scene loaded");
         // currentLevel = SceneManager.GetActiveScene().name;
         mainPlayer = GameObject.FindGameObjectWithTag("Player");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
