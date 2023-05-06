@@ -74,7 +74,7 @@ public class MitchellAI : MonoBehaviour
             Destroy(other.gameObject);
         }
         if(other.CompareTag("ICECREAM")){
-            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 1);
+            _gameManager.SetEnemyHealth(_gameManager.getEnemyHealth() - 3);
             Destroy(other.gameObject);
         }
     }
