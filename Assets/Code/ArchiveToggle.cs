@@ -24,5 +24,11 @@ public class ArchiveToggle : MonoBehaviour
             _gameManager.unlockLevel("Level3");
             _gameManager.unlockLevel("Level4");
         }
+        else{
+            // lock all levels again
+            _gameManager.lockLevel("Level2");
+            _gameManager.lockLevel("Level3");
+            _gameManager.lockLevel("Level4");
+        }
     }
 }

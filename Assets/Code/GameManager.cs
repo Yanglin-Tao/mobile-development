@@ -48,6 +48,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void lockLevel(string lockedLevel){
+        if (lockedLevel == "Level2"){
+            unlockLevel2 = false;
+        }
+        else if (lockedLevel == "Level3"){
+            unlockLevel3 = false;
+        }
+        else if (lockedLevel == "Level4"){
+            unlockLevel4 = false;
+        }
+    }
+
     public bool checkUnlock(string levelName){
         if (levelName == "Level1"){
             return true;
