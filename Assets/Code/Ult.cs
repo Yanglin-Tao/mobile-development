@@ -42,12 +42,14 @@ public class Ult : MonoBehaviour
     }
 
     public void clicked() {
+        Debug.Log("clicked");
         if (!isCooldown && Time.time - lastClickedTime > 10f && Time.time > 0.1){
             lastClickedTime = Time.time;
             noOfClicks++;
             inUlt = true;
             clickEnabled = true;
             isCooldown = true;
+            Debug.Log("cooling down");
             timer = cooldownTime;
             // cooldownText.gameObject.SetActive(true);
         }
