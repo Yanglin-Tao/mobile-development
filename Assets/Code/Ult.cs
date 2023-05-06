@@ -104,7 +104,7 @@ public class Ult : MonoBehaviour
         }
 
         // Level2 cool down 
-        if (scene.name == "Level2"){
+        if (scene.name == "Level2" || scene.name == "Onboarding"){
             if (clickEnabled && (Time.time - lastTime >= 5f))
             {
                 // Disable clicking the button for the cooldown duration
