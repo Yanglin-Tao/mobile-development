@@ -76,12 +76,19 @@ public class Ult : MonoBehaviour
             if (Cena != null && useThisUlt){
                 Cena.CenaUlt();
             }
+
+            if (mainPlayer != null && (scene.name == "Level1")){
+                Player playerScript = mainPlayer.GetComponent<Player>();
+                playerScript.clickFunction();
+            }
+
             // Debug.Log(scene.name);
             // Debug.Log(mainPlayer != null);
             if (mainPlayer != null && (scene.name == "Level3" || scene.name == "Level4")){
                 Player playerScript = mainPlayer.GetComponent<Player>();
                 playerScript.Shoot();
             }
+
             Animator.SetBool("ULT", true);    
             _audioSource.PlayOneShot(ultSound);
             lastTime = Time.time;
@@ -114,7 +121,7 @@ public class Ult : MonoBehaviour
         if (isCooldown)
         {
             timer -= Time.deltaTime;
-            if (scene.name == "Level3" || scene.name == "Level4"){
+            if (scene.name == "Level1" || scene.name == "Level3" || scene.name == "Level4"){
                 if (timer > 0){
                     cooldownText.gameObject.SetActive(true);
                     cooldownText.text = "Cooldown: " + Mathf.Round(timer).ToString() + "s";
